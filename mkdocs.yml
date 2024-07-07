@@ -1,0 +1,129 @@
+site_name: how to dft
+site_url: https://jerschro.github.io/howtodft
+site_author: Jeremy Schroeder
+site_description: How to DFT
+repo_name: jerschro/howtodft
+repo_url: https://github.com/jerschro/howtodft
+
+nav:
+  - Home : index.md
+  - Syllabus: syllabus/fall24syllabus.md
+  - HPCC : 
+    - HPCC: hpcc/index.md
+    - Create an HPCC Account : hpcc/create_account.md
+    - Connect to TTU VPN : hpcc/connect_to_vpn.md
+    - Logging onto HPCC Linux : hpcc/log_on_linux.md
+    - Logging onto HPCC Mac : hpcc/log_on_mac.md
+    - Logging onto HPCC Windows : hpcc/log_on_windows.md
+    - Intro to the Terminal : hpcc/intro_to_terminal.md
+    - The .bashrc File : hpcc/bashrc_file.md
+  - Turbomole : 
+    - Turbomole : turbomole/index.md
+    - Turbomole Guide: turbomole/guide_ppt.md
+    - define : turbomole/define.md
+    - cosmoprep : turbomole/cosmoprep.md
+    - cosmoprep Guide : turbomole/cosmo_docx.md
+    - aoforce/NumForce : turbomole/frequency.md
+    - Collect Results : turbomole/collect_results.md
+    - freeh : turbomole/frequency_docx.md
+  - Orca: orca/index.md
+  - DFT : 
+    - DFT: dft/index.md
+    - Intro to DFT: dft/intro_to_dft.md
+  - Lessons :
+    - Lessons: lessons/index.md
+    - Lesson 1: lessons/lesson_1.md
+
+
+
+
+theme:
+  name: material
+  features:
+    - navigation.instant #for better loading
+    - navigation.instant.progress #for better loading
+    - navigation.tabs #for tabs of nav folders in header
+    # - navigation.sections #groups pages by nav folder #not needed here
+    # - navigation.expand #ability for navigation sidebar to expand
+    - navigation.indexes #for index pages being clickable in navigation sidebar # must have index.md in folder and not labeled
+    - navigation.top #adds scroll to top button when you scroll down
+    # - toc.integrate #add toc to navigation panel #says its not compatible with navigation.indexes
+    # - content.code.annotate #for code blocks
+    - content.code.copy #for code blocks
+  
+  language: en
+  palette:
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/link
+        name: Switch to light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: red
+      accent: black
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: red
+      accent: black
+      toggle:
+        icon: material/toggle-switch-off
+        name: Switch to system preference
+  font:
+    text: Roboto
+    code: Roboto Mono
+
+plugins:
+  - search
+  # - mkdocstrings
+  - glightbox:
+      touchNavigation: true
+      loop: false
+      effect: zoom
+      slide_effect: slide
+      width: 100%
+      height: auto
+      zoomable: true
+      draggable: true
+      skip_classes:
+        - custom-skip-class-name
+      auto_caption: false
+      caption_position: bottom
+      background: white
+      shadow: true
+      
+markdown_extensions:
+  - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.caret #for subscripts and superscripts
+  - pymdownx.keys #for keyboard shortcuts
+  - pymdownx.superfences #for tabbed code blocks
+  - pymdownx.tabbed: #for tabbed code blocks
+      alternate_style: true #for tabbed code blocks
+  - md_in_html #needed for grids
+
+
+extra_javascript:
+  - javascripts/shortcuts.js
+
+extra:
+  social:
+    - icon: fontawesome/solid/envelope
+      link: mailto:jerschro@ttu.edu
+    - icon: fontawesome/solid/t
+      link: https://www.depts.ttu.edu/me/combustionlab/
+    - icon: fontawesome/brands/github
+      link: https://github.com/jerschro
+
+copyright: |
+  &copy; 2024 Jeremy Schroeder
