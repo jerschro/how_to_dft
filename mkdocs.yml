@@ -1,9 +1,9 @@
 site_name: how to dft
-site_url: https://jerschro.github.io/howtodft
+site_url: https://jerschro.github.io/how_to_dft
 site_author: Jeremy Schroeder
 site_description: How to DFT
-repo_name: jerschro/howtodft
-repo_url: https://github.com/jerschro/howtodft
+repo_name: jerschro/how_to_dft
+repo_url: https://github.com/jerschro/how_to_dft
 
 nav:
   - Home : index.md
