@@ -1,4 +1,4 @@
-site_name: how to dft
+site_name: How To DFT
 site_url: https://jerschro.github.io/how_to_dft
 site_author: Jeremy Schroeder
 site_description: How to DFT
@@ -27,12 +27,11 @@ nav:
     - Collect Results : turbomole/collect_results.md
     - freeh : turbomole/frequency_docx.md
   - Orca: orca/index.md
-  - DFT : 
-    - DFT: dft/index.md
-    - Intro to DFT: dft/intro_to_dft.md
   - Lessons :
     - Lessons: lessons/index.md
     - Lesson 1: lessons/lesson_1.md
+    - Lesson 2: lessons/lesson_2.md
+    - Resource 1: lessons/resource_intro_to_dft.md
 
 
 
@@ -111,7 +110,7 @@ markdown_extensions:
   - pymdownx.tabbed: #for tabbed code blocks
       alternate_style: true #for tabbed code blocks
   - md_in_html #needed for grids
-
+  - footnotes
 
 extra_javascript:
   - javascripts/shortcuts.js

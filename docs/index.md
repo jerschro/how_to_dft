@@ -15,5 +15,4 @@ Created by Jeremy Schroeder with help from Tristan Fisher, Jerimiah Zamora and D
 * [HPCC](hpcc/index.md)
 * [Turbomole](turbomole/index.md)
 * [ORCA](orca/index.md)
-* [DFT](dft/index.md)
 * [Lessons](lessons/index.md)
