@@ -18,5 +18,6 @@ It will be good to reference these pages in the first few weeks of learning how 
 * [Logging onto HPCC Linux](log_on_linux.md) - Instructions on how to log onto the HPCC using a Linux workstation.
 * [Logging onto HPCC Mac](log_on_mac.md) - Instructions on how to log onto the HPCC using a Mac laptop.
 * [Logging onto HPCC Windows](log_on_windows.md) - Instructions on how to log onto the HPCC using a Windows computer.
+* [How to Install Conda](install_conda.md) - Instructions on how to install conda and have a local python environment.
 * [Introduction to the Terminal](intro_to_terminal.md) - Introduction page on how to use the LINUX/UNIX Terminal.
 * [The .bashrc File](bashrc_file.md) - Contains information on the .bashrc file.

@@ -15,6 +15,7 @@ nav:
     - Logging onto HPCC Linux : hpcc/log_on_linux.md
     - Logging onto HPCC Mac : hpcc/log_on_mac.md
     - Logging onto HPCC Windows : hpcc/log_on_windows.md
+    - How to Install Conda : hpcc/install_conda.md
     - Intro to the Terminal : hpcc/intro_to_terminal.md
     - The .bashrc File : hpcc/bashrc_file.md
   - Turbomole : 
