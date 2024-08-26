@@ -13,9 +13,8 @@
 9. Continue to the next menu: Type "*"
 10. Answer the prompt if you are using internal coordinates: Type "no"
 11. Now we are in the basis set menu:
-12. Choose a basis set: Type "b all SVP" for the adenine calculations.
-13. Ensure the #atoms is equal to #bas to confirm the basis set was defined cor=
-rectly.
+12. Choose a basis set: Type "b all SVP" for the DNA molecule calculations.
+13. Ensure the #atoms is equal to #bas to confirm the basis set was defined correctly.
 14. Continue to the next menu: Type "*"
 15. Have define give a guess of electron occupation: Type "eht"
 16. Accept the parameters: Type "y"
@@ -25,7 +24,7 @@ rectly.
 19. Now we are in the main menu of define.
 20. Set the dft functional:
      * Type "dft"
-     * Type "func b3-lyp" for adenine calculations
+     * Type "func b3-lyp" for DNA molecule calculations
      * Type "on"
      * Make sure it says "DFT is used" and the correct functional you want is listed.
      * Press enter to exit

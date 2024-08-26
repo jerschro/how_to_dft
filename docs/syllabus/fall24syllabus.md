@@ -6,6 +6,8 @@ hide:
 
 # ME 4331 - Individual Study in Mechanical Engineering: Combustion Reactions on Mineral Surfaces Research - Dr. Aquino's Research Group - Fall 2024
 
+* NOTE - This Syllabus is being reviewed by Dr. Aquino and is not finalized for the semester yet. The assigments and weekly objectives are pretty set in stone but the report due dates may change. Jeremy - 8/25/24
+
 ## Office Hours
 
 **Dr. Adelia Aquino**
@@ -56,8 +58,8 @@ The weekly grade will be on a scale of 0-3. For every meeting not attended witho
 
 | Week # | Dates | Overview | Objective | Assignment |
 |---|---|---|---|---|
-|  1 :fontawesome-regular-star: | 8/22 - 8/23 | Intro to HPCC | [Create an HPCC account](../hpcc/create_account.md). | Show me the email confirmation of the HPCC account. |
-|  2 | 8/26 - 8/30 | Intro to Terminal | Get familiar with the [terminal](../hpcc/intro_to_terminal.md). | Show me [Assignment 1](../lessons/assignment_1.md). |
+|  1  | 8/22 - 8/23 | Intro to HPCC | [Create an HPCC account](../hpcc/create_account.md). | Show me the email confirmation of the HPCC account. |
+|  2 :fontawesome-regular-star: | 8/26 - 8/30 | Intro to Terminal | Get familiar with the [terminal](../hpcc/intro_to_terminal.md). | Show me [Assignment 1](../lessons/assignment_1.md). |
 |  3 | 9/2 - 9/6 | Intro to DFT | [Lesson 1](../lessons/lesson_1.md) & [Lesson 2](../lessons/lesson_2.md) | Get the 4 DNA molecules on the HPCC and use molden/other visualization program to look at them. |
 |  4 | 9/9 - 9/13 | Intro to Turbomole & Optimization | [Lesson 3](../lessons/lesson_3.md) | Optimize the 4 DNA molecules. Show me your results. |
 |  5 | 9/16 - 9/20 | Solvent & Frequency Calculations | [Lesson 4](../lessons/lesson_4.md) & [Lesson 5](../lessons/lesson_5.md) | Do solvent & frequency calculations for the 4 DNA molecules. Show me your results. |

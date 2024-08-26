@@ -31,7 +31,9 @@ nav:
     - Lessons: lessons/index.md
     - Lesson 1: lessons/lesson_1.md
     - Lesson 2: lessons/lesson_2.md
+    - Assignment 1: lessons/assignment_1.md
     - Resource 1: lessons/resource_intro_to_dft.md
+    
 
 
 

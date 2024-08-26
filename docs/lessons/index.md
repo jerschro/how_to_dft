@@ -1,10 +1,14 @@
-[:fontawesome-solid-house:](../index.md) :fontawesome-solid-angle-right: [Lessons](index.md) :fontawesome-solid-angle-right: **Lessons**
+[:fontawesome-solid-house:](../index.md) :fontawesome-solid-angle-right: **Lessons**
 # Welcome to the DFT Lessons
 
 ## Lessons
 
 * [Lesson 1](lesson_1.md) - Intro to Computational Chemistry
 * [Lesson 2](lesson_2.md) - Molecular Structure Representation and Common File Formats
+
+## Assignments
+
+* [Assignment 1](assignment_1.md) - Linux Intro and Turbomole Test Calculations
 
 ## Resources
 

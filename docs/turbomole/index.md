@@ -1,4 +1,4 @@
-[:fontawesome-solid-house:](../index.md) :fontawesome-solid-angle-right: [Turbomole](index.md) :fontawesome-solid-angle-right: **Turbomole**
+[:fontawesome-solid-house:](../index.md) :fontawesome-solid-angle-right: **Turbomole**
 # Turbomole
 
 This is the homepage for containing everything to do with Turbomole. 

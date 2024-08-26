@@ -2,7 +2,7 @@
 hide:
   - toc
 ---
-[:fontawesome-solid-house:](../index.md) :fontawesome-solid-angle-right: [HPCC](index.md) :fontawesome-solid-angle-right: **HPCC**
+[:fontawesome-solid-house:](../index.md) :fontawesome-solid-angle-right: **HPCC**
 
 # HPCC
 
