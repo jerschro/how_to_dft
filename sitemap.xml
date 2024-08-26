@@ -26,6 +26,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://jerschro.github.io/how_to_dft/hpcc/install_conda/</loc>
+         <lastmod>2024-08-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://jerschro.github.io/how_to_dft/hpcc/intro_to_terminal/</loc>
          <lastmod>2024-08-26</lastmod>
          <changefreq>daily</changefreq>
