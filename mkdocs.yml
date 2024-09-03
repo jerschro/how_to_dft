@@ -32,6 +32,7 @@ nav:
     - Lessons: lessons/index.md
     - Lesson 1: lessons/lesson_1.md
     - Lesson 2: lessons/lesson_2.md
+    - Lesson 3: lessons/lesson_3.md
     - Assignment 1: lessons/assignment_1.md
     - Resource 1: lessons/resource_intro_to_dft.md
     
@@ -113,11 +114,21 @@ markdown_extensions:
   - pymdownx.tabbed: #for tabbed code blocks
       alternate_style: true #for tabbed code blocks
   - md_in_html #needed for grids
-  - footnotes
+  - footnotes #for footnotes
+  - pymdownx.superfences: #for mermaid flow charts
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.arithmatex: #for equations
+      generic: true
 
 extra_javascript:
   - javascripts/shortcuts.js
+  - javascripts/mathjax.js
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
 
+  
 extra:
   social:
     - icon: fontawesome/solid/envelope

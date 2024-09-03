@@ -5,6 +5,7 @@
 
 * [Lesson 1](lesson_1.md) - Intro to Computational Chemistry
 * [Lesson 2](lesson_2.md) - Molecular Structure Representation and Common File Formats
+* [Lesson 3](lesson_3.md) - What is a geometry optimization?
 
 ## Assignments
 
@@ -16,7 +17,7 @@
 
 ## Planned Lessons
 
-* Lesson 3 - What is a geometry optimization?
+
 * Lesson 4 - What is a solvent calculation?
 * Lesson 5 - What is a frequency calculation?
 * Lesson 6 - Academic Writing Reminders
