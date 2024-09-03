@@ -12,28 +12,28 @@
         <meta name="author" content="Jeremy Schroeder">
       
       
-        <link rel="canonical" href="https://jerschro.github.io/how_to_dft/turbomole/">
+        <link rel="canonical" href="https://jerschro.github.io/how_to_dft/lessons/lesson_3/">
       
       
-        <link rel="prev" href="../hpcc/bashrc_file/">
+        <link rel="prev" href="../lesson_2/">
       
       
-        <link rel="next" href="guide_ppt/">
+        <link rel="next" href="../assignment_1/">
       
       
-      <link rel="icon" href="../assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.14">
     
     
       
-        <title>Turbomole - How To DFT</title>
+        <title>Lesson 3 - How To DFT</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.10ba22f1.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.10ba22f1.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -52,14 +52,14 @@
       
     
     
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
     
     
     
-   <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
     html.glightbox-open { overflow: initial; height: 100%; }
     .gslide-title { margin-top: 0px; user-select: text; }
     .gslide-desc { color: #666; user-select: text; }
@@ -68,7 +68,7 @@
     .gdesc-inner { font-size: 0.75rem; }
     body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
     body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
-    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../assets/javascripts/glightbox.min.js"></script></head>
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -87,7 +87,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#turbomole" class="md-skip">
+        <a href="#lesson-3-what-is-a-geometry-optimization" class="md-skip">
           Skip to content
         </a>
       
@@ -101,7 +101,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="How To DFT" class="md-header__button md-logo" aria-label="How To DFT" data-md-component="logo">
+    <a href="../.." title="How To DFT" class="md-header__button md-logo" aria-label="How To DFT" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -121,7 +121,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Turbomole
+              Lesson 3
             
           </span>
         </div>
@@ -238,7 +238,7 @@
   
   
     <li class="md-tabs__item">
-      <a href=".." class="md-tabs__link">
+      <a href="../.." class="md-tabs__link">
         
   
     
@@ -255,7 +255,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../syllabus/fall24syllabus/" class="md-tabs__link">
+      <a href="../../syllabus/fall24syllabus/" class="md-tabs__link">
         
   
     
@@ -274,7 +274,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../hpcc/" class="md-tabs__link">
+        <a href="../../hpcc/" class="md-tabs__link">
           
   
     
@@ -290,13 +290,11 @@
         
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="./" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../turbomole/" class="md-tabs__link">
           
   
     
@@ -314,7 +312,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../orca/" class="md-tabs__link">
+      <a href="../../orca/" class="md-tabs__link">
         
   
     
@@ -329,11 +327,13 @@
         
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../lessons/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
           
   
     
@@ -368,7 +368,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="How To DFT" class="md-nav__button md-logo" aria-label="How To DFT" data-md-component="logo">
+    <a href="../.." title="How To DFT" class="md-nav__button md-logo" aria-label="How To DFT" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -398,7 +398,7 @@
   
   
     <li class="md-nav__item">
-      <a href=".." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -418,7 +418,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../syllabus/fall24syllabus/" class="md-nav__link">
+      <a href="../../syllabus/fall24syllabus/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -475,7 +475,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../hpcc/" class="md-nav__link ">
+            <a href="../../hpcc/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -508,7 +508,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../hpcc/create_account/" class="md-nav__link">
+      <a href="../../hpcc/create_account/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -529,7 +529,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../hpcc/connect_to_vpn/" class="md-nav__link">
+      <a href="../../hpcc/connect_to_vpn/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -550,7 +550,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../hpcc/log_on_linux/" class="md-nav__link">
+      <a href="../../hpcc/log_on_linux/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -571,7 +571,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../hpcc/log_on_mac/" class="md-nav__link">
+      <a href="../../hpcc/log_on_mac/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -592,7 +592,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../hpcc/log_on_windows/" class="md-nav__link">
+      <a href="../../hpcc/log_on_windows/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -613,7 +613,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../hpcc/install_conda/" class="md-nav__link">
+      <a href="../../hpcc/install_conda/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -634,7 +634,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../hpcc/intro_to_terminal/" class="md-nav__link">
+      <a href="../../hpcc/intro_to_terminal/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -655,7 +655,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../hpcc/bashrc_file/" class="md-nav__link">
+      <a href="../../hpcc/bashrc_file/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -680,8 +680,6 @@
       
   
   
-    
-  
   
   
     
@@ -708,22 +706,19 @@
     
     
       
-        
-        
-      
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="./" class="md-nav__link md-nav__link--active">
+            <a href="../../turbomole/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -734,13 +729,13 @@
             </a>
             
               
-              <label class="md-nav__link md-nav__link--active" for="__nav_4" id="__nav_4_label" tabindex="">
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             Turbomole
@@ -756,7 +751,7 @@
   
   
     <li class="md-nav__item">
-      <a href="guide_ppt/" class="md-nav__link">
+      <a href="../../turbomole/guide_ppt/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -777,7 +772,7 @@
   
   
     <li class="md-nav__item">
-      <a href="define/" class="md-nav__link">
+      <a href="../../turbomole/define/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -798,7 +793,7 @@
   
   
     <li class="md-nav__item">
-      <a href="cosmoprep/" class="md-nav__link">
+      <a href="../../turbomole/cosmoprep/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -819,7 +814,7 @@
   
   
     <li class="md-nav__item">
-      <a href="cosmo_docx/" class="md-nav__link">
+      <a href="../../turbomole/cosmo_docx/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -840,7 +835,7 @@
   
   
     <li class="md-nav__item">
-      <a href="frequency/" class="md-nav__link">
+      <a href="../../turbomole/frequency/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -861,7 +856,7 @@
   
   
     <li class="md-nav__item">
-      <a href="collect_results/" class="md-nav__link">
+      <a href="../../turbomole/collect_results/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -882,7 +877,7 @@
   
   
     <li class="md-nav__item">
-      <a href="frequency_docx/" class="md-nav__link">
+      <a href="../../turbomole/frequency_docx/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -910,7 +905,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../orca/" class="md-nav__link">
+      <a href="../../orca/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -927,6 +922,8 @@
       
   
   
+    
+  
   
   
     
@@ -949,19 +946,22 @@
     
     
       
+        
+        
+      
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../lessons/" class="md-nav__link ">
+            <a href="../" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -972,13 +972,13 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
             Lessons
@@ -994,7 +994,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../lessons/lesson_1/" class="md-nav__link">
+      <a href="../lesson_1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1015,7 +1015,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../lessons/lesson_2/" class="md-nav__link">
+      <a href="../lesson_2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1033,10 +1033,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../lessons/lesson_3/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Lesson 3
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -1045,6 +1065,89 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introduction
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#initial-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Initial Structure
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#process-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Process Flow
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#initial-setup-step" class="md-nav__link">
+    <span class="md-ellipsis">
+      Initial Setup Step
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#main-step" class="md-nav__link">
+    <span class="md-ellipsis">
+      Main Step
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-find-energy" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to Find Energy
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-find-the-gradient" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to Find the Gradient
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1057,7 +1160,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../lessons/assignment_1/" class="md-nav__link">
+      <a href="../assignment_1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1078,7 +1181,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../lessons/resource_intro_to_dft/" class="md-nav__link">
+      <a href="../resource_intro_to_dft/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1126,27 +1229,63 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#turbomole-section-pages" class="md-nav__link">
+  <a href="#introduction" class="md-nav__link">
     <span class="md-ellipsis">
-      Turbomole Section Pages
+      Introduction
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#turbomole-brief-overview" class="md-nav__link">
+  <a href="#initial-structure" class="md-nav__link">
     <span class="md-ellipsis">
-      Turbomole Brief Overview
+      Initial Structure
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#turbomole-documentation" class="md-nav__link">
+  <a href="#process-flow" class="md-nav__link">
     <span class="md-ellipsis">
-      Turbomole Documentation
+      Process Flow
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#initial-setup-step" class="md-nav__link">
+    <span class="md-ellipsis">
+      Initial Setup Step
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#main-step" class="md-nav__link">
+    <span class="md-ellipsis">
+      Main Step
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-find-energy" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to Find Energy
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-find-the-gradient" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to Find the Gradient
     </span>
   </a>
   
@@ -1170,44 +1309,94 @@
   
 
 
-<p><a href="../"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M575.8 255.5c0 18-15 32.1-32 32.1h-32l.7 160.2c0 2.7-.2 5.4-.5 8.1V472c0 22.1-17.9 40-40 40h-16c-1.1 0-2.2 0-3.3-.1-1.4.1-2.8.1-4.2.1H392c-22.1 0-40-17.9-40-40v-88c0-17.7-14.3-32-32-32h-64c-17.7 0-32 14.3-32 32v88c0 22.1-17.9 40-40 40h-55.9c-1.5 0-3-.1-4.5-.2-1.2.1-2.4.2-3.6.2h-16c-22.1 0-40-17.9-40-40V360c0-.9 0-1.9.1-2.8v-69.6H32c-18 0-32-14-32-32.1 0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7l255.4 224.5c8 7 12 15 11 24z"/></svg></span></a> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span> <strong>Turbomole</strong></p>
-<h1 id="turbomole">Turbomole</h1>
-<p>This is the homepage for containing everything to do with Turbomole. </p>
-<h2 id="turbomole-section-pages">Turbomole Section Pages</h2>
+<p><a href="../../"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M575.8 255.5c0 18-15 32.1-32 32.1h-32l.7 160.2c0 2.7-.2 5.4-.5 8.1V472c0 22.1-17.9 40-40 40h-16c-1.1 0-2.2 0-3.3-.1-1.4.1-2.8.1-4.2.1H392c-22.1 0-40-17.9-40-40v-88c0-17.7-14.3-32-32-32h-64c-17.7 0-32 14.3-32 32v88c0 22.1-17.9 40-40 40h-55.9c-1.5 0-3-.1-4.5-.2-1.2.1-2.4.2-3.6.2h-16c-22.1 0-40-17.9-40-40V360c0-.9 0-1.9.1-2.8v-69.6H32c-18 0-32-14-32-32.1 0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7l255.4 224.5c8 7 12 15 11 24z"/></svg></span></a> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span> <a href="../">Lessons</a> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span> <strong>Lesson 3</strong></p>
+<h1 id="lesson-3-what-is-a-geometry-optimization">Lesson 3 - What is a geometry optimization?</h1>
+<p>Written by Jeremy Schroeder.</p>
+<h2 id="introduction">Introduction</h2>
+<p>Geometry Optimizations are the backbone of DFT calculations. It is the first calculation you initiate with a new system or with new initial conditions. Below will describe in short detail how a geometry optimization happens using a force field method, AMBER94. This is a simplification of how DFT programs actually optimize structures but I believe it is a good start to understanding how DFT actually works. The below information is found in the github repository <a href="https://github.com/tmpchem/computational_chemistry">tmpchem/computational_chemistry</a>.</p>
+<h2 id="initial-structure">Initial Structure</h2>
+<p>For this demonstration lets look at a water molecule. We know from basic chemistry that the bond lengths between the O and H molecules are around 0.95 Å and that the bond angle is 104.45°. The picture below is from this <a href="https://www.google.com/imgres?q=water%20molecule&amp;imgurl=https%3A%2F%2Fstudy.com%2Fcimages%2Fmultimages%2F16%2Fmolecular_models6546256760602134520.png&amp;imgrefurl=https%3A%2F%2Fstudy.com%2Facademy%2Flesson%2Fproperties-of-water.html&amp;docid=uPML3hPJ3E59qM&amp;tbnid=cprXvIR7q0aLGM&amp;vet=12ahUKEwiY9Kvc8KSIAxU68MkDHT7GGwkQM3oECGgQAA..i&amp;w=450&amp;h=432&amp;hcb=2&amp;ved=2ahUKEwiY9Kvc8KSIAxU68MkDHT7GGwkQM3oECGgQAA">source</a>.</p>
+<p><a class="glightbox" href="../../images/lessons/lesson_3/water_molecule_distances.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Water Molecule Picture" src="../../images/lessons/lesson_3/water_molecule_distances.png" /></a></p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M575.8 255.5c0 18-15 32.1-32 32.1h-32l.7 160.2c0 2.7-.2 5.4-.5 8.1V472c0 22.1-17.9 40-40 40h-16c-1.1 0-2.2 0-3.3-.1-1.4.1-2.8.1-4.2.1H392c-22.1 0-40-17.9-40-40v-88c0-17.7-14.3-32-32-32h-64c-17.7 0-32 14.3-32 32v88c0 22.1-17.9 40-40 40h-55.9c-1.5 0-3-.1-4.5-.2-1.2.1-2.4.2-3.6.2h-16c-22.1 0-40-17.9-40-40V360c0-.9 0-1.9.1-2.8v-69.6H32c-18 0-32-14-32-32.1 0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7l255.4 224.5c8 7 12 15 11 24z"/></svg></span></label><label for="__tabbed_1_2">.xyz file</label><label for="__tabbed_1_3">Initial Picture</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Lets create an initial structure that is a guess of what a water molecule looks like.</p>
+<p>I'm going to stack H-O-H on top of eachother with a distance of 1.5 Å between them.</p>
+</div>
+<div class="tabbed-block">
+<p>Below is the xyz file created for our example.</p>
+<div class="language-text highlight"><span class="filename">h2o_initial.xyz</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>3
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>h2o initial
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>O 0 0 1.5
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>H 0 0 3
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>H 0 0 0
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<p>Below is the picture of the initial structure.</p>
+<p><a class="glightbox" href="../../images/lessons/lesson_3/initi_water.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Initial Water Picture" src="../../images/lessons/lesson_3/initi_water.png" /></a></p>
+</div>
+</div>
+</div>
+<h2 id="process-flow">Process Flow</h2>
+<pre class="mermaid"><code>flowchart TD
+A[Initial Setup Step] ---&gt; B[Main Step]
+B ---&gt; C[Check for Convergence]
+C -- If Convergence \nCriteria is met --&gt; D[Finish Calculation]
+C -- If Convergence \nCriteria is not met --&gt; B
+</code></pre>
+<h2 id="initial-setup-step">Initial Setup Step</h2>
+<ol>
+<li>Finds Energy</li>
+<li>Finds Gradient</li>
+<li>Makes Initial Trajectory</li>
+<li>Sets initial convergence criteria values</li>
+</ol>
+<h2 id="main-step">Main Step</h2>
+<ol>
+<li>Choses Step Direction</li>
+<li>Line Search (Moves Atoms) (two methods, conjugate gradient and steepest direction)</li>
+<li>Finds New Energy</li>
+<li>Finds New Gradient</li>
+<li>Edits Trajectory</li>
+<li>Updates convergence criteria values</li>
+</ol>
+<h2 id="how-to-find-energy">How to Find Energy</h2>
 <ul>
-<li><a href="guide_ppt/">Turbomole Guide</a> - Powerpoint containing basic description of Turbomole and DFT geometry optimization instructions.</li>
-<li><a href="define/">define</a> - Instructions for DFT geometry optimization.</li>
-<li><a href="cosmoprep/">cosmoprep</a> - Instructions for DFT solvent calculations.</li>
-<li><a href="cosmo_docx/">cosmoprep Guide</a> - Word Document containing instructions for DFT solvent calculations.</li>
-<li><a href="frequency/">aoforce/NumForce</a> - Instructions for DFT vibrational frequency calculations.</li>
-<li><a href="collect_results/">Collect Results</a> - Instructions on how to retrieve Turbomole calculation results.</li>
-<li><a href="frequency_docx/">freeh</a> - Word document containing instructions on how to retrieve Turbomole frequency calculation results.</li>
-</ul>
-<h2 id="turbomole-brief-overview">Turbomole Brief Overview</h2>
-<p>The description below was written by Tristan Fisher.</p>
-<p>There are three main types of calculations we will perform in this process. Each of these are part of the overall Turbomole program: </p>
-<ul>
-<li>Geometry Optimization: This allows us to find an approximated ground-state energy for a given molecular structure in gaseous form.  <ul>
-<li>Program Name: <a href="define/">define</a> </li>
-<li>Input: Coordinates, Charge, DFT-functional, &amp; Basis-Set </li>
-<li>Output: Energy </li>
+<li>Different Kinds of Energy To find:<ul>
+<li>Bond Energy</li>
+<li>Angle Energy</li>
+<li>Torsion Energy</li>
+<li>Out of Plane Energy</li>
+<li>Non Bonded Energy</li>
+<li>Bound Energy</li>
+<li>Kinetic Energy</li>
 </ul>
 </li>
-<li>Solvent Calculation: This is done in parallel to the optimization process and allows us to emulate the ground-state in a solution (water in our case). <ul>
-<li>Program Name: <a href="cosmoprep/">cosmoprep</a> </li>
-<li>Input: Dielectric-constant of solution (Permittivity of solution)  </li>
-<li>Output: Energy </li>
+<li>Bonded Energy Consists of:<ul>
+<li>Bond Energy <a href="https://github.com/tmpchem/computational_chemistry/blob/master/scripts/molecular_mechanics/mmlib/energy.py#L15">Source</a></li>
+<li>Angle Energy <a href="https://github.com/tmpchem/computational_chemistry/blob/master/scripts/molecular_mechanics/mmlib/energy.py#L29">Source</a></li>
+<li>Torsion Energy <a href="https://github.com/tmpchem/computational_chemistry/blob/master/scripts/molecular_mechanics/mmlib/energy.py#L43">Source</a></li>
+<li>Out of Plane Energy <a href="https://github.com/tmpchem/computational_chemistry/blob/master/scripts/molecular_mechanics/mmlib/energy.py#L59">Source</a></li>
 </ul>
 </li>
-<li>Frequency Analysis: This computation finds the normal vibrational modes for each atom in a molecule which is used to compute various thermodynamic properties of a reaction (Gibbs-free energy &amp; enthalpy). The vibrational spectra produced by this calculation can also be used to identify whether a model is presenting a transition-state or a true ground-state.  <ul>
-<li>Program Name: <a href="frequency/">freeh</a> </li>
-<li>Input: Temperature, Pressure, &amp; Vibrational-spectrum from numerical calculation </li>
-<li>Output: Energy, Enthalpy, Gibbs-Free Energy, Entropy, &amp; specific-heat </li>
+<li>Non Bonded Energy Consists of:<ul>
+<li>Van der Waals Energy <a href="https://github.com/tmpchem/computational_chemistry/blob/master/scripts/molecular_mechanics/mmlib/energy.py#L72">Source</a></li>
+<li>Electrostatic Energy <a href="https://github.com/tmpchem/computational_chemistry/blob/master/scripts/molecular_mechanics/mmlib/energy.py#L87">Source</a></li>
+</ul>
+</li>
+<li>Potential Energy consists of:<ul>
+<li>Bonded Energy</li>
+<li>Non Bonded Energy</li>
+<li>Bound Energy <a href="https://github.com/tmpchem/computational_chemistry/blob/master/scripts/molecular_mechanics/mmlib/energy.py#L102">Source</a></li>
+</ul>
+</li>
+<li>Total Energy consists of:<ul>
+<li>Potential &amp; Kinetic Energy <a href="https://github.com/tmpchem/computational_chemistry/blob/master/scripts/molecular_mechanics/mmlib/energy.py#L277">Source</a></li>
 </ul>
 </li>
 </ul>
-<h2 id="turbomole-documentation">Turbomole Documentation</h2>
-<p>If you are interested in the Official Turbomole Documentation click <a href="https://www.turbomole.org/turbomole/turbomole-documentation/">Here</a></p>
+<h2 id="how-to-find-the-gradient">How to Find the Gradient</h2>
 
 
 
@@ -1300,14 +1489,14 @@
       <div class="md-progress" data-md-component="progress" role="progressbar"></div>
     
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.instant.progress", "navigation.tabs", "navigation.indexes", "navigation.top", "content.code.copy"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.instant.progress", "navigation.tabs", "navigation.indexes", "navigation.top", "content.code.copy"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.bd41221c.min.js"></script>
+      <script src="../../assets/javascripts/bundle.bd41221c.min.js"></script>
       
-        <script src="../javascripts/shortcuts.js"></script>
+        <script src="../../javascripts/shortcuts.js"></script>
       
-        <script src="../javascripts/mathjax.js"></script>
+        <script src="../../javascripts/mathjax.js"></script>
       
         <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
       
