@@ -2,127 +2,132 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://jerschro.github.io/how_to_dft/</loc>
-         <lastmod>2024-08-26</lastmod>
+         <lastmod>2024-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jerschro.github.io/how_to_dft/hpcc/</loc>
-         <lastmod>2024-08-26</lastmod>
+         <lastmod>2024-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jerschro.github.io/how_to_dft/hpcc/bashrc_file/</loc>
-         <lastmod>2024-08-26</lastmod>
+         <lastmod>2024-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jerschro.github.io/how_to_dft/hpcc/connect_to_vpn/</loc>
-         <lastmod>2024-08-26</lastmod>
+         <lastmod>2024-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jerschro.github.io/how_to_dft/hpcc/create_account/</loc>
-         <lastmod>2024-08-26</lastmod>
+         <lastmod>2024-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jerschro.github.io/how_to_dft/hpcc/install_conda/</loc>
-         <lastmod>2024-08-26</lastmod>
+         <lastmod>2024-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jerschro.github.io/how_to_dft/hpcc/intro_to_terminal/</loc>
-         <lastmod>2024-08-26</lastmod>
+         <lastmod>2024-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jerschro.github.io/how_to_dft/hpcc/log_on_linux/</loc>
-         <lastmod>2024-08-26</lastmod>
+         <lastmod>2024-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jerschro.github.io/how_to_dft/hpcc/log_on_mac/</loc>
-         <lastmod>2024-08-26</lastmod>
+         <lastmod>2024-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jerschro.github.io/how_to_dft/hpcc/log_on_windows/</loc>
-         <lastmod>2024-08-26</lastmod>
+         <lastmod>2024-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jerschro.github.io/how_to_dft/lessons/</loc>
-         <lastmod>2024-08-26</lastmod>
+         <lastmod>2024-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jerschro.github.io/how_to_dft/lessons/assignment_1/</loc>
-         <lastmod>2024-08-26</lastmod>
+         <lastmod>2024-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jerschro.github.io/how_to_dft/lessons/lesson_1/</loc>
-         <lastmod>2024-08-26</lastmod>
+         <lastmod>2024-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jerschro.github.io/how_to_dft/lessons/lesson_2/</loc>
-         <lastmod>2024-08-26</lastmod>
+         <lastmod>2024-09-03</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://jerschro.github.io/how_to_dft/lessons/lesson_3/</loc>
+         <lastmod>2024-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jerschro.github.io/how_to_dft/lessons/resource_intro_to_dft/</loc>
-         <lastmod>2024-08-26</lastmod>
+         <lastmod>2024-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jerschro.github.io/how_to_dft/orca/</loc>
-         <lastmod>2024-08-26</lastmod>
+         <lastmod>2024-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jerschro.github.io/how_to_dft/syllabus/fall24syllabus/</loc>
-         <lastmod>2024-08-26</lastmod>
+         <lastmod>2024-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jerschro.github.io/how_to_dft/turbomole/</loc>
-         <lastmod>2024-08-26</lastmod>
+         <lastmod>2024-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jerschro.github.io/how_to_dft/turbomole/collect_results/</loc>
-         <lastmod>2024-08-26</lastmod>
+         <lastmod>2024-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jerschro.github.io/how_to_dft/turbomole/cosmo_docx/</loc>
-         <lastmod>2024-08-26</lastmod>
+         <lastmod>2024-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jerschro.github.io/how_to_dft/turbomole/cosmoprep/</loc>
-         <lastmod>2024-08-26</lastmod>
+         <lastmod>2024-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jerschro.github.io/how_to_dft/turbomole/define/</loc>
-         <lastmod>2024-08-26</lastmod>
+         <lastmod>2024-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jerschro.github.io/how_to_dft/turbomole/frequency/</loc>
-         <lastmod>2024-08-26</lastmod>
+         <lastmod>2024-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jerschro.github.io/how_to_dft/turbomole/frequency_docx/</loc>
-         <lastmod>2024-08-26</lastmod>
+         <lastmod>2024-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jerschro.github.io/how_to_dft/turbomole/guide_ppt/</loc>
-         <lastmod>2024-08-26</lastmod>
+         <lastmod>2024-09-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>

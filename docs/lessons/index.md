@@ -5,7 +5,7 @@
 
 * [Lesson 1](lesson_1.md) - Intro to Computational Chemistry
 * [Lesson 2](lesson_2.md) - Molecular Structure Representation and Common File Formats
-* [Lesson 3](lesson_3.md) - What is a geometry optimization?
+* [Lesson 6](lesson_6.md) - Academic Writing Reminders
 
 ## Assignments
 
@@ -17,10 +17,11 @@
 
 ## Planned Lessons
 
+* Lesson 3 - What is a geometry optimization?
 
 * Lesson 4 - What is a solvent calculation?
 * Lesson 5 - What is a frequency calculation?
-* Lesson 6 - Academic Writing Reminders
+
 * Lesson 7 - What is an adsorption reaction?
 * Lesson 8 - Interpreting Calculation Results
 
@@ -31,4 +32,4 @@
 * Extra Lesson - What is MD?
 * Extra Lesson - What is AIMD?
 * Extra Lesson - What is MC?
-
+* Extra Lesson - [Lesson 3 Old Version](old_lesson_3.md)
