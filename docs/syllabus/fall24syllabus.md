@@ -43,7 +43,7 @@ Please schedule an appointment to meet with the instructors.
 Final Grade Distribution:
 
 * 60% of final grade is for reports.
-* 40% of final grade is a sum of the each weekly grade received.
+* 40% of final grade is an average of each weekly grade received.
 
 For every week, you will be expected to
 
@@ -66,8 +66,8 @@ The weekly grade will be on a scale of 0-100. For every meeting not attended wit
 |  1  | 8/22 - 8/23 | Intro to HPCC | [Create an HPCC account](../hpcc/create_account.md). | Show me the email confirmation of the HPCC account. |
 |  2 | 8/26 - 8/30 | Intro to Terminal & DFT | Get familiar with the [terminal](../hpcc/intro_to_terminal.md) & [Lesson 1](../lessons/lesson_1.md). | Show me [Assignment 1](../lessons/assignment_1.md). |
 |  3  | 9/2 - 9/6 | Intro to DFT (cont.) & Turbomole Optimization | [Lesson 2](../lessons/lesson_2.md) & [Lesson 3](../lessons/lesson_3.md) | Get the 4 DNA molecules on the HPCC and use molden/other visualization program to look at them. Optimize the 4 DNA molecules. Show me your results. |
-|  4 :fontawesome-regular-star:| 9/9 - 9/13 | Solvent & Frequency Calculations | [Lesson 4](../lessons/lesson_4.md) & [Lesson 5](../lessons/lesson_5.md) | Do solvent & frequency calculations for the 4 DNA molecules. Show me your results. |
-|  5 | 9/16 - 9/20 | Academic Writing | [Lesson 6](../lessons/lesson_6.md) | Show me your report draft. |
+|  4 | 9/9 - 9/13 | Solvent & Frequency Calculations | [Lesson 4](../lessons/lesson_4.md) & [Lesson 5](../lessons/lesson_5.md) | Do solvent & frequency calculations for the 4 DNA molecules. Show me your results. |
+|  5 :fontawesome-regular-star:| 9/16 - 9/20 | Academic Writing | [Lesson 6](../lessons/lesson_6.md) | Show me your report draft. |
 |  6 | 9/23 - 9/27 | Adsorption Reactions | [Lesson 7](../lessons/lesson_7.md) | Show me your assigned complex and optimize it. |
 |  7 | 9/30 - 10/4 | Interpreting Results | [Lesson 8](../lessons/lesson_8.md) | Show me your reactant and products optimization calculation. Show proof you submitted your rough draft on time to Dr. Aquino. |
 |  7 | 10/3 | Semester Report Draft Due | [Send to Dr. Aquino](mailto:adeliaaquino@ttu.edu) | DO NOT TURN IT IN LATE! IT IS DUE BY 10:30 PM. LATE WORK IS NOT ACCEPTED. |
