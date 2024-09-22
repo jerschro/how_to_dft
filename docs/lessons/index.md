@@ -6,6 +6,7 @@
 * [Lesson 1](lesson_1.md) - Intro to Computational Chemistry
 * [Lesson 2](lesson_2.md) - Molecular Structure Representation and Common File Formats
 * [Lesson 6](lesson_6.md) - Academic Writing Reminders
+* [Lesson 7](lesson_7.md) - What is an adsorption reaction?
 
 ## Assignments
 
@@ -18,11 +19,8 @@
 ## Planned Lessons
 
 * Lesson 3 - What is a geometry optimization?
-
 * Lesson 4 - What is a solvent calculation?
 * Lesson 5 - What is a frequency calculation?
-
-* Lesson 7 - What is an adsorption reaction?
 * Lesson 8 - Interpreting Calculation Results
 
 * Extra Lesson - What is a transition state/reaction pathway?
