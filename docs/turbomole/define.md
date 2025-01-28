@@ -52,7 +52,7 @@
      * Ensure the basis set for each species is set which is listed under "$atoms"
      * Ensure "$scfiterlimit 300" is correct
      * Ensure under '$dft", the functional listed is correct
-     * Ensure "$rij", "$marij" and "$dsp3" are in the control file. (Located near the bottom)
+     * Ensure "$rij" , "$marij" and "$dsp3" are in the control file. (Located near the bottom)
      * Exit nano by pressing "Ctrl-x", "y" and enter.
 28. Open the SLURM file (run_turbomole.sh): Use vi or nano.
      * Change the job-name to something unique so you can remember it.

@@ -7,7 +7,7 @@ repo_url: https://github.com/jerschro/how_to_dft
 
 nav:
   - Home : index.md
-  - Syllabus: syllabus/fall24syllabus.md
+  - Syllabus: syllabus/spring25syllabus.md
   - HPCC : 
     - HPCC: hpcc/index.md
     - Create an HPCC Account : hpcc/create_account.md
