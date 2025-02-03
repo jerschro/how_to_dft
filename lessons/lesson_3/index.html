@@ -12,21 +12,25 @@
         <meta name="author" content="Jeremy Schroeder">
       
       
-        <link rel="canonical" href="https://jerschro.github.io/how_to_dft/lessons/old_lesson_3/">
+        <link rel="canonical" href="https://jerschro.github.io/how_to_dft/lessons/lesson_3/">
       
       
+        <link rel="prev" href="../lesson_2/">
+      
+      
+        <link rel="next" href="../lesson_4/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.14">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.17">
     
     
       
-        <title>Old lesson 3 - How To DFT</title>
+        <title>Lesson 3 - How To DFT</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.10ba22f1.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.bcfcd587.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
@@ -83,7 +87,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#lesson-3-what-is-a-geometry-optimization" class="md-skip">
+        <a href="#lesson-3-using-molecular-mechanics-mm-to-learn-about-geometry-optimization" class="md-skip">
           Skip to content
         </a>
       
@@ -117,7 +121,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Old lesson 3
+              Lesson 3
             
           </span>
         </div>
@@ -324,9 +328,28 @@
   
   
   
+    <li class="md-tabs__item">
+      <a href="../../gaussian/" class="md-tabs__link">
+        
+  
+    
+  
+  Gaussian
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+  
     
     
-      <li class="md-tabs__item">
+      <li class="md-tabs__item md-tabs__item--active">
         <a href="../" class="md-tabs__link">
           
   
@@ -918,6 +941,28 @@
   
   
   
+    <li class="md-nav__item">
+      <a href="../../gaussian/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Gaussian
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
     
     
       
@@ -935,17 +980,30 @@
       
         
       
-    
-    
+        
       
+        
+      
+        
+      
+        
+      
+        
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
         
           
           
@@ -961,14 +1019,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_7" id="__nav_7_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_6">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_7">
             <span class="md-nav__icon md-icon"></span>
             Lessons
           </label>
@@ -1022,14 +1080,204 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../lesson_3.md" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Lesson 3
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
     Lesson 3
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introduction
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#optimization-process-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Optimization Process Flow
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-find-energy" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to Find Energy
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-find-the-gradient-and-convergence" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to Find the Gradient and Convergence
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recap" class="md-nav__link">
+    <span class="md-ellipsis">
+      Recap
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lesson_4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lesson 4
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lesson_5/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lesson 5
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lesson_6/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lesson 6
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lesson_7/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lesson 7
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lesson_8/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lesson 8
   </span>
   
 
@@ -1124,36 +1372,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#initial-structure" class="md-nav__link">
+  <a href="#optimization-process-flow" class="md-nav__link">
     <span class="md-ellipsis">
-      Initial Structure
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#process-flow" class="md-nav__link">
-    <span class="md-ellipsis">
-      Process Flow
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#initial-setup-step" class="md-nav__link">
-    <span class="md-ellipsis">
-      Initial Setup Step
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#main-step" class="md-nav__link">
-    <span class="md-ellipsis">
-      Main Step
+      Optimization Process Flow
     </span>
   </a>
   
@@ -1169,9 +1390,18 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#how-to-find-the-gradient" class="md-nav__link">
+  <a href="#how-to-find-the-gradient-and-convergence" class="md-nav__link">
     <span class="md-ellipsis">
-      How to Find the Gradient
+      How to Find the Gradient and Convergence
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recap" class="md-nav__link">
+    <span class="md-ellipsis">
+      Recap
     </span>
   </a>
   
@@ -1196,49 +1426,33 @@
 
 
 <p><a href="../../"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M575.8 255.5c0 18-15 32.1-32 32.1h-32l.7 160.2c0 2.7-.2 5.4-.5 8.1V472c0 22.1-17.9 40-40 40h-16c-1.1 0-2.2 0-3.3-.1-1.4.1-2.8.1-4.2.1H392c-22.1 0-40-17.9-40-40v-88c0-17.7-14.3-32-32-32h-64c-17.7 0-32 14.3-32 32v88c0 22.1-17.9 40-40 40h-55.9c-1.5 0-3-.1-4.5-.2-1.2.1-2.4.2-3.6.2h-16c-22.1 0-40-17.9-40-40V360c0-.9 0-1.9.1-2.8v-69.6H32c-18 0-32-14-32-32.1 0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7l255.4 224.5c8 7 12 15 11 24z"/></svg></span></a> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span> <a href="../">Lessons</a> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span> <strong>Lesson 3</strong></p>
-<h1 id="lesson-3-what-is-a-geometry-optimization">Lesson 3 - What is a geometry optimization?</h1>
+<h1 id="lesson-3-using-molecular-mechanics-mm-to-learn-about-geometry-optimization">Lesson 3 - Using Molecular Mechanics (MM) to learn about Geometry Optimization</h1>
 <p>Written by Jeremy Schroeder.</p>
 <h2 id="introduction">Introduction</h2>
 <p>Geometry Optimizations are the backbone of DFT calculations. It is the first calculation you initiate with a new system or with new initial conditions. Below will describe in short detail how a geometry optimization happens using a force field method, AMBER94. This is a simplification of how DFT programs actually optimize structures but I believe it is a good start to understanding how DFT actually works. The below information is found in the github repository <a href="https://github.com/tmpchem/computational_chemistry">tmpchem/computational_chemistry</a>.</p>
-<h2 id="initial-structure">Initial Structure</h2>
-<p>For this demonstration lets look at a water molecule. We know from basic chemistry that the bond lengths between the O and H molecules are around 0.95 Å and that the bond angle is 104.45°. The picture below is from this <a href="https://www.google.com/imgres?q=water%20molecule&amp;imgurl=https%3A%2F%2Fstudy.com%2Fcimages%2Fmultimages%2F16%2Fmolecular_models6546256760602134520.png&amp;imgrefurl=https%3A%2F%2Fstudy.com%2Facademy%2Flesson%2Fproperties-of-water.html&amp;docid=uPML3hPJ3E59qM&amp;tbnid=cprXvIR7q0aLGM&amp;vet=12ahUKEwiY9Kvc8KSIAxU68MkDHT7GGwkQM3oECGgQAA..i&amp;w=450&amp;h=432&amp;hcb=2&amp;ved=2ahUKEwiY9Kvc8KSIAxU68MkDHT7GGwkQM3oECGgQAA">source</a>.</p>
-<p><a class="glightbox" href="../../images/lessons/lesson_3/water_molecule_distances.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Water Molecule Picture" src="../../images/lessons/lesson_3/water_molecule_distances.png" /></a></p>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M575.8 255.5c0 18-15 32.1-32 32.1h-32l.7 160.2c0 2.7-.2 5.4-.5 8.1V472c0 22.1-17.9 40-40 40h-16c-1.1 0-2.2 0-3.3-.1-1.4.1-2.8.1-4.2.1H392c-22.1 0-40-17.9-40-40v-88c0-17.7-14.3-32-32-32h-64c-17.7 0-32 14.3-32 32v88c0 22.1-17.9 40-40 40h-55.9c-1.5 0-3-.1-4.5-.2-1.2.1-2.4.2-3.6.2h-16c-22.1 0-40-17.9-40-40V360c0-.9 0-1.9.1-2.8v-69.6H32c-18 0-32-14-32-32.1 0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7l255.4 224.5c8 7 12 15 11 24z"/></svg></span></label><label for="__tabbed_1_2">.xyz file</label><label for="__tabbed_1_3">Initial Picture</label></div>
+<h2 id="optimization-process-flow">Optimization Process Flow</h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:4"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><input id="__tabbed_1_4" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M575.8 255.5c0 18-15 32.1-32 32.1h-32l.7 160.2c0 2.7-.2 5.4-.5 8.1V472c0 22.1-17.9 40-40 40h-16c-1.1 0-2.2 0-3.3-.1-1.4.1-2.8.1-4.2.1H392c-22.1 0-40-17.9-40-40v-88c0-17.7-14.3-32-32-32h-64c-17.7 0-32 14.3-32 32v88c0 22.1-17.9 40-40 40h-55.9c-1.5 0-3-.1-4.5-.2-1.2.1-2.4.2-3.6.2h-16c-22.1 0-40-17.9-40-40V360c0-.9 0-1.9.1-2.8v-69.6H32c-18 0-32-14-32-32.1 0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7l255.4 224.5c8 7 12 15 11 24z"/></svg></span></label><label for="__tabbed_1_2">Main Flow</label><label for="__tabbed_1_3">Initial Setup Step</label><label for="__tabbed_1_4">Main Step</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p>Lets create an initial structure that is a guess of what a water molecule looks like.</p>
-<p>I'm going to stack H-O-H on top of eachother with a distance of 1.5 Å between them.</p>
+<p>Click through to look at the broad overview for how a molecular mechanics geometry opitimization works.</p>
 </div>
 <div class="tabbed-block">
-<p>Below is the xyz file created for our example.</p>
-<div class="language-text highlight"><span class="filename">h2o_initial.xyz</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>3
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>h2o initial
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>O 0 0 1.5
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>H 0 0 3
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>H 0 0 0
-</span></code></pre></div>
-</div>
-<div class="tabbed-block">
-<p>Below is the picture of the initial structure.</p>
-<p><a class="glightbox" href="../../images/lessons/lesson_3/initi_water.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Initial Water Picture" src="../../images/lessons/lesson_3/initi_water.png" /></a></p>
-</div>
-</div>
-</div>
-<h2 id="process-flow">Process Flow</h2>
 <pre class="mermaid"><code>flowchart TD
 A[Initial Setup Step] ---&gt; B[Main Step]
 B ---&gt; C[Check for Convergence]
 C -- If Convergence \nCriteria is met --&gt; D[Finish Calculation]
 C -- If Convergence \nCriteria is not met --&gt; B
 </code></pre>
-<h2 id="initial-setup-step">Initial Setup Step</h2>
+</div>
+<div class="tabbed-block">
 <ol>
 <li>Finds Energy</li>
 <li>Finds Gradient</li>
 <li>Makes Initial Trajectory</li>
 <li>Sets initial convergence criteria values</li>
 </ol>
-<h2 id="main-step">Main Step</h2>
+</div>
+<div class="tabbed-block">
 <ol>
 <li>Choses Step Direction</li>
 <li>Line Search (Moves Atoms) (two methods, conjugate gradient and steepest direction)</li>
@@ -1247,18 +1461,113 @@ C -- If Convergence \nCriteria is not met --&gt; B
 <li>Edits Trajectory</li>
 <li>Updates convergence criteria values</li>
 </ol>
+</div>
+</div>
+</div>
 <h2 id="how-to-find-energy">How to Find Energy</h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:8"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><input id="__tabbed_2_3" name="__tabbed_2" type="radio" /><input id="__tabbed_2_4" name="__tabbed_2" type="radio" /><input id="__tabbed_2_5" name="__tabbed_2" type="radio" /><input id="__tabbed_2_6" name="__tabbed_2" type="radio" /><input id="__tabbed_2_7" name="__tabbed_2" type="radio" /><input id="__tabbed_2_8" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M575.8 255.5c0 18-15 32.1-32 32.1h-32l.7 160.2c0 2.7-.2 5.4-.5 8.1V472c0 22.1-17.9 40-40 40h-16c-1.1 0-2.2 0-3.3-.1-1.4.1-2.8.1-4.2.1H392c-22.1 0-40-17.9-40-40v-88c0-17.7-14.3-32-32-32h-64c-17.7 0-32 14.3-32 32v88c0 22.1-17.9 40-40 40h-55.9c-1.5 0-3-.1-4.5-.2-1.2.1-2.4.2-3.6.2h-16c-22.1 0-40-17.9-40-40V360c0-.9 0-1.9.1-2.8v-69.6H32c-18 0-32-14-32-32.1 0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7l255.4 224.5c8 7 12 15 11 24z"/></svg></span></label><label for="__tabbed_2_2">Total Energy</label><label for="__tabbed_2_3">Potential Energy</label><label for="__tabbed_2_4">Bonded Energy</label><label for="__tabbed_2_5">Non Bonded Energy</label><label for="__tabbed_2_6">Boundary energy</label><label for="__tabbed_2_7">Kinetic Energy</label><label for="__tabbed_2_8">Equations in python code</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Click through to look at the equations to find the total energy of the system that is used every iteration step.</p>
+</div>
+<div class="tabbed-block">
+<p><span class="arithmatex">\(E_{total} = E_{potential} + E_{kinetic}\)</span></p>
+<p><span class="arithmatex">\(E_{total} = (E_{bonded} + {E_{non\:bonded}} + E_{boundary}) + E_{kinetic}\)</span></p>
+<p><span class="arithmatex">\(E_{total} = ((E_{bond} + E_{angle} + E_{torsion} + E_{out\:of\:plane}) + (E_{van\:der\:waals} + {E_{electrostatic}}) + E_{boundary}) + E_{kinetic}\)</span></p>
+</div>
+<div class="tabbed-block">
+<p><h3><span class="arithmatex">\(E_{potential} = E_{bonded} + {E_{non\:bonded}} + E_{boundary}\)</span></h3></p>
+</div>
+<div class="tabbed-block">
+<p>For each bond, the energies below are calculated:</p>
 <ul>
-<li>Different Kinds of Energy To find:<ul>
-<li>Bond Energy</li>
-<li>Angle Energy</li>
-<li>Torsion Energy</li>
-<li>Out of Plane Energy</li>
-<li>Non Bonded Energy</li>
-<li>Bound Energy</li>
-<li>Kinetic Energy</li>
+<li>If not noted, the argument is a float value.</li>
+</ul>
+<p><h3><span class="arithmatex">\(E_{bond} = k_b * (r_{ij} - r_{eq})^2\)</span></h3></p>
+<p>Energy [kcal/mol] of bond ij.</p>
+<ul>
+<li><span class="arithmatex">\(r_{ij}\)</span> - Distance [Angstrom] between atoms i and j.</li>
+<li><span class="arithmatex">\(r_{eq}\)</span> - Equilibrium bond length [Angstrom] of bond ij.</li>
+<li><span class="arithmatex">\(k_b\)</span> - Spring constant [kcal/(mol*A^2)] of bond ij.</li>
+</ul>
+<p><h3><span class="arithmatex">\(E_{angle} = k_a * ( \frac{\pi}{180} * (a_{ijk} - a_{eq}) )^2\)</span></h3></p>
+<p>Energy [kcal/mol] of angle ijk.</p>
+<ul>
+<li><span class="arithmatex">\(a_{ijk}\)</span> - Angle [degrees] between atoms i, j, and k.</li>
+<li><span class="arithmatex">\(a_{eq}\)</span> - Equilibrium bond angle [degrees] of angle ijk.</li>
+<li><span class="arithmatex">\(k_a\)</span> - Spring constant [kcal/(mol*rad^2)] of angle ijk.</li>
+</ul>
+<p><h3><span class="arithmatex">\(E_{torsion} = v_n * \frac{1.0 + cos(\frac{\pi}{180} * (nfold*t_{ijkl} - \gamma))}{paths}\)</span></h3></p>
+<p>Energy [kcal/mol] of torsion ijkl.</p>
+<ul>
+<li><span class="arithmatex">\(t_{ijkl}\)</span> - Torsion [degrees] between atoms i, j, k, and l.</li>
+<li><span class="arithmatex">\(v_n\)</span> - Half-barrier height [kcal/mol] of torsion ijkl.</li>
+<li><span class="arithmatex">\(\gamma\)</span> - Barrier offset [degrees] of torsion ijkl.</li>
+<li><span class="arithmatex">\(nfold\)</span> - (int) Barrier frequency of torsion ijkl.</li>
+<li><span class="arithmatex">\(paths\)</span> - (int) Number of distinct paths in torsion ijkl.</li>
+</ul>
+<p><h3><span class="arithmatex">\(E_{out\:of\:plane} = v_n * (1.0 + cos(\frac{\pi}{180} * (2.0 * o_{ijkl} - 180)))\)</span></h3></p>
+<p>Energy [kcal/mol] of outofplane ijkl.</p>
+<ul>
+<li><span class="arithmatex">\(o_{ijkl}\)</span> - Outofplane angle [degrees] between atoms i, j, k, and l.</li>
+<li><span class="arithmatex">\(v_n\)</span> - Half-barrier height [kcal/mol] of torsion ijkl.    </li>
+</ul>
+</div>
+<div class="tabbed-block">
+<p>For every atom pair, the energies below are calculated</p>
+<p><h3><span class="arithmatex">\(E_{van\:der\:waals} = \epsilon_{ij} * ( r_{6ij}^2 - 2.0 * r_{6ij} )\)</span></h3></p>
+<p>Where <span class="arithmatex">\(r_{6ij} = (r_{oij} / r_{ij})^6\)</span></p>
+<p>Van der waals energy [kcal/mol] between pair ij.</p>
+<ul>
+<li><span class="arithmatex">\(r_{ij}\)</span> - Distance [Angstrom] between atoms i and j.</li>
+<li><span class="arithmatex">\(\epsilon_{ij}\)</span> - Van der Waals epsilon [kcal/mol] between pair ij.</li>
+<li><span class="arithmatex">\(r_{oij}\)</span> - Van der Waals radius [Angstrom] between pair ij.</li>
+</ul>
+<p><h3><span class="arithmatex">\(E_{electrostatic} = \frac{332.06375 * q_i * q_j } {\epsilon * r_{ij}}\)</span></h3></p>
+<p>Electrostatic energy [kcal/mol] between pair ij.</p>
+<ul>
+<li><span class="arithmatex">\(r_{ij}\)</span> - Distance [Angstrom] between atoms i and j.</li>
+<li><span class="arithmatex">\(q_i\)</span> - Partial charge [e] of atom i.</li>
+<li><span class="arithmatex">\(q_j\)</span> - Partial charge [e] of atom j.</li>
+<li><span class="arithmatex">\(\epsilon\)</span> - Dielectric constant of space (&gt;= 1.0).</li>
+<li>332.06375 is the conversion of electrostatic energy from [ceu] to [kcal/mol]. </li>
+</ul>
+</div>
+<div class="tabbed-block">
+<p>Calculate simulation boundary energy of an atom.</p>
+<p><h3><span class="arithmatex">\(E_{boundary\:cubic} = k_{box} * (|n_{atom} - n_{origin}| - bound)^2\)</span> where <span class="arithmatex">\(n = x,y,z\)</span></h3></p>
+<p>For all atoms outside the boundary box,</p>
+<ul>
+<li><span class="arithmatex">\(k_{box}\)</span> - Spring constant [kcal/(mol*A^2)] of boundary.</li>
+<li><span class="arithmatex">\(bound\)</span> - Distance from origin [Angstrom] of boundary. Aka how large the boundary is.</li>
+<li><span class="arithmatex">\(atom\:coords\)</span> - Array of cartesian coordinates [Angstrom] of atom.</li>
+<li><span class="arithmatex">\(origin\:coords\)</span> - Array of cartesian coordiantes [Angstrom] of origin of simulation.</li>
+</ul>
+<p><h3><span class="arithmatex">\(E_{boundary\:spherical} = k_{box} * (r_{io} - bound)**2\)</span></h3></p>
+<p>For all atoms outside the boudary sphere,</p>
+<ul>
+<li><span class="arithmatex">\(r_{io}\)</span> - 3d distance between origin and atom.<ul>
+<li><span class="arithmatex">\(r_{io} = \sqrt{(x_{atom} - x_{origin})^2 + (y_{atom} - y_{origin})^2 + (z_{atom} - z_{origin})^2}\)</span></li>
 </ul>
 </li>
+<li><span class="arithmatex">\(k_{box}\)</span> - Spring constant [kcal/(mol*A^2)] of boundary.</li>
+<li><span class="arithmatex">\(bound\)</span> - Distance from origin [Angstrom] of boundary. Aka how large the boundary is.</li>
+</ul>
+</div>
+<div class="tabbed-block">
+<p>For every atom,</p>
+<p><h3><span class="arithmatex">\(E_{kinetic} = mass_{atom} * n_{velocity}^2\)</span> where <span class="arithmatex">\(n = x,y,z\)</span></h3></p>
+<ul>
+<li><span class="arithmatex">\(mass_{atom}\)</span> - Mass [g/mol] of atom.</li>
+<li>velocity - Array of velocities [Angstrom/ps] of atom.<ul>
+<li>Either you use the velocities of step n (default method) or an average of step n and step n-1 (leapfrog method).</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="tabbed-block">
+<p>Below are links to each equation in a python codebase.</p>
+<ul>
 <li>Bonded Energy Consists of:<ul>
 <li>Bond Energy <a href="https://github.com/tmpchem/computational_chemistry/blob/master/scripts/molecular_mechanics/mmlib/energy.py#L15">Source</a></li>
 <li>Angle Energy <a href="https://github.com/tmpchem/computational_chemistry/blob/master/scripts/molecular_mechanics/mmlib/energy.py#L29">Source</a></li>
@@ -1282,7 +1591,34 @@ C -- If Convergence \nCriteria is not met --&gt; B
 </ul>
 </li>
 </ul>
-<h2 id="how-to-find-the-gradient">How to Find the Gradient</h2>
+</div>
+</div>
+</div>
+<h2 id="how-to-find-the-gradient-and-convergence">How to Find the Gradient and Convergence</h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:4"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><input id="__tabbed_3_3" name="__tabbed_3" type="radio" /><input id="__tabbed_3_4" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M575.8 255.5c0 18-15 32.1-32 32.1h-32l.7 160.2c0 2.7-.2 5.4-.5 8.1V472c0 22.1-17.9 40-40 40h-16c-1.1 0-2.2 0-3.3-.1-1.4.1-2.8.1-4.2.1H392c-22.1 0-40-17.9-40-40v-88c0-17.7-14.3-32-32-32h-64c-17.7 0-32 14.3-32 32v88c0 22.1-17.9 40-40 40h-55.9c-1.5 0-3-.1-4.5-.2-1.2.1-2.4.2-3.6.2h-16c-22.1 0-40-17.9-40-40V360c0-.9 0-1.9.1-2.8v-69.6H32c-18 0-32-14-32-32.1 0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7l255.4 224.5c8 7 12 15 11 24z"/></svg></span></label><label for="__tabbed_3_2">Perturbation</label><label for="__tabbed_3_3">Finding the lowest energy</label><label for="__tabbed_3_4">Convergence</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Click through to look at the details of how the gradient is created and how a calculation finishes by convergence.</p>
+</div>
+<div class="tabbed-block">
+<p>Each atom is perturbed and moved in each axis direction (6 times) and the energy of the system is recorded for each pertubation.</p>
+<p>This in turn is calculating the Energy gradient or the first derivative of it.</p>
+<p>The picture below shows a potential energy surface for a water molecule with x axis being the H-O-H bond angle, y axis being 1 O-H bond length and z axis being the total energy of that particular structure.</p>
+<p><a class="glightbox" href="../../images/lessons/lesson_3/gradient_2.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Gradient 2" src="../../images/lessons/lesson_3/gradient_2.png" /></a></p>
+</div>
+<div class="tabbed-block">
+<p>There are different techniques to do a search method on a 3d matrix such as conjugate gradient and steepest direction. We want to choose the perturbed structure that produces the lowest energy is a global minima not just a local minima.</p>
+<p><a class="glightbox" href="../../images/lessons/lesson_3/gradient_1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Gradient 1" src="../../images/lessons/lesson_3/gradient_1.png" /></a></p>
+</div>
+<div class="tabbed-block">
+<p>After multiple optimization steps, if you compare the change in total energy and the displacement of each atom among other values. If the change is less than <span class="arithmatex">\(10^-6\)</span> (standard value) then the calculation is converged and it will stop.</p>
+<p><a class="glightbox" href="../../images/lessons/lesson_3/convergence_1.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Convergence 1" src="../../images/lessons/lesson_3/convergence_1.jpg" /></a></p>
+<p>Ignore the bottom axis in this picture. It is the same graph when the x axis is iteration steps.</p>
+</div>
+</div>
+</div>
+<h2 id="recap">Recap</h2>
+<p>A geometry optimization is an iterative process that takes an initial structure, then calculates the total energy of the structure and the energy gradient and iterates on the structure until the total energy converges to a stable value. For DFT calculations, the energy calculation step is more complicated but the main idea of finding a gradient and the structure changing is the same.</p>
 
 
 
@@ -1378,7 +1714,7 @@ C -- If Convergence \nCriteria is not met --&gt; B
     <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.instant.progress", "navigation.tabs", "navigation.indexes", "navigation.top", "content.code.copy"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.bd41221c.min.js"></script>
+      <script src="../../assets/javascripts/bundle.1e8ae164.min.js"></script>
       
         <script src="../../javascripts/shortcuts.js"></script>
       
