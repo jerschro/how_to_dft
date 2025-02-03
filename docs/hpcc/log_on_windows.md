@@ -24,7 +24,8 @@ It is also a good idea to have a coding environment downloaded locally to be abl
 
 * [VESTA](https://jp-minerals.org/vesta/en/download.html) (Visualization Software) :fontawesome-solid-star:
 * [JMOL](https://jmol.sourceforge.net/download/) (Visualization Software) :fontawesome-solid-star:
-* [Avogadro](https://avogadro.cc/) (Visualization Software)
+* [Avogadro](https://avogadro.cc/) (Visualization Software) 
+    * Version 1.2.0 32 bit works on Windows 11. [Here](https://sourceforge.net/projects/avogadro/files/avogadro/1.2.0/Avogadro-1.2.0n-win32.exe/download)
 * [Avogadro2](https://two.avogadro.cc/install/index.html) (Visualization Software)
 * [TTMolE](https://jerschro.github.io/ttmole_documentation/) (Created In House Visualization Software) :fontawesome-solid-star::fontawesome-solid-star::fontawesome-solid-star:
 * [Mobaxterm](https://mobaxterm.mobatek.net/download.html) (Terminal Program) :fontawesome-solid-star:

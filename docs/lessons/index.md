@@ -5,8 +5,13 @@
 
 * [Lesson 1](lesson_1.md) - Intro to Computational Chemistry
 * [Lesson 2](lesson_2.md) - Molecular Structure Representation and Common File Formats
+* [Lesson 3](lesson_3.md) - Using Molecular Mechanics (MM) to learn about Geometry Optimization
+* [Lesson 4](lesson_4.md) - Details on DFT Geometry Optimization
+* [Lesson 5](lesson_5.md) - What is a frequency and solvent calculation?
 * [Lesson 6](lesson_6.md) - Academic Writing Reminders
 * [Lesson 7](lesson_7.md) - What is an adsorption reaction?
+* [Lesson 8](lesson_8.md) - Interpreting Calculation Results
+
 
 ## Assignments
 
@@ -15,19 +20,3 @@
 ## Resources
 
 * [Resource 1](resource_intro_to_dft.md) - Intro To DFT PPT
-
-## Planned Lessons
-
-* Lesson 3 - What is a geometry optimization?
-* Lesson 4 - What is a solvent calculation?
-* Lesson 5 - What is a frequency calculation?
-* Lesson 8 - Interpreting Calculation Results
-
-* Extra Lesson - What is a transition state/reaction pathway?
-* Extra Lesson - What is decomposition?
-* Extra Lesson - More details of DFT
-* Extra Lesson - How it relates to QM?
-* Extra Lesson - What is MD?
-* Extra Lesson - What is AIMD?
-* Extra Lesson - What is MC?
-* Extra Lesson - [Lesson 3 Old Version](old_lesson_3.md)
