@@ -63,8 +63,8 @@ The weekly grade will be on a scale of 0-100. For every meeting not attended wit
 | Week # | Dates | Overview | Objective | Assignment |
 |---|---|---|---|---|
 |  1&2  | 1/15 - 1/24 | Intro to HPCC | [Create an HPCC account](../hpcc/create_account.md). | Show me the email confirmation of the HPCC account. |
-|  3 :fontawesome-regular-star:| 1/27 - 1/31 | Intro to Terminal & DFT | Get familiar with the [terminal](../hpcc/intro_to_terminal.md) & [Lesson 1](../lessons/lesson_1.md). | Show me [Assignment 1](../lessons/assignment_1.md). |
-|  4  | 2/3 - 2/7 | Intro to DFT (cont.) & Turbomole Optimization | [Lesson 2](../lessons/lesson_2.md) & [Lesson 3](../lessons/lesson_3.md) | Get the 4 DNA molecules on the HPCC and use molden/other visualization program to look at them. Optimize the 4 DNA molecules. Show me your results. |
+|  3 | 1/27 - 1/31 | Intro to Terminal & DFT | Get familiar with the [terminal](../hpcc/intro_to_terminal.md) & [Lesson 1](../lessons/lesson_1.md). | Show me [Assignment 1](../lessons/assignment_1.md). |
+|  4 :fontawesome-regular-star:| 2/3 - 2/7 | Intro to DFT (cont.) & Turbomole Optimization | [Lesson 2](../lessons/lesson_2.md) & [Lesson 3](../lessons/lesson_3.md) | Get the 4 DNA molecules on the HPCC and use molden/other visualization program to look at them. Optimize the 4 DNA molecules. Show me your results. |
 |  5 | 2/10 - 2/14 | Solvent & Frequency Calculations | [Lesson 4](../lessons/lesson_4.md) & [Lesson 5](../lessons/lesson_5.md) | Do solvent & frequency calculations for the 4 DNA molecules. Show me your results. |
 |  6 | 2/17 - 2/21 | Academic Writing | [Lesson 6](../lessons/lesson_6.md) | Show me your report draft. |
 |  7 | 2/24 - 2/28 | Adsorption Reactions | [Lesson 7](../lessons/lesson_7.md) | Show me your assigned complex and optimize it. |
