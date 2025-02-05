@@ -22,7 +22,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.17">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.14">
     
     
       
@@ -30,7 +30,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.bcfcd587.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.10ba22f1.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
@@ -990,6 +990,8 @@
       
         
       
+        
+      
     
     
       
@@ -1159,15 +1161,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#initial-structure" class="md-nav__link">
-    <span class="md-ellipsis">
-      Initial Structure
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#pauli-exclusion-principle" class="md-nav__link">
     <span class="md-ellipsis">
       Pauli-Exclusion Principle
@@ -1306,6 +1299,27 @@
   
   
     <li class="md-nav__item">
+      <a href="../assignment_2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Assignment 2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../resource_intro_to_dft/" class="md-nav__link">
         
   
@@ -1363,15 +1377,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#initial-structure" class="md-nav__link">
-    <span class="md-ellipsis">
-      Initial Structure
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#pauli-exclusion-principle" class="md-nav__link">
     <span class="md-ellipsis">
       Pauli-Exclusion Principle
@@ -1412,36 +1417,10 @@
 <p>Written by Jeremy Schroeder</p>
 <h2 id="introduction">Introduction</h2>
 <p>As seen in the previous lesson, calculating the energy of the structure and optimization of structures is complicated. I used the Molecular Mechanics (MM) example to show equations and hopefully have a more sinplified understanding of the logic because as you increase the level of theory, the complicatedness and logic become more abstract. To understand every inner logic and workings of DFT would take years of math, quantum mechanics and chemistry classes to truly understand. So In this lesson I will show an example and particular steps of how DFT works.</p>
-<h2 id="initial-structure">Initial Structure</h2>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:4"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><input id="__tabbed_1_4" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M575.8 255.5c0 18-15 32.1-32 32.1h-32l.7 160.2c0 2.7-.2 5.4-.5 8.1V472c0 22.1-17.9 40-40 40h-16c-1.1 0-2.2 0-3.3-.1-1.4.1-2.8.1-4.2.1H392c-22.1 0-40-17.9-40-40v-88c0-17.7-14.3-32-32-32h-64c-17.7 0-32 14.3-32 32v88c0 22.1-17.9 40-40 40h-55.9c-1.5 0-3-.1-4.5-.2-1.2.1-2.4.2-3.6.2h-16c-22.1 0-40-17.9-40-40V360c0-.9 0-1.9.1-2.8v-69.6H32c-18 0-32-14-32-32.1 0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7l255.4 224.5c8 7 12 15 11 24z"/></svg></span></label><label for="__tabbed_1_2">The Initial Guess Idea</label><label for="__tabbed_1_3">.xyz file</label><label for="__tabbed_1_4">Initial Picture</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<p>For this demonstration lets look at a water molecule. We know from basic chemistry that the bond lengths between the O and H molecules are around 0.95 Å and that the bond angle is 104.45°. The picture below is from this <a href="https://www.google.com/imgres?q=water%20molecule&amp;imgurl=https%3A%2F%2Fstudy.com%2Fcimages%2Fmultimages%2F16%2Fmolecular_models6546256760602134520.png&amp;imgrefurl=https%3A%2F%2Fstudy.com%2Facademy%2Flesson%2Fproperties-of-water.html&amp;docid=uPML3hPJ3E59qM&amp;tbnid=cprXvIR7q0aLGM&amp;vet=12ahUKEwiY9Kvc8KSIAxU68MkDHT7GGwkQM3oECGgQAA..i&amp;w=450&amp;h=432&amp;hcb=2&amp;ved=2ahUKEwiY9Kvc8KSIAxU68MkDHT7GGwkQM3oECGgQAA">source</a>.</p>
-<p><a class="glightbox" href="../../images/lessons/lesson_3/water_molecule_distances.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Water Molecule Picture" src="../../images/lessons/lesson_3/water_molecule_distances.png" /></a></p>
-</div>
-<div class="tabbed-block">
-<p>Lets create an initial structure that is a guess of what a water molecule looks like.</p>
-<p>I'm going to stack H-O-H on top of eachother with a distance of 1.5 Å between them.</p>
-</div>
-<div class="tabbed-block">
-<p>Below is the xyz file created for our example.</p>
-<div class="language-text highlight"><span class="filename">h2o_initial.xyz</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>3
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>h2o initial
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>O 0 0 1.5
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>H 0 0 3
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>H 0 0 0
-</span></code></pre></div>
-</div>
-<div class="tabbed-block">
-<p>Below is the picture of the initial structure.</p>
-<p><a class="glightbox" href="../../images/lessons/lesson_3/initi_water.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Initial Water Picture" src="../../images/lessons/lesson_3/initi_water.png" /></a></p>
-</div>
-</div>
-</div>
 <h2 id="pauli-exclusion-principle">Pauli-Exclusion Principle</h2>
 <p>How electrons are assigned in each orbital. </p>
 <h2 id="calculated-orbital-energies-and-locations">Calculated Orbital Energies and Locations</h2>
-<div class="tabbed-set tabbed-alternate" data-tabs="2:20"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><input id="__tabbed_2_3" name="__tabbed_2" type="radio" /><input id="__tabbed_2_4" name="__tabbed_2" type="radio" /><input id="__tabbed_2_5" name="__tabbed_2" type="radio" /><input id="__tabbed_2_6" name="__tabbed_2" type="radio" /><input id="__tabbed_2_7" name="__tabbed_2" type="radio" /><input id="__tabbed_2_8" name="__tabbed_2" type="radio" /><input id="__tabbed_2_9" name="__tabbed_2" type="radio" /><input id="__tabbed_2_10" name="__tabbed_2" type="radio" /><input id="__tabbed_2_11" name="__tabbed_2" type="radio" /><input id="__tabbed_2_12" name="__tabbed_2" type="radio" /><input id="__tabbed_2_13" name="__tabbed_2" type="radio" /><input id="__tabbed_2_14" name="__tabbed_2" type="radio" /><input id="__tabbed_2_15" name="__tabbed_2" type="radio" /><input id="__tabbed_2_16" name="__tabbed_2" type="radio" /><input id="__tabbed_2_17" name="__tabbed_2" type="radio" /><input id="__tabbed_2_18" name="__tabbed_2" type="radio" /><input id="__tabbed_2_19" name="__tabbed_2" type="radio" /><input id="__tabbed_2_20" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M575.8 255.5c0 18-15 32.1-32 32.1h-32l.7 160.2c0 2.7-.2 5.4-.5 8.1V472c0 22.1-17.9 40-40 40h-16c-1.1 0-2.2 0-3.3-.1-1.4.1-2.8.1-4.2.1H392c-22.1 0-40-17.9-40-40v-88c0-17.7-14.3-32-32-32h-64c-17.7 0-32 14.3-32 32v88c0 22.1-17.9 40-40 40h-55.9c-1.5 0-3-.1-4.5-.2-1.2.1-2.4.2-3.6.2h-16c-22.1 0-40-17.9-40-40V360c0-.9 0-1.9.1-2.8v-69.6H32c-18 0-32-14-32-32.1 0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7l255.4 224.5c8 7 12 15 11 24z"/></svg></span></label><label for="__tabbed_2_2">Orbital 01</label><label for="__tabbed_2_3">Orbital 02</label><label for="__tabbed_2_4">Orbital 03</label><label for="__tabbed_2_5">Orbital 04</label><label for="__tabbed_2_6">Orbital 05</label><label for="__tabbed_2_7">Orbital 06</label><label for="__tabbed_2_8">Orbital 07</label><label for="__tabbed_2_9">Orbital 08</label><label for="__tabbed_2_10">Orbital 09</label><label for="__tabbed_2_11">Orbital 10</label><label for="__tabbed_2_12">Orbital 11</label><label for="__tabbed_2_13">Orbital 12</label><label for="__tabbed_2_14">Orbital 13</label><label for="__tabbed_2_15">Orbital 14</label><label for="__tabbed_2_16">Orbital 15</label><label for="__tabbed_2_17">Orbital 16</label><label for="__tabbed_2_18">Orbital 17</label><label for="__tabbed_2_19">Orbital 18</label><label for="__tabbed_2_20">Answers</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:20"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><input id="__tabbed_1_4" name="__tabbed_1" type="radio" /><input id="__tabbed_1_5" name="__tabbed_1" type="radio" /><input id="__tabbed_1_6" name="__tabbed_1" type="radio" /><input id="__tabbed_1_7" name="__tabbed_1" type="radio" /><input id="__tabbed_1_8" name="__tabbed_1" type="radio" /><input id="__tabbed_1_9" name="__tabbed_1" type="radio" /><input id="__tabbed_1_10" name="__tabbed_1" type="radio" /><input id="__tabbed_1_11" name="__tabbed_1" type="radio" /><input id="__tabbed_1_12" name="__tabbed_1" type="radio" /><input id="__tabbed_1_13" name="__tabbed_1" type="radio" /><input id="__tabbed_1_14" name="__tabbed_1" type="radio" /><input id="__tabbed_1_15" name="__tabbed_1" type="radio" /><input id="__tabbed_1_16" name="__tabbed_1" type="radio" /><input id="__tabbed_1_17" name="__tabbed_1" type="radio" /><input id="__tabbed_1_18" name="__tabbed_1" type="radio" /><input id="__tabbed_1_19" name="__tabbed_1" type="radio" /><input id="__tabbed_1_20" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M575.8 255.5c0 18-15 32.1-32 32.1h-32l.7 160.2c0 2.7-.2 5.4-.5 8.1V472c0 22.1-17.9 40-40 40h-16c-1.1 0-2.2 0-3.3-.1-1.4.1-2.8.1-4.2.1H392c-22.1 0-40-17.9-40-40v-88c0-17.7-14.3-32-32-32h-64c-17.7 0-32 14.3-32 32v88c0 22.1-17.9 40-40 40h-55.9c-1.5 0-3-.1-4.5-.2-1.2.1-2.4.2-3.6.2h-16c-22.1 0-40-17.9-40-40V360c0-.9 0-1.9.1-2.8v-69.6H32c-18 0-32-14-32-32.1 0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7l255.4 224.5c8 7 12 15 11 24z"/></svg></span></label><label for="__tabbed_1_2">Orbital 01</label><label for="__tabbed_1_3">Orbital 02</label><label for="__tabbed_1_4">Orbital 03</label><label for="__tabbed_1_5">Orbital 04</label><label for="__tabbed_1_6">Orbital 05</label><label for="__tabbed_1_7">Orbital 06</label><label for="__tabbed_1_8">Orbital 07</label><label for="__tabbed_1_9">Orbital 08</label><label for="__tabbed_1_10">Orbital 09</label><label for="__tabbed_1_11">Orbital 10</label><label for="__tabbed_1_12">Orbital 11</label><label for="__tabbed_1_13">Orbital 12</label><label for="__tabbed_1_14">Orbital 13</label><label for="__tabbed_1_15">Orbital 14</label><label for="__tabbed_1_16">Orbital 15</label><label for="__tabbed_1_17">Orbital 16</label><label for="__tabbed_1_18">Orbital 17</label><label for="__tabbed_1_19">Orbital 18</label><label for="__tabbed_1_20">Answers</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Click through to see each orbital energy of a water molecule that the program Orca found. These pictures are from the visulization program JMol and you can also use Molden or GaussView to see orbitals visualized.</p>
@@ -1684,7 +1663,7 @@ So <span class="arithmatex">\(E_{gap} = 0.354883086\)</span> H</p>
     <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.instant.progress", "navigation.tabs", "navigation.indexes", "navigation.top", "content.code.copy"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.1e8ae164.min.js"></script>
+      <script src="../../assets/javascripts/bundle.bd41221c.min.js"></script>
       
         <script src="../../javascripts/shortcuts.js"></script>
       
