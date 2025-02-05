@@ -26,7 +26,7 @@ Please schedule an appointment to meet with the instructors.
 
 ## Meeting Times
 
-* Meeting With Jeremy - TBD.
+* Meeting With Jeremy - Tuesdays at 9:30 in MEN 216A.
 * Group Meeting - Thursdays at 5:15pm in MEN 103.
 
 ## Goals For The Semester
@@ -51,7 +51,7 @@ For every week, you will be expected to
 * Keep up with calculations/semester report and ask for help when you have questions.
 * Complete and show Jeremy or Dr. Aquino the assignment of the week.
 
-The weekly grade will be on a scale of 0-100. For every meeting not attended without a legitimate reason, 10 points will be deducted from the weekly grade.
+The weekly grade will be on a scale of 0-100. For every meeting not attended without a legitimate reason, 50 points will be deducted from the weekly grade.
 
 * 0-60: Means you did not do any work from last week.
 * 60-75: Some progress was done.

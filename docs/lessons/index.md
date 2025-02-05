@@ -16,6 +16,7 @@
 ## Assignments
 
 * [Assignment 1](assignment_1.md) - Linux Intro and Turbomole Test Calculations
+* [Assignment 2](assignment_2.md) - Create a Potential Energy Surface (PES)
 
 ## Resources
 

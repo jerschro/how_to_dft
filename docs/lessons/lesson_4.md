@@ -7,40 +7,6 @@ Written by Jeremy Schroeder
 
 As seen in the previous lesson, calculating the energy of the structure and optimization of structures is complicated. I used the Molecular Mechanics (MM) example to show equations and hopefully have a more sinplified understanding of the logic because as you increase the level of theory, the complicatedness and logic become more abstract. To understand every inner logic and workings of DFT would take years of math, quantum mechanics and chemistry classes to truly understand. So In this lesson I will show an example and particular steps of how DFT works.
 
-
-## Initial Structure
-
-=== ":fontawesome-solid-house:"
-    For this demonstration lets look at a water molecule. We know from basic chemistry that the bond lengths between the O and H molecules are around 0.95 Å and that the bond angle is 104.45°. The picture below is from this [source](https://www.google.com/imgres?q=water%20molecule&imgurl=https%3A%2F%2Fstudy.com%2Fcimages%2Fmultimages%2F16%2Fmolecular_models6546256760602134520.png&imgrefurl=https%3A%2F%2Fstudy.com%2Facademy%2Flesson%2Fproperties-of-water.html&docid=uPML3hPJ3E59qM&tbnid=cprXvIR7q0aLGM&vet=12ahUKEwiY9Kvc8KSIAxU68MkDHT7GGwkQM3oECGgQAA..i&w=450&h=432&hcb=2&ved=2ahUKEwiY9Kvc8KSIAxU68MkDHT7GGwkQM3oECGgQAA).
-
-    ![Water Molecule Picture](../images/lessons/lesson_3/water_molecule_distances.png)
-
-
-=== "The Initial Guess Idea"
-    Lets create an initial structure that is a guess of what a water molecule looks like.
-
-    I'm going to stack H-O-H on top of eachother with a distance of 1.5 Å between them.
-
-=== ".xyz file"
-    
-    Below is the xyz file created for our example.
-
-    ```title="h2o_initial.xyz"
-    3
-    h2o initial
-    O 0 0 1.5
-    H 0 0 3
-    H 0 0 0
-    ```
-
-=== "Initial Picture"
-
-    Below is the picture of the initial structure.
-
-    ![Initial Water Picture](../images/lessons/lesson_3/initi_water.png)
-
-
-
 ## Pauli-Exclusion Principle
 
 How electrons are assigned in each orbital. 

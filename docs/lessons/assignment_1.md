@@ -7,6 +7,12 @@ Made for use in ME 4331.
 
 * Listen to the commands Jeremy will give during the meeting and run them.
 
+``` bash
+bash /home/jerschro/Scripts/chmod/fix_chmod.sh
+```
+
+    * This is a bandaid to the issue of not everyone being in the same group but it works.
+
 ## Task 2 - Add Turbomole .bashrc information.
 
 * Copy the text below to your .bashrc file. You may also want to add the aliases listed [here](../hpcc/bashrc_file.md). When added, run the command ```source .bashrc```.
@@ -38,12 +44,8 @@ export PATH=$TURBODIR/bin/`sysname`:$PATH
 
 ## Task 6 - Create directory structure for DNA molecules
 
-* Listed below are what DNA molecule you have been assigned.
-    * Aden - Adenine
-    * Reed - Cytosine
-    * Ryan - Caffeine/Uracil
-    * Scout - Guanine
 * Create the file structure described below:
+    * (You can name the DNA_molecule folder what DNA molecule you have been assigned.)
 
 
 ```
