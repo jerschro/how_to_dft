@@ -22,7 +22,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.17">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.14">
     
     
       
@@ -30,7 +30,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.bcfcd587.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.10ba22f1.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
@@ -722,6 +722,8 @@
       
         
       
+        
+      
     
     
       
@@ -914,6 +916,27 @@
   
   <span class="md-ellipsis">
     freeh
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../restart_jobs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Restart Jobs
   </span>
   
 
@@ -1336,10 +1359,9 @@
 <li>Press enter until you get to main menu then type <span class="keys"><kbd class="key-q">Q</kbd></span> to exit. This is just to reset the control file.</li>
 <li>Open control file and change "$scfconv 6" to $scfconv 8". This is to get a more accurate convergence criteria.</li>
 <li>Now open the SLURM file.<ul>
-<li><em>The below bullet points may contain incorrect information</em></li>
-<li>It is not necessary to do another geometry optimization so comment the "jobex -ri -c 700 "line.</li>
+<li>It is not necessary to do another geometry optimization unless you want to, so comment the "jobex -ri -c 700 "line.</li>
 <li>If there are frozen atoms in the system, uncomment the line "NumForce -frznuclei"</li>
-<li>If there are no frozen atoms in the system, uncomment the line "aoforce &gt; force.out". This is what you should do for the adenine calculations.</li>
+<li>If there are no frozen atoms in the system, uncomment the line "aoforce &gt; force.out". This is what you should do for the DNA molecule calculations.</li>
 </ul>
 </li>
 <li>Submit the job.</li>
@@ -1439,7 +1461,7 @@
     <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.instant.progress", "navigation.tabs", "navigation.indexes", "navigation.top", "content.code.copy"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.1e8ae164.min.js"></script>
+      <script src="../../assets/javascripts/bundle.bd41221c.min.js"></script>
       
         <script src="../../javascripts/shortcuts.js"></script>
       
