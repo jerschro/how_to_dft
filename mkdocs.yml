@@ -27,6 +27,7 @@ nav:
     - aoforce/NumForce : turbomole/frequency.md
     - Collect Results : turbomole/collect_results.md
     - freeh : turbomole/frequency_docx.md
+    - Restart Jobs: turbomole/restart_jobs.md
   - Orca: orca/index.md
   - Gaussian: gaussian/index.md
   - Lessons :

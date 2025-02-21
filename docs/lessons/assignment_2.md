@@ -1,3 +1,4 @@
+[:fontawesome-solid-house:](../index.md) :fontawesome-solid-angle-right: [Lessons](index.md) :fontawesome-solid-angle-right: **Assignment 2**
 
 # Assignment 2 - (Optional) - Create a Potential Energy Surface (PES)
 

@@ -12,6 +12,7 @@ This is the homepage for containing everything to do with Turbomole.
 * [aoforce/NumForce](frequency.md) - Instructions for DFT vibrational frequency calculations.
 * [Collect Results](collect_results.md) - Instructions on how to retrieve Turbomole calculation results.
 * [freeh](frequency_docx.md) - Word document containing instructions on how to retrieve Turbomole frequency calculation results.
+* [Restart Jobs](restart_jobs.md) - Instructions on how to restart Turbomole jobs.
 
 ## Turbomole Brief Overview
 The description below was written by Tristan Fisher.

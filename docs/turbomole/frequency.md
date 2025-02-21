@@ -11,8 +11,7 @@
 5. Press enter until you get to main menu then type ++q++ to exit. This is just to reset the control file.
 6. Open control file and change "$scfconv 6" to $scfconv 8". This is to get a more accurate convergence criteria.
 7. Now open the SLURM file.
-     * *The below bullet points may contain incorrect information*
-     * It is not necessary to do another geometry optimization so comment the "jobex -ri -c 700 "line.
+     * It is not necessary to do another geometry optimization unless you want to, so comment the "jobex -ri -c 700 "line.
      * If there are frozen atoms in the system, uncomment the line "NumForce -frznuclei"
-     * If there are no frozen atoms in the system, uncomment the line "aoforce > force.out". This is what you should do for the adenine calculations.
+     * If there are no frozen atoms in the system, uncomment the line "aoforce > force.out". This is what you should do for the DNA molecule calculations.
 8. Submit the job.
