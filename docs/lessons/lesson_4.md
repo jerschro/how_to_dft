@@ -9,8 +9,15 @@ As seen in the previous lesson, calculating the energy of the structure and opti
 
 ## Pauli-Exclusion Principle
 
-How electrons are assigned in each orbital. 
+How electrons are assigned in each orbital.
 
+## Hunz Rule
+
+## Born-Oppenheimer Approximation
+
+## Hartree-Fock Theory
+
+## Kohn-Sham Theory Equations
 
 
 ## Calculated Orbital Energies and Locations
@@ -178,6 +185,8 @@ How electrons are assigned in each orbital.
     
 === "Answers"
 
-    HOMO is Orbital 5, with energy -0.28665087 H
-    LUMO is Orbital 6, with energy 0.068232216 H
-    So $E_{gap} = 0.354883086$ H
+    HOMO is Orbital 5, with energy $-0.28665087\:E_h$
+
+    LUMO is Orbital 6, with energy $0.068232216\:E_h$
+    
+    So $E_{gap} = 0.354883086\: E_h$

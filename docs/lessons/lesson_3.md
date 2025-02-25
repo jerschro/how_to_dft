@@ -188,221 +188,92 @@ Geometry Optimizations are the backbone of DFT calculations. It is the first cal
 
     This in turn is calculating the Energy gradient or the first derivative of it.
 
-    The picture below shows a potential energy surface for a water molecule with x axis being the H-O-H bond angle, y axis being 1 O-H bond length and z axis being the total energy of that particular structure.
+    The picture below shows a potential energy surface for a water molecule with x axis being the H-O-H bond angle, y axis being 1 O-H bond length and z axis being the total energy of that particular structure. [^1]
 
     ![Gradient 2](../images/lessons/lesson_3/gradient_2.png)
 
 === "Finding the lowest energy"
 
-    There are different techniques to do a search method on a 3d matrix such as conjugate gradient and steepest direction. We want to choose the perturbed structure that produces the lowest energy is a global minima not just a local minima.
+    There are different techniques to do a search method on a 3d matrix such as conjugate gradient and steepest descent/direction. We want to choose the perturbed structure that produces the lowest energy is a global minima not just a local minima. [^2]
 
     ![Gradient 1](../images/lessons/lesson_3/gradient_1.png)
 
-=== "Steepest Direction"
-
-
-
-=== "Conjugate Gradient"
-
-
-
-
 === "Convergence"
 
-    After multiple optimization steps, if you compare the change in total energy and the displacement of each atom among other values. If the change is less than $10^-6$ (standard value) then the calculation is converged and it will stop.
+    After multiple optimization steps, if you compare the change in total energy and the displacement of each atom among other values. If the change is less than $10^-6$ (standard value) then the calculation is converged and it will stop.[^3]
 
-    ![Convergence X](../images/lessons/lesson_3/convergence_X.jpg)
-
-
+    ![Convergence 1](../images/lessons/lesson_3/convergence_1.png)
+    
 ## Example Optimization
 
 
 === ":fontawesome-solid-house:"
 
-    Lets look at an example optimization.
+    Lets look at an example optimization. The first geometry is a linear (bond angle 180°) H2O molecule with a bond length of 1.5 Å. The second geometery is a bent (bond angle 90°) H2O molecule with a bond length of 1.5 Å. The following slides will show how Turbomole optimized each of these geometries.
 
-=== "Two Initial Guess Geometries"
+=== "Initial Guess Geometries"
 
-    I 
+    <div class="grid">
+    
+    Geometry 1
+    ![Linear Geo](../images/lessons/lesson_3/linear.png)
+
+    Geometry 2
+    ![Bent Geo](../images/lessons/lesson_3/bent.png)
+    
+    </div>
+
+    Pictures were obtained from VESTA.
 
 === "Bond Angle vs. H-O Distance"
 
+    
     <div class="grid">
-    ![Graph 1](../images/lessons/lesson_1/xyz_file1.png)
-    ![Graph 2](../images/lessons/lesson_1/xyz_file2.png)
+    
+    Geometry 1
+    ![Linear GGraph](../images/lessons/lesson_3/Bent_Water_Structure_Parameters_Optimization_Graph.png)
+
+    Geometry 2
+    ![Bent GGraph](../images/lessons/lesson_3/Linear_Water_Structure_Parameters_Optimization_Graph.png)
+    
     </div>
 
-=== "Gradient Files"
 
-    Left is Linear, Right is Bent
+=== "Energy Amount Across Optimization"
+
+    
+    <div class="grid">
+    
+    Geometry 1
+    ![Linear EGraph](../images/lessons/lesson_3/Bent_Energy_Graph.png)
+
+    Geometry 2
+    ![Bent EGraph](../images/lessons/lesson_3/Linear_Energy_Graph.png)
+    
+    </div>
+
+=== "Optimized Geometries and Final Energies"
 
     <div class="grid">
-    ```
-    $grad          cartesian gradients
-    cycle =      1    SCF energy =      -76.0342679285   |dE/dxyz| =  0.163929
-        0.00000000000000      0.00000000000000      0.00000000000000      o
-        0.00000000000000      0.00000000000000      2.83458918693865      h
-        0.00000000000000      0.00000000000000     -2.83458918693865      h
-    0.00000000000000D+00  0.00000000000000D+00  0.00000000000000D+00
-    0.00000000000000D+00  0.00000000000000D+00  0.11591534585240D+00
-    0.00000000000000D+00  0.00000000000000D+00  -.11591534585240D+00
-    cycle =      2    SCF energy =      -76.0596732050   |dE/dxyz| =  0.174584
-        0.00000000000000      0.00000000000000      0.00000000000000      o
-        0.00000000000000      0.00000000000000      2.72852316976067      h
-        0.00000000000000      0.00000000000000     -2.72852316976067      h
-    0.00000000000000D+00  0.00000000000000D+00  0.00000000000000D+00
-    0.00000000000000D+00  0.00000000000000D+00  0.12344954946510D+00
-    0.00000000000000D+00  0.00000000000000D+00  -.12344954946510D+00
-    cycle =      3    SCF energy =      -76.1018958862   |dE/dxyz| =  0.187963
-        0.00000000000000      0.00000000000000      0.00000000000000      o
-        0.00000000000000      0.00000000000000      2.56420640250912      h
-        0.00000000000000      0.00000000000000     -2.56420640250912      h
-    0.00000000000000D+00  0.00000000000000D+00  0.00000000000000D+00
-    0.00000000000000D+00  0.00000000000000D+00  0.13290982031451D+00
-    0.00000000000000D+00  0.00000000000000D+00  -.13290982031451D+00
-    cycle =      4    SCF energy =      -76.1596051298   |dE/dxyz| =  0.193897
-        0.00000000000000      0.00000000000000      0.00000000000000      o
-        0.00000000000000      0.00000000000000      2.35207436815316      h
-        0.00000000000000      0.00000000000000     -2.35207436815316      h
-    0.00000000000000D+00  0.00000000000000D+00  0.00000000000000D+00
-    0.00000000000000D+00  0.00000000000000D+00  0.13710563521874D+00
-    0.00000000000000D+00  0.00000000000000D+00  -.13710563521874D+00
-    cycle =      5    SCF energy =      -76.2157454303   |dE/dxyz| =  0.174690
-        0.00000000000000      0.00000000000000      0.00000000000000      o
-        0.00000000000000      0.00000000000000      2.13994233379720      h
-        0.00000000000000      0.00000000000000     -2.13994233379720      h
-    0.00000000000000D+00  0.00000000000000D+00  0.00000000000000D+00
-    0.00000000000000D+00  0.00000000000000D+00  0.12352457383284D+00
-    0.00000000000000D+00  0.00000000000000D+00  -.12352457383284D+00
-    cycle =      6    SCF energy =      -76.2595733307   |dE/dxyz| =  0.106472
-        0.00000000000000      0.00000000000000      0.00000000000000      o
-        0.00000000000000      0.00000000000000      1.92781029944124      h
-        0.00000000000000      0.00000000000000     -1.92781029944124      h
-    0.00000000000000D+00  0.00000000000000D+00  0.00000000000000D+00
-    0.00000000000000D+00  0.00000000000000D+00  0.75286839099578D-01
-    0.00000000000000D+00  0.00000000000000D+00  -.75286839099578D-01
-    cycle =      7    SCF energy =      -76.2702771677   |dE/dxyz| =  0.056687
-        0.00000000000000      0.00000000000000      0.00000000000000      o
-        0.00000000000000      0.00000000000000      1.71567826508528      h
-        0.00000000000000      0.00000000000000     -1.71567826508528      h
-    0.00000000000000D+00  0.00000000000000D+00  0.00000000000000D+00
-    0.00000000000000D+00  0.00000000000000D+00  -.40083718067586D-01
-    0.00000000000000D+00  0.00000000000000D+00  0.40083718067586D-01
-    cycle =      8    SCF energy =      -76.2722751113   |dE/dxyz| =  0.015156
-        0.00000000000000      0.00000000000000      0.00000000000000      o
-        0.00000000000000      0.00000000000000      1.78938026381887      h
-        0.00000000000000      0.00000000000000     -1.78938026381887      h
-    0.00000000000000D+00  0.00000000000000D+00  0.00000000000000D+00
-    0.00000000000000D+00  0.00000000000000D+00  0.10716639972244D-01
-    0.00000000000000D+00  0.00000000000000D+00  -.10716639972244D-01
-    cycle =      9    SCF energy =      -76.2724601684   |dE/dxyz| =  0.001564
-        0.00000000000000      0.00000000000000      0.00000000000000      o
-        0.00000000000000      0.00000000000000      1.77383238549401      h
-        0.00000000000000      0.00000000000000     -1.77383238549401      h
-    0.00000000000000D+00  0.00000000000000D+00  0.00000000000000D+00
-    0.00000000000000D+00  0.00000000000000D+00  0.11058002061091D-02
-    0.00000000000000D+00  0.00000000000000D+00  -.11058002061091D-02
-    cycle =     10    SCF energy =      -76.2724620679   |dE/dxyz| =  0.000046
-        0.00000000000000      0.00000000000000      0.00000000000000      o
-        0.00000000000000      0.00000000000000      1.77204348385007      h
-        0.00000000000000      0.00000000000000     -1.77204348385007      h
-    0.00000000000000D+00  0.00000000000000D+00  0.00000000000000D+00
-    0.00000000000000D+00  0.00000000000000D+00  -.32185184110745D-04
-    0.00000000000000D+00  0.00000000000000D+00  0.32185184110745D-04
-    cycle =     11    SCF energy =      -76.2724620769   |dE/dxyz| =  0.000001
-        0.00000000000000      0.00000000000000      0.00000000000000      o
-        0.00000000000000      0.00000000000000      1.77209407863737      h
-        0.00000000000000      0.00000000000000     -1.77209407863737      h
-    0.00000000000000D+00  0.00000000000000D+00  0.00000000000000D+00
-    0.00000000000000D+00  0.00000000000000D+00  0.92775614040734D-06
-    0.00000000000000D+00  0.00000000000000D+00  -.92775614040734D-06
-    $end
+    
+    Geometry 1:  $-76.27246207551\:E_h$
+    ![Linear Geo](../images/lessons/lesson_3/linear_opt.png)
 
-    ```
-    ``` 
-    $grad          cartesian gradients
-    cycle =      1    SCF energy =      -76.1347138816   |dE/dxyz| =  0.216399
-        0.00000000000000      0.00000000000000     -1.33623815730826      o
-    -2.00435723596239      0.00000000000000      0.66811907865413      h
-        2.00435723596239      0.00000000000000      0.66811907865413      h
-    0.00000000000000D+00  0.00000000000000D+00  -.15371733855228D+00
-    -.75477380628687D-01  0.00000000000000D+00  0.76830655553477D-01
-    0.75477380628687D-01  0.00000000000000D+00  0.76830655553477D-01
-    cycle =      2    SCF energy =      -76.1675265527   |dE/dxyz| =  0.220386
-        0.00000000000000      0.00000000000000     -1.22969984449440      o
-    -1.95203906581968      0.00000000000000      0.61484992224720      h
-        1.95203906581968      0.00000000000000      0.61484992224720      h
-    0.00000000000000D+00  0.00000000000000D+00  -.15308474743820D+00
-    -.81925569931974D-01  0.00000000000000D+00  0.76522365091220D-01
-    0.81925569931974D-01  0.00000000000000D+00  0.76522365091220D-01
-    cycle =      3    SCF energy =      -76.2185166712   |dE/dxyz| =  0.215606
-        0.00000000000000      0.00000000000000     -1.07129348121312      o
-    -1.86159257305167      0.00000000000000      0.53564674060656      h
-        1.86159257305167      0.00000000000000      0.53564674060656      h
-    0.00000000000000D+00  0.00000000000000D+00  -.14288670976270D+00
-    -.89053162213362D-01  0.00000000000000D+00  0.71443003123186D-01
-    0.89053162213362D-01  0.00000000000000D+00  0.71443003123186D-01
-    cycle =      4    SCF energy =      -76.2783872549   |dE/dxyz| =  0.175003
-        0.00000000000000      0.00000000000000     -0.87701985220224      o
-    -1.73238995000087      0.00000000000000      0.43850992610112      h
-        1.73238995000087      0.00000000000000      0.43850992610112      h
-    0.00000000000000D+00  0.00000000000000D+00  -.10397104877942D+00
-    -.84885712092734D-01  0.00000000000000D+00  0.51985627775374D-01
-    0.84885712092734D-01  0.00000000000000D+00  0.51985627775374D-01
-    cycle =      5    SCF energy =      -76.3159623408   |dE/dxyz| =  0.060638
-        0.00000000000000      0.00000000000000     -0.70332981988096      o
-    -1.58281110957128      0.00000000000000      0.35166490994048      h
-        1.58281110957128      0.00000000000000      0.35166490994048      h
-    0.00000000000000D+00  0.00000000000000D+00  -.17922348819494D-01
-    -.39969834075857D-01  0.00000000000000D+00  0.89591488223048D-02
-    0.39969834075857D-01  0.00000000000000D+00  0.89591488223048D-02
-    cycle =      6    SCF energy =      -76.3176797903   |dE/dxyz| =  0.069593
-        0.00000000000000      0.00000000000000     -0.64839020814579      o
-    -1.47666834594709      0.00000000000000      0.32419510407290      h
-        1.47666834594709      0.00000000000000      0.32419510407290      h
-    0.00000000000000D+00  0.00000000000000D+00  0.53161274481013D-01
-    0.17373981638171D-01  0.00000000000000D+00  -.26582949687105D-01
-    -.17373981638171D-01  0.00000000000000D+00  -.26582949687105D-01
-    cycle =      7    SCF energy =      -76.3201811000   |dE/dxyz| =  0.019796
-        0.00000000000000      0.00000000000000     -0.69705865799665      o
-    -1.50059541673130      0.00000000000000      0.34852932899833      h
-        1.50059541673130      0.00000000000000      0.34852932899833      h
-    0.00000000000000D+00  0.00000000000000D+00  0.11804823085072D-01
-    -.95577394813818D-02  0.00000000000000D+00  -.59086095256087D-02
-    0.95577394813818D-02  0.00000000000000D+00  -.59086095256087D-02
-    cycle =      8    SCF energy =      -76.3208794990   |dE/dxyz| =  0.013103
-        0.00000000000000      0.00000000000000     -0.72222671697600      o
-    -1.47912469960123      0.00000000000000      0.36111335848800      h
-        1.47912469960123      0.00000000000000      0.36111335848800      h
-    0.00000000000000D+00  0.00000000000000D+00  0.45270136763901D-02
-    -.83930225197870D-02  0.00000000000000D+00  -.22692931950739D-02
-    0.83930225197870D-02  0.00000000000000D+00  -.22692931950739D-02
-    cycle =      9    SCF energy =      -76.3214031408   |dE/dxyz| =  0.004152
-        0.00000000000000      0.00000000000000     -0.76097424664092      o
-    -1.43256977376970      0.00000000000000      0.38048712332046      h
-        1.43256977376970      0.00000000000000      0.38048712332046      h
-    0.00000000000000D+00  0.00000000000000D+00  -.28446928249342D-02
-    -.16030338863389D-02  0.00000000000000D+00  0.14162429448356D-02
-    0.16030338863389D-02  0.00000000000000D+00  0.14162429448356D-02
-    cycle =     10    SCF energy =      -76.3214124086   |dE/dxyz| =  0.000510
-        0.00000000000000      0.00000000000000     -0.75800719327388      o
-    -1.43132051238261      0.00000000000000      0.37900359663694      h
-        1.43132051238261      0.00000000000000      0.37900359663694      h
-    0.00000000000000D+00  0.00000000000000D+00  -.31697586547436D-03
-    -.23729936771934D-03  0.00000000000000D+00  0.15265473113057D-03
-    0.23729936771932D-03  0.00000000000000D+00  0.15265473113057D-03
-    cycle =     11    SCF energy =      -76.3214125819   |dE/dxyz| =  0.000008
-        0.00000000000000      0.00000000000000     -0.75782366494463      o
-    -1.43084805415747      0.00000000000000      0.37891183247231      h
-        1.43084805415747      0.00000000000000      0.37891183247231      h
-    0.00000000000000D+00  0.00000000000000D+00  -.43526811906157D-05
-    0.27302497020015D-05  0.00000000000000D+00  -.36308920330075D-05
-    -.27302497020154D-05  0.00000000000000D+00  -.36308920330075D-05
-    $end
-
-    ```
+    Geometry 2:  $-76.32141258581\:E_h$
+    ![Bent Geo](../images/lessons/lesson_3/bent_opt.png)
+    
     </div>
+
+    Pictures were obtained from VESTA.
+
 
 ## Recap
 
 A geometry optimization is an iterative process that takes an initial structure, then calculates the total energy of the structure and the energy gradient and iterates on the structure until the total energy converges to a stable value. For DFT calculations, the energy calculation step is more complicated but the main idea of finding a gradient and the structure changing is the same. Check out [Assignment 2](assignment_2.md) if you are interested in understanding more about an optimization and creating a Potential Energy Surface (PES).
+
+
+[^1]: https://en.wikipedia.org/wiki/Potential_energy_surface
+
+[^2]: https://www.scribd.com/document/441758196/Gradient-Descent
+
+[^3]: Wang, X.-Y & Zhao, F.-P & Wang, Jie & Yan, Yabin. (2016). First-principle studies of mechanical, electronic properties and strain engineering of metal-organic framework. Acta Physica Sinica. 65. 10.7498/aps.65.178105. 

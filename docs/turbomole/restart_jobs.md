@@ -35,7 +35,7 @@
 ## Hints to Figure out Reasons of Failed Turbomole Jobs
 
 * The two best files to check out is the job.last file and slurm-XXXXXX.out file.
-* You can also do ```t2x coord > OO``` and ```molden OO``` to see an animation of the geometry optimization. If you click on ++"Geom Convergence"++ then++"Movie"++ in MOLDEN, you can watch the calculation structure and total energy amount across the iterations. 
+* You can also do ```t2x coord > OO``` and ```molden OO``` to see an animation of the geometry optimization. If you click on ++"Geom Convergence"++ then ++"Movie"++ in MOLDEN, you can watch the calculation structure and total energy amount across the iterations. 
     * If there is not a a smooth parabola converging to a value, that means it is still working on converging and needs more iteration steps. See above instructions to restart the geometry optimization.
     * If the Geom Convergence line is ocillating then that means you probably won't converge to a global minimum structure and shoul drestart the calculation with a different initial geometry. Oscillations tend to happen between two local minimas so you could take one of the geometries of the structures, preturb the structure some, and start the geometry optimization again. 
 

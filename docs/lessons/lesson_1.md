@@ -41,6 +41,6 @@ This picture shows a graph of Computational Chemistry Methods with Calculation C
 
 There are many different branches and complexities of computational chemistry. This has just been a brief overview to computational chemistry and the main branch we will look at for the other lessons is DFT.
 
-[^1]: [https://en.wikipedia.org/wiki/Computational_chemistry](https://en.wikipedia.org/wiki/Computational_chemistry)
+[^1]: https://en.wikipedia.org/wiki/Computational_chemistry
 
-[^2]: [https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.researchgate.net%2Ffigure%2FQuantum-chemistry-methods-upper-right-are-considered-highly-accurate-but-also-highly_fig2_351530930&psig=AOvVaw2hK6IT1y-TQtNMdhCj3Fmj&ust=1721447042474000&source=images&cd=vfe&opi=89978449&ved=0CBQQjhxqFwoTCJjO8I2YsocDFQAAAAAdAAAAABAx](https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.researchgate.net%2Ffigure%2FQuantum-chemistry-methods-upper-right-are-considered-highly-accurate-but-also-highly_fig2_351530930&psig=AOvVaw2hK6IT1y-TQtNMdhCj3Fmj&ust=1721447042474000&source=images&cd=vfe&opi=89978449&ved=0CBQQjhxqFwoTCJjO8I2YsocDFQAAAAAdAAAAABAx)
+[^2]: https://www.researchgate.net/figure/Quantum-chemistry-methods-upper-right-are-considered-highly-accurate-but-also-highly_fig2_351530930

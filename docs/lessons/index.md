@@ -11,6 +11,7 @@
 * [Lesson 6](lesson_6.md) - Academic Writing Reminders
 * [Lesson 7](lesson_7.md) - What is an adsorption reaction?
 * [Lesson 8](lesson_8.md) - Interpreting Calculation Results
+* [Lesson 9](lesson_9.md) - Intro to Quantum Mechanics
 
 
 ## Assignments
