@@ -12,13 +12,13 @@
         <meta name="author" content="Jeremy Schroeder">
       
       
-        <link rel="canonical" href="https://jerschro.github.io/how_to_dft/lessons/lesson_4/">
+        <link rel="canonical" href="https://jerschro.github.io/how_to_dft/vasp/slurm_script/">
       
       
-        <link rel="prev" href="../lesson_3/">
+        <link rel="prev" href="../KPOINTS/">
       
       
-        <link rel="next" href="../lesson_5/">
+        <link rel="next" href="../OUTCAR/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -26,7 +26,7 @@
     
     
       
-        <title>Lesson 4 - How To DFT</title>
+        <title>SLURM Script - How To DFT</title>
       
     
     
@@ -89,7 +89,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#lesson-4-details-on-dft-geometry-optimization" class="md-skip">
+        <a href="#slurm-script" class="md-skip">
           Skip to content
         </a>
       
@@ -123,7 +123,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Lesson 4
+              SLURM Script
             
           </span>
         </div>
@@ -346,11 +346,13 @@
         
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../vasp/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
           
   
     
@@ -366,13 +368,11 @@
         
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../lessons/" class="md-tabs__link">
           
   
     
@@ -1004,228 +1004,6 @@
       
   
   
-  
-  
-    
-    
-      
-        
-          
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
-        
-          
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../../vasp/" class="md-nav__link ">
-              
-  
-  <span class="md-ellipsis">
-    VASP
-  </span>
-  
-
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_7" id="__nav_7_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_7">
-            <span class="md-nav__icon md-icon"></span>
-            VASP
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../vasp/INCAR/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    INCAR
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../vasp/POSCAR/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    POSCAR
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../vasp/POTCAR/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    POTCAR
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../vasp/KPOINTS/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    KPOINTS
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../vasp/slurm_script/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    SLURM Script
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../vasp/OUTCAR/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    OUTCAR
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../vasp/phonopy/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Phonopy
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
     
   
   
@@ -1235,16 +1013,6 @@
       
         
           
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
         
       
         
@@ -1274,7 +1042,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
         
           
           
@@ -1283,23 +1051,23 @@
               
   
   <span class="md-ellipsis">
-    Lessons
+    VASP
   </span>
   
 
             </a>
             
               
-              <label class="md-nav__link " for="__nav_8" id="__nav_8_label" tabindex="">
+              <label class="md-nav__link " for="__nav_7" id="__nav_7_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_8">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_7">
             <span class="md-nav__icon md-icon"></span>
-            Lessons
+            VASP
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -1312,11 +1080,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../lesson_1/" class="md-nav__link">
+      <a href="../INCAR/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Lesson 1
+    INCAR
   </span>
   
 
@@ -1333,11 +1101,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../lesson_2/" class="md-nav__link">
+      <a href="../POSCAR/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Lesson 2
+    POSCAR
   </span>
   
 
@@ -1354,11 +1122,32 @@
   
   
     <li class="md-nav__item">
-      <a href="../lesson_3/" class="md-nav__link">
+      <a href="../POTCAR/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Lesson 3
+    POTCAR
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../KPOINTS/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    KPOINTS
   </span>
   
 
@@ -1384,108 +1173,15 @@
         
       
       
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Lesson 4
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
-    Lesson 4
+    SLURM Script
   </span>
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#introduction" class="md-nav__link">
-    <span class="md-ellipsis">
-      Introduction
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#pauli-exclusion-principle" class="md-nav__link">
-    <span class="md-ellipsis">
-      Pauli-Exclusion Principle
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#hunz-rule" class="md-nav__link">
-    <span class="md-ellipsis">
-      Hunz Rule
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#born-oppenheimer-approximation" class="md-nav__link">
-    <span class="md-ellipsis">
-      Born-Oppenheimer Approximation
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#hartree-fock-theory" class="md-nav__link">
-    <span class="md-ellipsis">
-      Hartree-Fock Theory
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#kohn-sham-theory-equations" class="md-nav__link">
-    <span class="md-ellipsis">
-      Kohn-Sham Theory Equations
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#calculated-orbital-energies-and-locations" class="md-nav__link">
-    <span class="md-ellipsis">
-      Calculated Orbital Energies and Locations
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
       
     </li>
   
@@ -1499,7 +1195,218 @@
   
   
     <li class="md-nav__item">
-      <a href="../lesson_5/" class="md-nav__link">
+      <a href="../OUTCAR/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    OUTCAR
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../phonopy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Phonopy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../lessons/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Lessons
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_8" id="__nav_8_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Lessons
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lessons/lesson_1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lesson 1
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lessons/lesson_2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lesson 2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lessons/lesson_3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lesson 3
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lessons/lesson_4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lesson 4
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lessons/lesson_5/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1520,7 +1427,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../lesson_6/" class="md-nav__link">
+      <a href="../../lessons/lesson_6/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1541,7 +1448,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../lesson_7/" class="md-nav__link">
+      <a href="../../lessons/lesson_7/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1562,7 +1469,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../lesson_8/" class="md-nav__link">
+      <a href="../../lessons/lesson_8/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1583,7 +1490,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../lesson_9/" class="md-nav__link">
+      <a href="../../lessons/lesson_9/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1604,7 +1511,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../assignment_1/" class="md-nav__link">
+      <a href="../../lessons/assignment_1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1625,7 +1532,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../assignment_2/" class="md-nav__link">
+      <a href="../../lessons/assignment_2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1646,7 +1553,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../resource_intro_to_dft/" class="md-nav__link">
+      <a href="../../lessons/resource_intro_to_dft/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1687,77 +1594,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#introduction" class="md-nav__link">
-    <span class="md-ellipsis">
-      Introduction
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#pauli-exclusion-principle" class="md-nav__link">
-    <span class="md-ellipsis">
-      Pauli-Exclusion Principle
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#hunz-rule" class="md-nav__link">
-    <span class="md-ellipsis">
-      Hunz Rule
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#born-oppenheimer-approximation" class="md-nav__link">
-    <span class="md-ellipsis">
-      Born-Oppenheimer Approximation
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#hartree-fock-theory" class="md-nav__link">
-    <span class="md-ellipsis">
-      Hartree-Fock Theory
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#kohn-sham-theory-equations" class="md-nav__link">
-    <span class="md-ellipsis">
-      Kohn-Sham Theory Equations
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#calculated-orbital-energies-and-locations" class="md-nav__link">
-    <span class="md-ellipsis">
-      Calculated Orbital Energies and Locations
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -1774,166 +1610,61 @@
   
 
 
-<p><a href="../../"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M575.8 255.5c0 18-15 32.1-32 32.1h-32l.7 160.2c0 2.7-.2 5.4-.5 8.1V472c0 22.1-17.9 40-40 40h-16c-1.1 0-2.2 0-3.3-.1-1.4.1-2.8.1-4.2.1H392c-22.1 0-40-17.9-40-40v-88c0-17.7-14.3-32-32-32h-64c-17.7 0-32 14.3-32 32v88c0 22.1-17.9 40-40 40h-55.9c-1.5 0-3-.1-4.5-.2-1.2.1-2.4.2-3.6.2h-16c-22.1 0-40-17.9-40-40V360c0-.9 0-1.9.1-2.8v-69.6H32c-18 0-32-14-32-32.1 0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7l255.4 224.5c8 7 12 15 11 24z"/></svg></span></a> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span> <a href="../">Lessons</a> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span> <strong>Lesson 4</strong></p>
-<h1 id="lesson-4-details-on-dft-geometry-optimization">Lesson 4 - Details on DFT Geometry Optimization</h1>
-<p>Written by Jeremy Schroeder</p>
-<h2 id="introduction">Introduction</h2>
-<p>As seen in the previous lesson, calculating the energy of the structure and optimization of structures is complicated. I used the Molecular Mechanics (MM) example to show equations and hopefully have a more sinplified understanding of the logic because as you increase the level of theory, the complicatedness and logic become more abstract. To understand every inner logic and workings of DFT would take years of math, quantum mechanics and chemistry classes to truly understand. So In this lesson I will show an example and particular steps of how DFT works.</p>
-<h2 id="pauli-exclusion-principle">Pauli-Exclusion Principle</h2>
-<p>How electrons are assigned in each orbital.</p>
-<h2 id="hunz-rule">Hunz Rule</h2>
-<h2 id="born-oppenheimer-approximation">Born-Oppenheimer Approximation</h2>
-<h2 id="hartree-fock-theory">Hartree-Fock Theory</h2>
-<h2 id="kohn-sham-theory-equations">Kohn-Sham Theory Equations</h2>
-<h2 id="calculated-orbital-energies-and-locations">Calculated Orbital Energies and Locations</h2>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:20"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><input id="__tabbed_1_4" name="__tabbed_1" type="radio" /><input id="__tabbed_1_5" name="__tabbed_1" type="radio" /><input id="__tabbed_1_6" name="__tabbed_1" type="radio" /><input id="__tabbed_1_7" name="__tabbed_1" type="radio" /><input id="__tabbed_1_8" name="__tabbed_1" type="radio" /><input id="__tabbed_1_9" name="__tabbed_1" type="radio" /><input id="__tabbed_1_10" name="__tabbed_1" type="radio" /><input id="__tabbed_1_11" name="__tabbed_1" type="radio" /><input id="__tabbed_1_12" name="__tabbed_1" type="radio" /><input id="__tabbed_1_13" name="__tabbed_1" type="radio" /><input id="__tabbed_1_14" name="__tabbed_1" type="radio" /><input id="__tabbed_1_15" name="__tabbed_1" type="radio" /><input id="__tabbed_1_16" name="__tabbed_1" type="radio" /><input id="__tabbed_1_17" name="__tabbed_1" type="radio" /><input id="__tabbed_1_18" name="__tabbed_1" type="radio" /><input id="__tabbed_1_19" name="__tabbed_1" type="radio" /><input id="__tabbed_1_20" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M575.8 255.5c0 18-15 32.1-32 32.1h-32l.7 160.2c0 2.7-.2 5.4-.5 8.1V472c0 22.1-17.9 40-40 40h-16c-1.1 0-2.2 0-3.3-.1-1.4.1-2.8.1-4.2.1H392c-22.1 0-40-17.9-40-40v-88c0-17.7-14.3-32-32-32h-64c-17.7 0-32 14.3-32 32v88c0 22.1-17.9 40-40 40h-55.9c-1.5 0-3-.1-4.5-.2-1.2.1-2.4.2-3.6.2h-16c-22.1 0-40-17.9-40-40V360c0-.9 0-1.9.1-2.8v-69.6H32c-18 0-32-14-32-32.1 0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7l255.4 224.5c8 7 12 15 11 24z"/></svg></span></label><label for="__tabbed_1_2">Orbital 01</label><label for="__tabbed_1_3">Orbital 02</label><label for="__tabbed_1_4">Orbital 03</label><label for="__tabbed_1_5">Orbital 04</label><label for="__tabbed_1_6">Orbital 05</label><label for="__tabbed_1_7">Orbital 06</label><label for="__tabbed_1_8">Orbital 07</label><label for="__tabbed_1_9">Orbital 08</label><label for="__tabbed_1_10">Orbital 09</label><label for="__tabbed_1_11">Orbital 10</label><label for="__tabbed_1_12">Orbital 11</label><label for="__tabbed_1_13">Orbital 12</label><label for="__tabbed_1_14">Orbital 13</label><label for="__tabbed_1_15">Orbital 14</label><label for="__tabbed_1_16">Orbital 15</label><label for="__tabbed_1_17">Orbital 16</label><label for="__tabbed_1_18">Orbital 17</label><label for="__tabbed_1_19">Orbital 18</label><label for="__tabbed_1_20">Answers</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<p>Click through to see each orbital energy of a water molecule that the program Orca found. These pictures are from the visulization program JMol and you can also use Molden or GaussView to see orbitals visualized.</p>
-<p>Try to identify the LUMO (Lowest Unoccupied Molecular Orbital) and the HOMO (Highest Occupied Molecular Orbital). You can also find the Energy Gap which is the equation below.</p>
-<p><span class="arithmatex">\(E_{gap} = LUMO - HOMO\)</span></p>
-<p>When looking at the pictures, the Red atom is Oxygen, the White atoms are Hydrogens, the red transparent cloud is the "positive" orbitals and the blue transparent cloud are the "negative" orbitals.</p>
-<ul>
-<li>The reason "positive" and "negative" are in quotations is that it's really two electrons that have opposite spin of each other and are not attracted to each other. Think like spin-up and spin-down.</li>
-</ul>
-<p>This website linked below goes into more details about the orbitals a water molecule has. </p>
-<ul>
-<li><a href="https://water.lsbu.ac.uk/water/h2o_orbitals.html">https://water.lsbu.ac.uk/water/h2o_orbitals.html</a></li>
-</ul>
-</div>
-<div class="tabbed-block">
-<p><div class="grid">
-<a class="glightbox" href="../../images/lessons/lesson_4/mo/011.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="011" src="../../images/lessons/lesson_4/mo/011.jpg" /></a>
-<a class="glightbox" href="../../images/lessons/lesson_4/mo/012.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="012" src="../../images/lessons/lesson_4/mo/012.jpg" /></a>
-<a class="glightbox" href="../../images/lessons/lesson_4/mo/013.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="013" src="../../images/lessons/lesson_4/mo/013.jpg" /></a>
-</div></p>
-</div>
-<div class="tabbed-block">
-<p><div class="grid">
-<a class="glightbox" href="../../images/lessons/lesson_4/mo/021.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="021" src="../../images/lessons/lesson_4/mo/021.jpg" /></a>
-<a class="glightbox" href="../../images/lessons/lesson_4/mo/022.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="022" src="../../images/lessons/lesson_4/mo/022.jpg" /></a>
-<a class="glightbox" href="../../images/lessons/lesson_4/mo/023.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="023" src="../../images/lessons/lesson_4/mo/023.jpg" /></a>
-</div></p>
-</div>
-<div class="tabbed-block">
-<p><div class="grid">
-<a class="glightbox" href="../../images/lessons/lesson_4/mo/031.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="031" src="../../images/lessons/lesson_4/mo/031.jpg" /></a>
-<a class="glightbox" href="../../images/lessons/lesson_4/mo/032.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="032" src="../../images/lessons/lesson_4/mo/032.jpg" /></a>
-<a class="glightbox" href="../../images/lessons/lesson_4/mo/033.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="033" src="../../images/lessons/lesson_4/mo/033.jpg" /></a>
-</div></p>
-</div>
-<div class="tabbed-block">
-<p><div class="grid">
-<a class="glightbox" href="../../images/lessons/lesson_4/mo/041.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="041" src="../../images/lessons/lesson_4/mo/041.jpg" /></a>
-<a class="glightbox" href="../../images/lessons/lesson_4/mo/042.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="042" src="../../images/lessons/lesson_4/mo/042.jpg" /></a>
-<a class="glightbox" href="../../images/lessons/lesson_4/mo/043.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="043" src="../../images/lessons/lesson_4/mo/043.jpg" /></a>
-</div></p>
-</div>
-<div class="tabbed-block">
-<p><div class="grid">
-<a class="glightbox" href="../../images/lessons/lesson_4/mo/051.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="051" src="../../images/lessons/lesson_4/mo/051.jpg" /></a>
-<a class="glightbox" href="../../images/lessons/lesson_4/mo/052.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="052" src="../../images/lessons/lesson_4/mo/052.jpg" /></a>
-<a class="glightbox" href="../../images/lessons/lesson_4/mo/053.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="053" src="../../images/lessons/lesson_4/mo/053.jpg" /></a>
-</div></p>
-</div>
-<div class="tabbed-block">
-<p><div class="grid">
-<a class="glightbox" href="../../images/lessons/lesson_4/mo/061.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="061" src="../../images/lessons/lesson_4/mo/061.jpg" /></a>
-<a class="glightbox" href="../../images/lessons/lesson_4/mo/062.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="062" src="../../images/lessons/lesson_4/mo/062.jpg" /></a>
-<a class="glightbox" href="../../images/lessons/lesson_4/mo/063.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="063" src="../../images/lessons/lesson_4/mo/063.jpg" /></a>
-</div></p>
-</div>
-<div class="tabbed-block">
-<p><div class="grid">
-<a class="glightbox" href="../../images/lessons/lesson_4/mo/071.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="071" src="../../images/lessons/lesson_4/mo/071.jpg" /></a>
-<a class="glightbox" href="../../images/lessons/lesson_4/mo/072.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="072" src="../../images/lessons/lesson_4/mo/072.jpg" /></a>
-<a class="glightbox" href="../../images/lessons/lesson_4/mo/073.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="073" src="../../images/lessons/lesson_4/mo/073.jpg" /></a>
-</div></p>
-</div>
-<div class="tabbed-block">
-<p><div class="grid">
-<a class="glightbox" href="../../images/lessons/lesson_4/mo/081.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="081" src="../../images/lessons/lesson_4/mo/081.jpg" /></a>
-<a class="glightbox" href="../../images/lessons/lesson_4/mo/082.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="082" src="../../images/lessons/lesson_4/mo/082.jpg" /></a>
-<a class="glightbox" href="../../images/lessons/lesson_4/mo/083.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="083" src="../../images/lessons/lesson_4/mo/083.jpg" /></a>
-</div></p>
-</div>
-<div class="tabbed-block">
-<p><div class="grid">
-<a class="glightbox" href="../../images/lessons/lesson_4/mo/091.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="091" src="../../images/lessons/lesson_4/mo/091.jpg" /></a>
-<a class="glightbox" href="../../images/lessons/lesson_4/mo/092.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="092" src="../../images/lessons/lesson_4/mo/092.jpg" /></a>
-<a class="glightbox" href="../../images/lessons/lesson_4/mo/093.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="093" src="../../images/lessons/lesson_4/mo/093.jpg" /></a>
-</div></p>
-</div>
-<div class="tabbed-block">
-<p><div class="grid">
-<a class="glightbox" href="../../images/lessons/lesson_4/mo/101.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="101" src="../../images/lessons/lesson_4/mo/101.jpg" /></a>
-<a class="glightbox" href="../../images/lessons/lesson_4/mo/102.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="102" src="../../images/lessons/lesson_4/mo/102.jpg" /></a>
-<a class="glightbox" href="../../images/lessons/lesson_4/mo/103.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="103" src="../../images/lessons/lesson_4/mo/103.jpg" /></a>
-</div></p>
-</div>
-<div class="tabbed-block">
-<p><div class="grid">
-<a class="glightbox" href="../../images/lessons/lesson_4/mo/111.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="111" src="../../images/lessons/lesson_4/mo/111.jpg" /></a>
-<a class="glightbox" href="../../images/lessons/lesson_4/mo/112.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="112" src="../../images/lessons/lesson_4/mo/112.jpg" /></a>
-<a class="glightbox" href="../../images/lessons/lesson_4/mo/113.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="113" src="../../images/lessons/lesson_4/mo/113.jpg" /></a>
-</div></p>
-</div>
-<div class="tabbed-block">
-<p><div class="grid">
-<a class="glightbox" href="../../images/lessons/lesson_4/mo/121.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="121" src="../../images/lessons/lesson_4/mo/121.jpg" /></a>
-<a class="glightbox" href="../../images/lessons/lesson_4/mo/122.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="122" src="../../images/lessons/lesson_4/mo/122.jpg" /></a>
-<a class="glightbox" href="../../images/lessons/lesson_4/mo/123.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="123" src="../../images/lessons/lesson_4/mo/123.jpg" /></a>
-</div></p>
-</div>
-<div class="tabbed-block">
-<p><div class="grid">
-<a class="glightbox" href="../../images/lessons/lesson_4/mo/131.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="131" src="../../images/lessons/lesson_4/mo/131.jpg" /></a>
-<a class="glightbox" href="../../images/lessons/lesson_4/mo/132.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="132" src="../../images/lessons/lesson_4/mo/132.jpg" /></a>
-<a class="glightbox" href="../../images/lessons/lesson_4/mo/133.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="133" src="../../images/lessons/lesson_4/mo/133.jpg" /></a>
-</div></p>
-</div>
-<div class="tabbed-block">
-<p><div class="grid">
-<a class="glightbox" href="../../images/lessons/lesson_4/mo/141.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="141" src="../../images/lessons/lesson_4/mo/141.jpg" /></a>
-<a class="glightbox" href="../../images/lessons/lesson_4/mo/142.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="142" src="../../images/lessons/lesson_4/mo/142.jpg" /></a>
-<a class="glightbox" href="../../images/lessons/lesson_4/mo/143.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="143" src="../../images/lessons/lesson_4/mo/143.jpg" /></a>
-</div></p>
-</div>
-<div class="tabbed-block">
-<p><div class="grid">
-<a class="glightbox" href="../../images/lessons/lesson_4/mo/151.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="151" src="../../images/lessons/lesson_4/mo/151.jpg" /></a>
-<a class="glightbox" href="../../images/lessons/lesson_4/mo/152.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="152" src="../../images/lessons/lesson_4/mo/152.jpg" /></a>
-<a class="glightbox" href="../../images/lessons/lesson_4/mo/153.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="153" src="../../images/lessons/lesson_4/mo/153.jpg" /></a>
-</div></p>
-</div>
-<div class="tabbed-block">
-<p><div class="grid">
-<a class="glightbox" href="../../images/lessons/lesson_4/mo/161.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="161" src="../../images/lessons/lesson_4/mo/161.jpg" /></a>
-<a class="glightbox" href="../../images/lessons/lesson_4/mo/162.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="162" src="../../images/lessons/lesson_4/mo/162.jpg" /></a>
-<a class="glightbox" href="../../images/lessons/lesson_4/mo/163.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="163" src="../../images/lessons/lesson_4/mo/163.jpg" /></a>
-</div></p>
-</div>
-<div class="tabbed-block">
-<p><div class="grid">
-<a class="glightbox" href="../../images/lessons/lesson_4/mo/171.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="171" src="../../images/lessons/lesson_4/mo/171.jpg" /></a>
-<a class="glightbox" href="../../images/lessons/lesson_4/mo/172.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="172" src="../../images/lessons/lesson_4/mo/172.jpg" /></a>
-<a class="glightbox" href="../../images/lessons/lesson_4/mo/173.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="173" src="../../images/lessons/lesson_4/mo/173.jpg" /></a>
-</div></p>
-</div>
-<div class="tabbed-block">
-<p><div class="grid">
-<a class="glightbox" href="../../images/lessons/lesson_4/mo/181.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="181" src="../../images/lessons/lesson_4/mo/181.jpg" /></a>
-<a class="glightbox" href="../../images/lessons/lesson_4/mo/182.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="182" src="../../images/lessons/lesson_4/mo/182.jpg" /></a>
-<a class="glightbox" href="../../images/lessons/lesson_4/mo/183.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="183" src="../../images/lessons/lesson_4/mo/183.jpg" /></a>
-</div></p>
-</div>
-<div class="tabbed-block">
-<p>HOMO is Orbital 5, with energy <span class="arithmatex">\(-0.28665087\:E_h\)</span></p>
-<p>LUMO is Orbital 6, with energy <span class="arithmatex">\(0.068232216\:E_h\)</span></p>
-<p>So <span class="arithmatex">\(E_{gap} = 0.354883086\: E_h\)</span></p>
-</div>
-</div>
-</div>
+<p><a href="../../"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M575.8 255.5c0 18-15 32.1-32 32.1h-32l.7 160.2c0 2.7-.2 5.4-.5 8.1V472c0 22.1-17.9 40-40 40h-16c-1.1 0-2.2 0-3.3-.1-1.4.1-2.8.1-4.2.1H392c-22.1 0-40-17.9-40-40v-88c0-17.7-14.3-32-32-32h-64c-17.7 0-32 14.3-32 32v88c0 22.1-17.9 40-40 40h-55.9c-1.5 0-3-.1-4.5-.2-1.2.1-2.4.2-3.6.2h-16c-22.1 0-40-17.9-40-40V360c0-.9 0-1.9.1-2.8v-69.6H32c-18 0-32-14-32-32.1 0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7l255.4 224.5c8 7 12 15 11 24z"/></svg></span></a> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span> <a href="../">VASP</a> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span> <strong>Slurm Script</strong></p>
+<h1 id="slurm-script">SLURM Script</h1>
+<p>Below is an example SLURM script you can use. </p>
+<p>The command to run VASP is <code>mpirun  vasp_std &gt;&amp; vasp.out</code> once the correct modules have been loaded.</p>
+<div class="language-bash highlight"><span class="filename">run_vasp.sh</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="ch">#!/bin/bash</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="c1">#SBATCH --job-name=JOB_NAME             # Job name</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="c1">#SBATCH --time=48:00:00               # Time limit hrs:min:sec</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="c1">#SBATCH -p nocona</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="c1">#SBATCH -N 1</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="c1">#SBATCH --ntasks-per-node=64</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="c1">#this vasp slurm script is for one job on nocona</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="c1"># Modules</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>module<span class="w"> </span>load<span class="w"> </span>gcc/10.1.0<span class="w"> </span>openmpi/4.1.4<span class="w"> </span>vasp/6.3.2-openmp
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="c1">#module load gcc/10.1.0 openmpi/4.0.4 vasp/5.4.4-openmp</span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="nv">SDIR</span><span class="o">=</span><span class="sb">`</span><span class="nb">pwd</span><span class="sb">`</span>
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="nv">ex</span><span class="o">=</span><span class="nv">$$</span>
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;---------------------------------------------------------&quot;</span><span class="w"> </span>&gt;<span class="w"> </span><span class="nv">$SDIR</span>/job.<span class="nv">$ex</span>
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;        JOB STARTED ON: &quot;</span><span class="w"> </span><span class="sb">`</span>date<span class="sb">`</span><span class="w"> </span>&gt;&gt;<span class="w"> </span><span class="nv">$SDIR</span>/job.<span class="nv">$ex</span>
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;        NODE NAME:      &quot;</span><span class="w"> </span><span class="sb">`</span>hostname<span class="sb">`</span><span class="w"> </span>&gt;&gt;<span class="w"> </span><span class="nv">$SDIR</span>/job.<span class="nv">$ex</span>
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;        DIR:            &quot;</span><span class="w"> </span><span class="sb">`</span><span class="nb">pwd</span><span class="sb">`</span><span class="w"> </span>&gt;&gt;<span class="w"> </span><span class="nv">$SDIR</span>/job.<span class="nv">$ex</span>
+</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>
+</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span>!<span class="w">  </span>-f<span class="w"> </span>POSCAR<span class="w"> </span><span class="o">]</span>
+</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="k">then</span>
+</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a><span class="w">  </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;!!!Job stopped. File POSCAR is missing!!! &quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span><span class="nv">$SDIR</span>/job.<span class="nv">$ex</span>
+</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a><span class="w">  </span><span class="nb">exit</span>
+</span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a><span class="k">fi</span>
+</span><span id="__span-0-26"><a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a><span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span>!<span class="w">  </span>-f<span class="w"> </span>INCAR<span class="w"> </span><span class="o">]</span>
+</span><span id="__span-0-27"><a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a><span class="k">then</span>
+</span><span id="__span-0-28"><a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a><span class="w">  </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;!!!Job stopped. File INCAR is missing!!! &quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span><span class="nv">$SDIR</span>/job.<span class="nv">$ex</span>
+</span><span id="__span-0-29"><a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a><span class="w">  </span><span class="nb">exit</span>
+</span><span id="__span-0-30"><a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a><span class="k">fi</span>
+</span><span id="__span-0-31"><a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a><span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span>!<span class="w">  </span>-f<span class="w"> </span>KPOINTS<span class="w"> </span><span class="o">]</span>
+</span><span id="__span-0-32"><a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a><span class="k">then</span>
+</span><span id="__span-0-33"><a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a><span class="w">  </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;!!!Job stopped. File KPOINTS is missing!!! &quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span><span class="nv">$SDIR</span>/job.<span class="nv">$ex</span>
+</span><span id="__span-0-34"><a id="__codelineno-0-34" name="__codelineno-0-34" href="#__codelineno-0-34"></a><span class="w">  </span><span class="nb">exit</span>
+</span><span id="__span-0-35"><a id="__codelineno-0-35" name="__codelineno-0-35" href="#__codelineno-0-35"></a><span class="k">fi</span>
+</span><span id="__span-0-36"><a id="__codelineno-0-36" name="__codelineno-0-36" href="#__codelineno-0-36"></a><span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span>!<span class="w">  </span>-f<span class="w"> </span>POTCAR<span class="w">  </span><span class="o">]</span>
+</span><span id="__span-0-37"><a id="__codelineno-0-37" name="__codelineno-0-37" href="#__codelineno-0-37"></a><span class="k">then</span>
+</span><span id="__span-0-38"><a id="__codelineno-0-38" name="__codelineno-0-38" href="#__codelineno-0-38"></a><span class="w">  </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;!!!Job stopped. File POTCAR is missing!!! &quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span><span class="nv">$SDIR</span>/job.<span class="nv">$ex</span>
+</span><span id="__span-0-39"><a id="__codelineno-0-39" name="__codelineno-0-39" href="#__codelineno-0-39"></a><span class="w">  </span><span class="nb">exit</span>
+</span><span id="__span-0-40"><a id="__codelineno-0-40" name="__codelineno-0-40" href="#__codelineno-0-40"></a><span class="k">fi</span>
+</span><span id="__span-0-41"><a id="__codelineno-0-41" name="__codelineno-0-41" href="#__codelineno-0-41"></a>
+</span><span id="__span-0-42"><a id="__codelineno-0-42" name="__codelineno-0-42" href="#__codelineno-0-42"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;        RUNNING VASP at  `date` &quot;</span><span class="w">  </span>&gt;&gt;<span class="w"> </span><span class="nv">$SDIR</span>/job.<span class="nv">$ex</span>
+</span><span id="__span-0-43"><a id="__codelineno-0-43" name="__codelineno-0-43" href="#__codelineno-0-43"></a>
+</span><span id="__span-0-44"><a id="__codelineno-0-44" name="__codelineno-0-44" href="#__codelineno-0-44"></a>mpirun<span class="w">  </span>vasp_std<span class="w"> </span>&gt;<span class="p">&amp;</span><span class="w"> </span>vasp.out
+</span><span id="__span-0-45"><a id="__codelineno-0-45" name="__codelineno-0-45" href="#__codelineno-0-45"></a>
+</span><span id="__span-0-46"><a id="__codelineno-0-46" name="__codelineno-0-46" href="#__codelineno-0-46"></a>rm<span class="w"> </span>-f<span class="w">  </span>WAVECAR<span class="w"> </span>CHG*<span class="w"> </span>TMPCAR<span class="w"> </span>REP*<span class="w"> </span>EIG*
+</span><span id="__span-0-47"><a id="__codelineno-0-47" name="__codelineno-0-47" href="#__codelineno-0-47"></a>rm<span class="w"> </span>-f<span class="w"> </span>DOSCAR<span class="w"> </span>IBZKPT<span class="w"> </span>ICONST<span class="w"> </span>PCDAT
+</span><span id="__span-0-48"><a id="__codelineno-0-48" name="__codelineno-0-48" href="#__codelineno-0-48"></a>
+</span><span id="__span-0-49"><a id="__codelineno-0-49" name="__codelineno-0-49" href="#__codelineno-0-49"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;        JOB FINISHED ON: &quot;</span><span class="w"> </span><span class="sb">`</span>date<span class="sb">`</span><span class="w"> </span>&gt;&gt;<span class="w"> </span><span class="nv">$SDIR</span>/job.<span class="nv">$ex</span>
+</span><span id="__span-0-50"><a id="__codelineno-0-50" name="__codelineno-0-50" href="#__codelineno-0-50"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;---------------------------------------------------------&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span><span class="nv">$SDIR</span>/job.<span class="nv">$ex</span>
+</span></code></pre></div>
 
 
 
