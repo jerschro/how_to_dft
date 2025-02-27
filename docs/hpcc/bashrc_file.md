@@ -32,7 +32,7 @@ export PATH=$TURBODIR/bin/`sysname`:$PATH
 Replace eraider with your eraider/hpcc account name.
 
 ``` bash
-alias sq=' squeue -u eraider '
+alias sq=' squeue --me '
 alias lus=' cd /lustre/scratch/eraider '
 alias work=' cd /lustre/work/eraider '
 alias li=' ls -r -lah --color=auto '
@@ -64,8 +64,7 @@ unset __conda_setup
 ## For molden
 
 ``` bash
-alias molden='/lustre/work/rnieman/molden6.9/bin/molden'
-
+alias molden=/home/jerschro/Programs/molden6.9/bin/molden
 ```
 
 ## For Sublime
@@ -79,7 +78,7 @@ alias subl='/home/tristfis/PROGRAMS/sublime_text_3/sublime_text $1'
 
 ``` bash
 alias check_sq='bash /home/jerschro/Scripts/squeue/read_squeue.sh'
-alias check_abuse='bash /home/jerschro/Scripts/squeue/pandas_squeue.sh'
+alias check_usage='bash /home/jerschro/Scripts/squeue/pandas_squeue.sh'
 alias nocona_pie='bash /home/jerschro/Scripts/squeue/nocona_pie.sh'
 alias quanah_pie='bash /home/jerschro/Scripts/squeue/quanah_pie.sh'
 
@@ -92,3 +91,9 @@ alias ttmole='/home/jerschro/conda/bin/python3 /home/jerschro/Programs/TTMolE/ma
 
 ```
 
+## For Jeremy's Scripts Documentation
+
+``` bash
+alias launch="bash /home/jerschro/Scripts/documentation/launch_documentation.sh"
+
+```

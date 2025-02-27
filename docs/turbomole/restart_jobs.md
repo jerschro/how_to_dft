@@ -13,7 +13,7 @@
 
 1. If no Turbomole job completion files (job.start, job.last, energy etc...) are in the directory the job was submitted in, that means the calculation timed out.
 1. Look for the slurm-XXXXXXXX.out file where X are integers. This was the SLURM JOB ID of the job that ran out of time.
-1. Go to /lustre/work/eraider/XXXXXXXX where XXXXXXXX is the SLURM JOB ID and eraider is your HPC username.
+1. Go to /lustre/scratch/eraider/XXXXXXXX where XXXXXXXX is the SLURM JOB ID and eraider is your HPC username.
 1. Copy all of these files to the original job submission directory.
     * Remember you can use * or -r with cp to make your life easier.
 1. From there, follow the instructions above to resubmit the job.
@@ -24,7 +24,7 @@
 
 1. If the job submission directory is missing the completed frequency job files (vib_spectrum, vib_normal_modes etc...), then the frequency job ran out of time.
 1. Look for the slurm-XXXXXXXX.out file where X are integers. This was the SLURM JOB ID of the job that ran out of time.
-1. Go to /lustre/work/eraider/XXXXXXXX where XXXXXXXX is the SLURM JOB ID and eraider is your HPC username.
+1. Go to /lustre/scratch/eraider/XXXXXXXX where XXXXXXXX is the SLURM JOB ID and eraider is your HPC username.
 1. Copy all of these files to the original job submission directory.
     * Remember you can use * or -r with cp to make your life easier.
 1. If you did a geometry optimization with a finer convergence criteria, you can check if this finished by seeing the geometry optimization completed files (job.start, job.last, energy etc...). You can uncomment the jobex line in the slurm submission file, run define like described above to reset control file, and resubmit the job.

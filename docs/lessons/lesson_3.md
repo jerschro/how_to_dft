@@ -181,7 +181,6 @@ Geometry Optimizations are the backbone of DFT calculations. It is the first cal
 
     Click through to look at the details of how the gradient is created and how a calculation finishes by convergence.
 
-
 === "Perturbation"
 
     Each atom is perturbed and moved in each axis direction (6 times) and the energy of the system is recorded for each pertubation.
@@ -206,7 +205,6 @@ Geometry Optimizations are the backbone of DFT calculations. It is the first cal
     
 ## Example Optimization
 
-
 === ":fontawesome-solid-house:"
 
     Lets look at an example optimization. The first geometry is a linear (bond angle 180°) H2O molecule with a bond length of 1.5 Å. The second geometery is a bent (bond angle 90°) H2O molecule with a bond length of 1.5 Å. The following slides will show how Turbomole optimized each of these geometries.
@@ -227,7 +225,6 @@ Geometry Optimizations are the backbone of DFT calculations. It is the first cal
 
 === "Bond Angle vs. H-O Distance"
 
-    
     <div class="grid">
     
     Geometry 1
@@ -238,10 +235,8 @@ Geometry Optimizations are the backbone of DFT calculations. It is the first cal
     
     </div>
 
-
 === "Energy Amount Across Optimization"
-
-    
+   
     <div class="grid">
     
     Geometry 1
@@ -265,7 +260,6 @@ Geometry Optimizations are the backbone of DFT calculations. It is the first cal
     </div>
 
     Pictures were obtained from VESTA.
-
 
 ## Recap
 
