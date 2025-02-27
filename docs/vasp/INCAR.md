@@ -11,9 +11,9 @@ Follow the link for a list of all INCAR tags: [Link](https://www.vasp.at/wiki/in
 
 Tells VASP what method to do. 
 
-* IBRION=0 is for Molecular Dynamics.
-* IBRION=2 is for Conjugate Gradient Geometry Optimization. 
-* IBRION=5 is for calculating finite differences for phonopy displacements.
+* IBRION = 0 is for Molecular Dynamics.
+* IBRION = 2 is for Conjugate Gradient Geometry Optimization. 
+* IBRION = -1 with NSW = 0 is a single point calculation.
 
 ### ISIF[:fontawesome-solid-link:](https://www.vasp.at/wiki/index.php/ISIF)
 
@@ -37,16 +37,14 @@ Defines the energy cutoff for the basis set used in the VASP calculation. This v
 
 These tags are for parallelization of VASP. You need to use one or the other tag in the INCAR file.
 
-* NCORE is equal to the number of cores per compute node. 
-
-Or if you are using more than one node:
-
-* NPAR is equal to the square root of the number of cores being used.
+* NCORE determines how many cpus work on one orbital.
+* NPAR determines how many orbitals will be ran at one time.
 
 For 1 node jobs on Nocona:
 
-***NCORE = number of ntasks/cpus requested in SLURM file. (I am not sure if this is right...)***
+NCORE = should be a low amount of cpus, so if you request 36 cpus, NCORE could be 4. 
 
+Don't provide NPAR since you provided NCORE.
 
 ## Geometry Optimization INCAR
 

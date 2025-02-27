@@ -36,6 +36,7 @@ nav:
     - POSCAR : vasp/POSCAR.md
     - POTCAR : vasp/POTCAR.md
     - KPOINTS : vasp/KPOINTS.md
+    - SLURM Script : vasp/slurm_script.md
     - OUTCAR : vasp/OUTCAR.md
     - Phonopy : vasp/phonopy.md
   - Lessons :

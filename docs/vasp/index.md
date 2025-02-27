@@ -11,7 +11,7 @@ If you want more detailed explanations you can check out the [VASP Forum](https:
 * [POSCAR](POSCAR.md) - Geometry for calculation.
 * [POTCAR](POTCAR.md) - Potentials for system.
 * [KPOINTS](KPOINTS.md) - File defining the KPOINTS for the calculation.
-* Slurm Script - Shell script that runs VASP on the HPC.
+* [SLURM Script](slurm_script.md) - Shell script that runs VASP on the HPC.
 
 ## Output Files
 
@@ -21,8 +21,8 @@ If you want more detailed explanations you can check out the [VASP Forum](https:
 
 ## Phonopy
 
-Phonopy is a program that we use combined with VASP to calculate the phonon frequencies of the optimized geometry. Navigate to the [Phonopy page](phonopy.md) or check out their documentation link: [https://phonopy.github.io/phonopy/](https://phonopy.github.io/phonopy/).
+Phonopy is a program that we use combined with VASP to calculate the phonon frequencies of the optimized geometry. Navigate to the [Phonopy page](phonopy.md) or check out their documentation link: [https://phonopy.github.io/phonopy/](https://phonopy.github.io/phonopy/)
 
 ## VASPKIT
 
-VASPKIT is a program that can be used to postprocess a VASP calculation. Documentation link: [https://vaspkit.com/](https://vaspkit.com/)
+VASPKIT is a program that can be used to postprocess a VASP calculation. Contact Jeremy for more information as he has experience using it. Documentation link: [https://vaspkit.com/](https://vaspkit.com/)

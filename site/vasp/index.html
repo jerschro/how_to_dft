@@ -12,28 +12,28 @@
         <meta name="author" content="Jeremy Schroeder">
       
       
-        <link rel="canonical" href="https://jerschro.github.io/how_to_dft/hpcc/create_account/">
+        <link rel="canonical" href="https://jerschro.github.io/how_to_dft/vasp/">
       
       
-        <link rel="prev" href="../">
+        <link rel="prev" href="../turbomole/restart_jobs/">
       
       
-        <link rel="next" href="../connect_to_vpn/">
+        <link rel="next" href="INCAR/">
       
       
-      <link rel="icon" href="../../assets/images/favicon.png">
+      <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.14">
     
     
       
-        <title>Create an HPCC Account - How To DFT</title>
+        <title>VASP - How To DFT</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.10ba22f1.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.10ba22f1.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -52,16 +52,16 @@
       
     
     
-      <link rel="stylesheet" href="../../styles.css">
+      <link rel="stylesheet" href="../styles.css">
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
     
     
     
-   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+   <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
     html.glightbox-open { overflow: initial; height: 100%; }
     .gslide-title { margin-top: 0px; user-select: text; }
     .gslide-desc { color: #666; user-select: text; }
@@ -70,7 +70,7 @@
     .gdesc-inner { font-size: 0.75rem; }
     body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
     body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
-    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -89,7 +89,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#how-to-create-a-hpcc-account" class="md-skip">
+        <a href="#vasp-vasp-wiki" class="md-skip">
           Skip to content
         </a>
       
@@ -103,7 +103,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="How To DFT" class="md-header__button md-logo" aria-label="How To DFT" data-md-component="logo">
+    <a href=".." title="How To DFT" class="md-header__button md-logo" aria-label="How To DFT" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -123,7 +123,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Create an HPCC Account
+              VASP
             
           </span>
         </div>
@@ -240,7 +240,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../.." class="md-tabs__link">
+      <a href=".." class="md-tabs__link">
         
   
     
@@ -257,7 +257,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../syllabus/spring25syllabus/" class="md-tabs__link">
+      <a href="../syllabus/spring25syllabus/" class="md-tabs__link">
         
   
     
@@ -272,13 +272,11 @@
         
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../hpcc/" class="md-tabs__link">
           
   
     
@@ -296,7 +294,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../gaussian/" class="md-tabs__link">
+      <a href="../gaussian/" class="md-tabs__link">
         
   
     
@@ -313,7 +311,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../orca/" class="md-tabs__link">
+      <a href="../orca/" class="md-tabs__link">
         
   
     
@@ -332,7 +330,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../turbomole/" class="md-tabs__link">
+        <a href="../turbomole/" class="md-tabs__link">
           
   
     
@@ -348,11 +346,13 @@
         
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../vasp/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
           
   
     
@@ -372,7 +372,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../lessons/" class="md-tabs__link">
+        <a href="../lessons/" class="md-tabs__link">
           
   
     
@@ -407,7 +407,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="How To DFT" class="md-nav__button md-logo" aria-label="How To DFT" data-md-component="logo">
+    <a href=".." title="How To DFT" class="md-nav__button md-logo" aria-label="How To DFT" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -437,7 +437,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../.." class="md-nav__link">
+      <a href=".." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -457,7 +457,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../syllabus/spring25syllabus/" class="md-nav__link">
+      <a href="../syllabus/spring25syllabus/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -474,8 +474,6 @@
       
   
   
-    
-  
   
   
     
@@ -504,22 +502,19 @@
     
     
       
-        
-        
-      
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../" class="md-nav__link ">
+            <a href="../hpcc/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -530,13 +525,13 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             HPCC
@@ -549,19 +544,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../hpcc/create_account/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -570,7 +556,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -583,7 +568,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../connect_to_vpn/" class="md-nav__link">
+      <a href="../hpcc/connect_to_vpn/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -604,7 +589,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../log_on_linux/" class="md-nav__link">
+      <a href="../hpcc/log_on_linux/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -625,7 +610,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../log_on_mac/" class="md-nav__link">
+      <a href="../hpcc/log_on_mac/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -646,7 +631,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../log_on_windows/" class="md-nav__link">
+      <a href="../hpcc/log_on_windows/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -667,7 +652,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../install_conda/" class="md-nav__link">
+      <a href="../hpcc/install_conda/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -688,7 +673,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../intro_to_terminal/" class="md-nav__link">
+      <a href="../hpcc/intro_to_terminal/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -709,7 +694,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../bashrc_file/" class="md-nav__link">
+      <a href="../hpcc/bashrc_file/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -737,7 +722,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../gaussian/" class="md-nav__link">
+      <a href="../gaussian/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -757,7 +742,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../orca/" class="md-nav__link">
+      <a href="../orca/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -814,7 +799,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../turbomole/" class="md-nav__link ">
+            <a href="../turbomole/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -847,7 +832,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../turbomole/guide_ppt/" class="md-nav__link">
+      <a href="../turbomole/guide_ppt/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -868,7 +853,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../turbomole/define/" class="md-nav__link">
+      <a href="../turbomole/define/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -889,7 +874,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../turbomole/cosmoprep/" class="md-nav__link">
+      <a href="../turbomole/cosmoprep/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -910,7 +895,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../turbomole/cosmo_docx/" class="md-nav__link">
+      <a href="../turbomole/cosmo_docx/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -931,7 +916,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../turbomole/frequency/" class="md-nav__link">
+      <a href="../turbomole/frequency/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -952,7 +937,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../turbomole/collect_results/" class="md-nav__link">
+      <a href="../turbomole/collect_results/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -973,7 +958,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../turbomole/frequency_docx/" class="md-nav__link">
+      <a href="../turbomole/frequency_docx/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -994,7 +979,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../turbomole/restart_jobs/" class="md-nav__link">
+      <a href="../turbomole/restart_jobs/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1019,6 +1004,8 @@
       
   
   
+    
+  
   
   
     
@@ -1043,19 +1030,22 @@
     
     
       
+        
+        
+      
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../vasp/" class="md-nav__link ">
+            <a href="./" class="md-nav__link md-nav__link--active">
               
   
   <span class="md-ellipsis">
@@ -1066,13 +1056,13 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_7" id="__nav_7_label" tabindex="0">
+              <label class="md-nav__link md-nav__link--active" for="__nav_7" id="__nav_7_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_7">
             <span class="md-nav__icon md-icon"></span>
             VASP
@@ -1088,7 +1078,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../vasp/INCAR/" class="md-nav__link">
+      <a href="INCAR/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1109,7 +1099,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../vasp/POSCAR/" class="md-nav__link">
+      <a href="POSCAR/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1130,7 +1120,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../vasp/POTCAR/" class="md-nav__link">
+      <a href="POTCAR/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1151,7 +1141,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../vasp/KPOINTS/" class="md-nav__link">
+      <a href="KPOINTS/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1172,7 +1162,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../vasp/OUTCAR/" class="md-nav__link">
+      <a href="OUTCAR/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1193,7 +1183,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../vasp/phonopy/" class="md-nav__link">
+      <a href="phonopy/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1266,7 +1256,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../lessons/" class="md-nav__link ">
+            <a href="../lessons/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1299,7 +1289,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../lessons/lesson_1/" class="md-nav__link">
+      <a href="../lessons/lesson_1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1320,7 +1310,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../lessons/lesson_2/" class="md-nav__link">
+      <a href="../lessons/lesson_2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1341,7 +1331,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../lessons/lesson_3/" class="md-nav__link">
+      <a href="../lessons/lesson_3/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1362,7 +1352,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../lessons/lesson_4/" class="md-nav__link">
+      <a href="../lessons/lesson_4/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1383,7 +1373,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../lessons/lesson_5/" class="md-nav__link">
+      <a href="../lessons/lesson_5/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1404,7 +1394,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../lessons/lesson_6/" class="md-nav__link">
+      <a href="../lessons/lesson_6/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1425,7 +1415,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../lessons/lesson_7/" class="md-nav__link">
+      <a href="../lessons/lesson_7/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1446,7 +1436,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../lessons/lesson_8/" class="md-nav__link">
+      <a href="../lessons/lesson_8/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1467,7 +1457,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../lessons/lesson_9/" class="md-nav__link">
+      <a href="../lessons/lesson_9/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1488,7 +1478,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../lessons/assignment_1/" class="md-nav__link">
+      <a href="../lessons/assignment_1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1509,7 +1499,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../lessons/assignment_2/" class="md-nav__link">
+      <a href="../lessons/assignment_2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1530,7 +1520,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../lessons/resource_intro_to_dft/" class="md-nav__link">
+      <a href="../lessons/resource_intro_to_dft/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1571,6 +1561,50 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#input-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      Input Files
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#output-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      Output Files
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#phonopy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Phonopy
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vaspkit" class="md-nav__link">
+    <span class="md-ellipsis">
+      VASPKIT
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1587,10 +1621,27 @@
   
 
 
-<p><a href="../../"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M575.8 255.5c0 18-15 32.1-32 32.1h-32l.7 160.2c0 2.7-.2 5.4-.5 8.1V472c0 22.1-17.9 40-40 40h-16c-1.1 0-2.2 0-3.3-.1-1.4.1-2.8.1-4.2.1H392c-22.1 0-40-17.9-40-40v-88c0-17.7-14.3-32-32-32h-64c-17.7 0-32 14.3-32 32v88c0 22.1-17.9 40-40 40h-55.9c-1.5 0-3-.1-4.5-.2-1.2.1-2.4.2-3.6.2h-16c-22.1 0-40-17.9-40-40V360c0-.9 0-1.9.1-2.8v-69.6H32c-18 0-32-14-32-32.1 0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7l255.4 224.5c8 7 12 15 11 24z"/></svg></span></a> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span> <a href="../">HPCC</a> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span> <strong>Create an HPCC Account</strong></p>
-<h1 id="how-to-create-a-hpcc-account">How to Create a HPCC account</h1>
-<p>The first step is to get an account on the HPCC by going to the website below and requesting it. Use 0000-0000-0000-0000 as the ORCID number.</p>
-<p><a href="https://www.depts.ttu.edu/hpcc/accounts/hpcc_new_account_req.php">https://www.depts.ttu.edu/hpcc/accounts/hpcc_new_account_req.php</a></p>
+<p><a href="../"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M575.8 255.5c0 18-15 32.1-32 32.1h-32l.7 160.2c0 2.7-.2 5.4-.5 8.1V472c0 22.1-17.9 40-40 40h-16c-1.1 0-2.2 0-3.3-.1-1.4.1-2.8.1-4.2.1H392c-22.1 0-40-17.9-40-40v-88c0-17.7-14.3-32-32-32h-64c-17.7 0-32 14.3-32 32v88c0 22.1-17.9 40-40 40h-55.9c-1.5 0-3-.1-4.5-.2-1.2.1-2.4.2-3.6.2h-16c-22.1 0-40-17.9-40-40V360c0-.9 0-1.9.1-2.8v-69.6H32c-18 0-32-14-32-32.1 0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7l255.4 224.5c8 7 12 15 11 24z"/></svg></span></a> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span> <strong>VASP</strong></p>
+<h1 id="vasp-vasp-wiki">VASP <a href="https://www.vasp.at/wiki/" class="md-button small-button">VASP Wiki</a></h1>
+<p>This is the homepage for containing everything to do with VASP. </p>
+<p>If you want more detailed explanations you can check out the <a href="https://www.vasp.at/forum/">VASP Forum</a> or <a href="https://www.vasp.at/wiki/">VASP Wiki</a>. To use VASP on the TTU HPCC, it is important you are on the our research group's VASP License, as VASP is a proprietary software.</p>
+<h2 id="input-files">Input Files</h2>
+<ul>
+<li><a href="INCAR/">INCAR</a> - Main input file for VASP.</li>
+<li><a href="POSCAR/">POSCAR</a> - Geometry for calculation.</li>
+<li><a href="POTCAR/">POTCAR</a> - Potentials for system.</li>
+<li><a href="KPOINTS/">KPOINTS</a> - File defining the KPOINTS for the calculation.</li>
+<li>Slurm Script - Shell script that runs VASP on the HPC.</li>
+</ul>
+<h2 id="output-files">Output Files</h2>
+<ul>
+<li><a href="OUTCAR/">OUTCAR</a> - Main output file for VASP.</li>
+<li>Many Others... Check the VASP Wiki for more info <a href="https://www.vasp.at/wiki/index.php/Category:Output_files">Here</a>.</li>
+</ul>
+<h2 id="phonopy">Phonopy</h2>
+<p>Phonopy is a program that we use combined with VASP to calculate the phonon frequencies of the optimized geometry. Navigate to the <a href="phonopy/">Phonopy page</a> or check out their documentation link: <a href="https://phonopy.github.io/phonopy/">https://phonopy.github.io/phonopy/</a>.</p>
+<h2 id="vaspkit">VASPKIT</h2>
+<p>VASPKIT is a program that can be used to postprocess a VASP calculation. Documentation link: <a href="https://vaspkit.com/">https://vaspkit.com/</a></p>
 
 
 
@@ -1683,14 +1734,14 @@
       <div class="md-progress" data-md-component="progress" role="progressbar"></div>
     
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.instant.progress", "navigation.tabs", "navigation.indexes", "navigation.top", "content.code.copy"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.instant.progress", "navigation.tabs", "navigation.indexes", "navigation.top", "content.code.copy"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.bd41221c.min.js"></script>
+      <script src="../assets/javascripts/bundle.bd41221c.min.js"></script>
       
-        <script src="../../javascripts/shortcuts.js"></script>
+        <script src="../javascripts/shortcuts.js"></script>
       
-        <script src="../../javascripts/mathjax.js"></script>
+        <script src="../javascripts/mathjax.js"></script>
       
         <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
       
