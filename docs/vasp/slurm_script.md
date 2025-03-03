@@ -58,3 +58,30 @@ echo "        JOB FINISHED ON: " `date` >> $SDIR/job.$ex
 echo "---------------------------------------------------------" >> $SDIR/job.$ex
 
 ```
+
+## VASP With VTST Tools
+
+Thanks to Jerimiah Zamora, we have VASP compiled with UT Austin's Transition State Tools for VASP (VTST Tools). Below is the SLURM Script that envokes VASP VTST Tools.
+
+``` bash title="run_vasp_vtst.sh"
+
+#!/bin/bash
+#SBATCH --job-name=jobname            # Job name
+#SBATCH --time=48:00:00               # Time limit hrs:min:sec
+#SBATCH -p nocona
+#SBATCH -N 1
+#SBATCH --ntasks-per-node=128
+
+# Modules
+module load gcc/10.1.0
+module load openmpi/4.1.4
+module load netlib-scalapack/2.2.0-mpi
+module load openblas/0.3.12-openmp
+module load fftw/3.3.8-mpi-openmp
+module load netlib-lapack/3.10.1
+
+export VASP_DIR=/home/jerizamo/vasp/vasp.6.3.2/bin
+
+mpirun $VASP_DIR/vasp_std >& vasp.out
+
+```
