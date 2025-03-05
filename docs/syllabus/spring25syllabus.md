@@ -26,7 +26,7 @@ Please schedule an appointment to meet with the instructors.
 
 ## Meeting Times
 
-* Meeting With Jeremy - Tuesdays at 9:30 in MEN 216A.
+* Meeting With Jeremy - Tuesday and Thursdays at 9:30 in MEN 225K.
 * Group Meeting - Thursdays at 5:15pm in MEN 103.
 
 ## Goals For The Semester
@@ -94,3 +94,14 @@ This calendar below only includes the major deadlines.
 | 16 | 5/1 | Semester Final Report Due | [Send to Dr. Aquino](mailto:adeliaaquino@ttu.edu) | DO NOT TURN IT IN LATE! IT IS DUE BY 10:30 PM. LATE WORK IS NOT ACCEPTED. |
 
 * Deadlines are tentative as of 1/27.
+
+## Assignments for New Members
+
+* Optimization and Frequency on DNA Molecule monomer, dimer and trimer. We can then calculate Interaction energy between the different systems. We can also do a solvent calculation and see the affect a solvent has on the systems. Run in SVP and if you have time TZVP. 
+  * Solvent list: cytosol, nucleoplasm, water, urea.
+
+* Optimization and frequency between 2 conformations of the PETN molecule. We can find HOMO LUMO gap by using different functionals and compare this finding to the literature value. We will combine our results so everyone will report on all 6 structures and we can anaylze which one is the most stable and why. Run with SVP and if you have time TZVP. Take the functional that predicts the HOMO-LUMO gap the best and run solvent calculations with the most stable petn molecule and with the solvents below.
+  * Functional list: b3lyp, bp, cam-b3lyp, m062x, pbe, pbe0, wb97xd.
+  * Solvent list: acetone, acetonitrile, hexane, water.
+
+* Optimization and frequency of manganase complex with APC using pbe/b3-lyp and SVP/TZVP (maybe def2). (Will start after spring break)

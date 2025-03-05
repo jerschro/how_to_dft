@@ -3,7 +3,7 @@
 
 Below is an example SLURM script you can use. 
 
-The command to run VASP is ```mpirun  vasp_std >& vasp.out``` once the correct modules have been loaded.
+The command to invoke VASP is ```mpirun  vasp_std >& vasp.out``` once the correct modules have been loaded.
 
 ``` bash title="run_vasp.sh"
 #!/bin/bash
