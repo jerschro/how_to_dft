@@ -396,7 +396,9 @@
           
             
               
-              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden>
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -751,6 +753,17 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    ORCA
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -760,6 +773,79 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#orca-documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      ORCA Documentation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#orca-input-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      ORCA Input Files
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#orcainp" class="md-nav__link">
+    <span class="md-ellipsis">
+      orca.inp
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-orcainp" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example orca.inp
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#orca-output-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      ORCA Output Files
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#slurm-script-for-orca" class="md-nav__link">
+    <span class="md-ellipsis">
+      SLURM Script for ORCA
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1577,6 +1663,8 @@
             
             
               
+                
+              
               <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
@@ -1588,6 +1676,68 @@
   
     
   
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#orca-documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      ORCA Documentation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#orca-input-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      ORCA Input Files
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#orcainp" class="md-nav__link">
+    <span class="md-ellipsis">
+      orca.inp
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-orcainp" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example orca.inp
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#orca-output-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      ORCA Output Files
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#slurm-script-for-orca" class="md-nav__link">
+    <span class="md-ellipsis">
+      SLURM Script for ORCA
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -1607,6 +1757,132 @@
 
 <p><a href="../"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M575.8 255.5c0 18-15 32.1-32 32.1h-32l.7 160.2c0 2.7-.2 5.4-.5 8.1V472c0 22.1-17.9 40-40 40h-16c-1.1 0-2.2 0-3.3-.1-1.4.1-2.8.1-4.2.1H392c-22.1 0-40-17.9-40-40v-88c0-17.7-14.3-32-32-32h-64c-17.7 0-32 14.3-32 32v88c0 22.1-17.9 40-40 40h-55.9c-1.5 0-3-.1-4.5-.2-1.2.1-2.4.2-3.6.2h-16c-22.1 0-40-17.9-40-40V360c0-.9 0-1.9.1-2.8v-69.6H32c-18 0-32-14-32-32.1 0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7l255.4 224.5c8 7 12 15 11 24z"/></svg></span></a> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span> <strong>ORCA</strong></p>
 <h1 id="orca">ORCA</h1>
+<p>This is the webpage for containing everything to do with ORCA.</p>
+<p>ORCA is an open source DFT program that has a lot of flexibility and is very easy to use. Check out the detailed ORCA manual which has alot of information on the basis sets, functionals, and specifics of how ORCA does the calculation. You can use the search function in the ORCA manual to help answer a question you may have. ORCA also has tutorials that will help show you how it works. There is also another documentation website that is focused on the input of ORCA that is a good resource.</p>
+<h2 id="orca-documentation">ORCA Documentation</h2>
+<ul>
+<li><a href="https://www.faccts.de/docs/orca/6.0/manual/">ORCA 6.0 Manual</a></li>
+<li><a href="https://www.faccts.de/docs/orca/6.0/tutorials/">ORCA 6.0 Tutorials</a></li>
+<li><a href="https://www.faccts.de/docs/orca/5.0/tutorials/">ORCA 5.0 Tutorials</a></li>
+<li><a href="https://sites.google.com/site/orcainputlibrary/home">ORCA Input Library</a></li>
+</ul>
+<h2 id="orca-input-files">ORCA Input Files</h2>
+<p>The initial files required for ORCA are:</p>
+<ul>
+<li>orca.inp</li>
+<li>SLURM file</li>
+<li>initial coordinates in .xyz format (optional because you can supply coordinates in orca.inp)<ul>
+<li>Make sure it is a unique filename and not a name ORCA will overwrite for the output like orca.xyz which is the final geometry of the ORCA calculation.</li>
+</ul>
+</li>
+</ul>
+<h2 id="orcainp">orca.inp</h2>
+<p>The orca.inp file is the main input file for ORCA. The first line is the input line that will contain all of the calculation settings you want ORCA to do that starts with "!". Anything with a "%" is a setting for ORCA to read and there is alot of customizability with ORCA. You define the coordinates with an "*" as you will see below. ORCA is not case sensitive.</p>
+<p>Near the coordinate definition ("* xyz X X" or "* xyzfile X X filename.xyz") you will need two integers. The first integer is the molecular charge of the system. The second integer is the multiplicity of the system. The multiplicity of the system is almost always 1 if the charge is 0 for a molecule that has the correct charge and is a closed shell system. The multiplicity describes the amount of possible spin states in the system and it is defined as <span class="arithmatex">\(2S + 1\)</span> where <span class="arithmatex">\(S\)</span> is the total spin quantum number. For a closed shell system, the multplicity is 1 also called a singlet and for example an unpaired electron has a doublet spin or multiplicity of 2.</p>
+<h2 id="example-orcainp">Example orca.inp</h2>
+<p>The below orca.inp file will run a DFT geometry optimization and a frequency calculation with B3LYP functional, 6-31G* basis set, using RI (Resolution of Identity) Algorithms. </p>
+<div class="language-text highlight"><span class="filename">orca.inp</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>! B3LYP 6-31G* OPT RIJCOSX FREQ
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>%maxcore 4000
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>%pal
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>nprocs 12
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>end
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>* xyzfile 0 1 initial_geom.xyz
+</span></code></pre></div>
+<p>The below example orca.inp file includes the geometry. It is a simple initial linear H2O molecule.</p>
+<div class="language-text highlight"><span class="filename">orca.inp</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>! B3LYP 6-31G* OPT RIJCOSX FREQ
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>%maxcore 4000
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>%pal
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>nprocs 12
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>end
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>* xyz 0 1
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>O 0.0 0.0 1.5
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>H 0.0 0.0 3.0
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>H 0.0 0.0 0.0
+</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>*
+</span></code></pre></div>
+<h2 id="orca-output-files">ORCA Output Files</h2>
+<p>The main output file for ORCA is orca.out . You can open orca.out to see everything ORCA calculates. There are also alot of other files ORCA generates. The final geometry is in the orca.xyz file. Jeremy has also wrote a script that you can use get values from ORCA calculations. Put the alias below into your .bashrc and type <code>orca_energy --help</code> to see everything the script will find.</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nb">alias</span><span class="w"> </span><span class="nv">orca_energy</span><span class="o">=</span><span class="s1">&#39;/home/jerschro/conda/bin/python3 /home/jerschro/Scripts/orca/orca_energy.py&#39;</span>
+</span></code></pre></div>
+<h2 id="slurm-script-for-orca">SLURM Script for ORCA</h2>
+<p>Below is an example SLURM script for ORCA. After loading the correct modules and environment variables, you can invoke ORCA with the command <code>$ORCADIR/orca orca.inp &gt;&gt; orca.out</code>.</p>
+<div class="language-bash highlight"><span class="filename">run_orca.sh</span><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="ch">#!/bin/bash</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="c1">#SBATCH --job-name=JOBNAME</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="c1">#SBATCH --partition nocona</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="c1">#SBATCH --nodes=1</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="c1">#SBATCH --ntasks=12</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="c1">#SBATCH --time=03:00:00</span>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="c1">#SBATCH --mem-per-cpu=4G</span>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="c1">#export ORCADIR=/lustre/work/ddecastr/orca_4_2_1_linux_x86-64_shared_openmpi314</span>
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="c1">#export ORCADIR=/home/rnieman/PROGRAMS/orca_4_2_1_linux_x86-64/orca_4_2_1_linux_x86-64_openmpi314</span>
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="nb">export</span><span class="w"> </span><span class="nv">ORCADIR</span><span class="o">=</span>/lustre/work/rnieman/orca_5_0_1_linux_x86-64_shared_openmpi411
+</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="nb">export</span><span class="w"> </span><span class="nv">PATH</span><span class="o">=</span><span class="nv">$ORCADIR</span>:<span class="nv">$PATH</span>
+</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a><span class="nb">export</span><span class="w"> </span><span class="nv">LD_LIBRARY_PATH</span><span class="o">=</span><span class="nv">$ORCADIR</span>:<span class="nv">$LD_LIBRARY_PATH</span>
+</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>
+</span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>module<span class="w"> </span>load<span class="w"> </span>gcc/10.2.0<span class="w"> </span>openmpi/4.0.4
+</span><span id="__span-3-16"><a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a>
+</span><span id="__span-3-17"><a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a>mkdir<span class="w"> </span>-p<span class="w"> </span>/lustre/scratch/<span class="nv">$USER</span>/<span class="nv">$SLURM_JOB_ID</span>
+</span><span id="__span-3-18"><a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a><span class="nv">WRKDIR</span><span class="o">=</span>/lustre/scratch/<span class="nv">$USER</span>/<span class="nv">$SLURM_JOB_ID</span>
+</span><span id="__span-3-19"><a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a><span class="nb">cd</span><span class="w"> </span><span class="nv">$WRKDIR</span>
+</span><span id="__span-3-20"><a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a>cp<span class="w"> </span><span class="nv">$SLURM_SUBMIT_DIR</span>/*<span class="w"> </span>.<span class="w"> </span>-f
+</span><span id="__span-3-21"><a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a>
+</span><span id="__span-3-22"><a id="__codelineno-3-22" name="__codelineno-3-22" href="#__codelineno-3-22"></a><span class="c1"># control echoes</span>
+</span><span id="__span-3-23"><a id="__codelineno-3-23" name="__codelineno-3-23" href="#__codelineno-3-23"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;ORCADIR :</span><span class="nv">$ORCADIR</span><span class="s2">&quot;</span>
+</span><span id="__span-3-24"><a id="__codelineno-3-24" name="__codelineno-3-24" href="#__codelineno-3-24"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;PATH     :</span><span class="nv">$PATH</span><span class="s2">&quot;</span>
+</span><span id="__span-3-25"><a id="__codelineno-3-25" name="__codelineno-3-25" href="#__codelineno-3-25"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;start up&quot;</span>
+</span><span id="__span-3-26"><a id="__codelineno-3-26" name="__codelineno-3-26" href="#__codelineno-3-26"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;HOME=</span><span class="nv">$HOME</span><span class="s2">&quot;</span>
+</span><span id="__span-3-27"><a id="__codelineno-3-27" name="__codelineno-3-27" href="#__codelineno-3-27"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;WRKDIR=</span><span class="nv">$WRKDIR</span><span class="s2">&quot;</span>
+</span><span id="__span-3-28"><a id="__codelineno-3-28" name="__codelineno-3-28" href="#__codelineno-3-28"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;HOSTNAME=</span><span class="nv">$HOSTNAME</span><span class="s2">&quot;</span>
+</span><span id="__span-3-29"><a id="__codelineno-3-29" name="__codelineno-3-29" href="#__codelineno-3-29"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;JOBID=</span><span class="nv">$SLURM_JOB_ID</span><span class="s2">&quot;</span>
+</span><span id="__span-3-30"><a id="__codelineno-3-30" name="__codelineno-3-30" href="#__codelineno-3-30"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;SUBMIT_DIR=</span><span class="nv">$SLURM_SUBMIT_DIR</span><span class="s2">&quot;</span>
+</span><span id="__span-3-31"><a id="__codelineno-3-31" name="__codelineno-3-31" href="#__codelineno-3-31"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;NSLOTS=</span><span class="nv">$SLURM_NTASKS</span><span class="s2">, NPEFF=</span><span class="nv">$NPEFF</span><span class="s2">&quot;</span>
+</span><span id="__span-3-32"><a id="__codelineno-3-32" name="__codelineno-3-32" href="#__codelineno-3-32"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;P_PER_N_eff=</span><span class="nv">$P_PER_N_eff</span><span class="s2">&quot;</span>
+</span><span id="__span-3-33"><a id="__codelineno-3-33" name="__codelineno-3-33" href="#__codelineno-3-33"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;P_PER_N=</span><span class="nv">$P_PER_N</span><span class="s2">&quot;</span>
+</span><span id="__span-3-34"><a id="__codelineno-3-34" name="__codelineno-3-34" href="#__codelineno-3-34"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;===============================&quot;</span>
+</span><span id="__span-3-35"><a id="__codelineno-3-35" name="__codelineno-3-35" href="#__codelineno-3-35"></a>
+</span><span id="__span-3-36"><a id="__codelineno-3-36" name="__codelineno-3-36" href="#__codelineno-3-36"></a><span class="c1">#-----------------------------------------------------------------------</span>
+</span><span id="__span-3-37"><a id="__codelineno-3-37" name="__codelineno-3-37" href="#__codelineno-3-37"></a><span class="c1"># NOW EXECUTION of the Turbomole JOB.</span>
+</span><span id="__span-3-38"><a id="__codelineno-3-38" name="__codelineno-3-38" href="#__codelineno-3-38"></a><span class="c1"># This has to be changed according to particular Turbomole specification.</span>
+</span><span id="__span-3-39"><a id="__codelineno-3-39" name="__codelineno-3-39" href="#__codelineno-3-39"></a><span class="c1">##########################################</span>
+</span><span id="__span-3-40"><a id="__codelineno-3-40" name="__codelineno-3-40" href="#__codelineno-3-40"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;STARTING AT &quot;</span><span class="w"> </span><span class="sb">`</span>date<span class="sb">`</span>
+</span><span id="__span-3-41"><a id="__codelineno-3-41" name="__codelineno-3-41" href="#__codelineno-3-41"></a><span class="nv">lista</span><span class="o">=</span>orca.inp
+</span><span id="__span-3-42"><a id="__codelineno-3-42" name="__codelineno-3-42" href="#__codelineno-3-42"></a>
+</span><span id="__span-3-43"><a id="__codelineno-3-43" name="__codelineno-3-43" href="#__codelineno-3-43"></a><span class="k">for</span><span class="w"> </span>inp<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="nv">$lista</span>
+</span><span id="__span-3-44"><a id="__codelineno-3-44" name="__codelineno-3-44" href="#__codelineno-3-44"></a><span class="w">  </span><span class="k">do</span>
+</span><span id="__span-3-45"><a id="__codelineno-3-45" name="__codelineno-3-45" href="#__codelineno-3-45"></a><span class="w">        </span><span class="nv">out</span><span class="o">=</span><span class="si">${</span><span class="nv">inp</span><span class="p">%inp</span><span class="si">}</span>out
+</span><span id="__span-3-46"><a id="__codelineno-3-46" name="__codelineno-3-46" href="#__codelineno-3-46"></a><span class="w">        </span>date<span class="w"> </span>&gt;<span class="w"> </span><span class="nv">$out</span>
+</span><span id="__span-3-47"><a id="__codelineno-3-47" name="__codelineno-3-47" href="#__codelineno-3-47"></a><span class="w">        </span>hostname<span class="w"> </span>&gt;&gt;<span class="w"> </span><span class="nv">$out</span>
+</span><span id="__span-3-48"><a id="__codelineno-3-48" name="__codelineno-3-48" href="#__codelineno-3-48"></a><span class="w">        </span><span class="nv">$ORCADIR</span>/orca<span class="w"> </span><span class="nv">$inp</span><span class="w"> </span>&gt;&gt;<span class="w"> </span><span class="nv">$out</span>
+</span><span id="__span-3-49"><a id="__codelineno-3-49" name="__codelineno-3-49" href="#__codelineno-3-49"></a><span class="w">        </span>date<span class="w"> </span>&gt;&gt;<span class="w"> </span><span class="nv">$out</span>
+</span><span id="__span-3-50"><a id="__codelineno-3-50" name="__codelineno-3-50" href="#__codelineno-3-50"></a><span class="k">done</span>
+</span><span id="__span-3-51"><a id="__codelineno-3-51" name="__codelineno-3-51" href="#__codelineno-3-51"></a>
+</span><span id="__span-3-52"><a id="__codelineno-3-52" name="__codelineno-3-52" href="#__codelineno-3-52"></a><span class="c1">## *********************************************************************</span>
+</span><span id="__span-3-53"><a id="__codelineno-3-53" name="__codelineno-3-53" href="#__codelineno-3-53"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;FINISHED AT &quot;</span><span class="w"> </span><span class="sb">`</span>date<span class="sb">`</span>
+</span><span id="__span-3-54"><a id="__codelineno-3-54" name="__codelineno-3-54" href="#__codelineno-3-54"></a><span class="c1">##########################################</span>
+</span><span id="__span-3-55"><a id="__codelineno-3-55" name="__codelineno-3-55" href="#__codelineno-3-55"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;FINAL COPY: WRKDIR=</span><span class="nv">$WRKDIR</span><span class="s2">&quot;</span>
+</span><span id="__span-3-56"><a id="__codelineno-3-56" name="__codelineno-3-56" href="#__codelineno-3-56"></a><span class="nb">cd</span><span class="w"> </span><span class="nv">$WRKDIR</span>
+</span><span id="__span-3-57"><a id="__codelineno-3-57" name="__codelineno-3-57" href="#__codelineno-3-57"></a>rm<span class="w"> </span>slurm*<span class="w"> </span>-f
+</span><span id="__span-3-58"><a id="__codelineno-3-58" name="__codelineno-3-58" href="#__codelineno-3-58"></a><span class="nb">pwd</span>
+</span><span id="__span-3-59"><a id="__codelineno-3-59" name="__codelineno-3-59" href="#__codelineno-3-59"></a><span class="nv">rmfiles</span><span class="o">=</span><span class="s2">&quot;`find . -size +50M`&quot;</span>
+</span><span id="__span-3-60"><a id="__codelineno-3-60" name="__codelineno-3-60" href="#__codelineno-3-60"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;rmfiles=</span><span class="nv">$rmfiles</span><span class="s2">&quot;</span>
+</span><span id="__span-3-61"><a id="__codelineno-3-61" name="__codelineno-3-61" href="#__codelineno-3-61"></a><span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$rmfiles</span><span class="s2">&quot;</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="w"> </span><span class="o">]</span>
+</span><span id="__span-3-62"><a id="__codelineno-3-62" name="__codelineno-3-62" href="#__codelineno-3-62"></a><span class="k">then</span>
+</span><span id="__span-3-63"><a id="__codelineno-3-63" name="__codelineno-3-63" href="#__codelineno-3-63"></a><span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s1">&#39;No big files to remove.&#39;</span>
+</span><span id="__span-3-64"><a id="__codelineno-3-64" name="__codelineno-3-64" href="#__codelineno-3-64"></a><span class="k">else</span>
+</span><span id="__span-3-65"><a id="__codelineno-3-65" name="__codelineno-3-65" href="#__codelineno-3-65"></a><span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s1">&#39;Removing big files:&#39;</span>
+</span><span id="__span-3-66"><a id="__codelineno-3-66" name="__codelineno-3-66" href="#__codelineno-3-66"></a><span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="nv">$rmfiles</span>
+</span><span id="__span-3-67"><a id="__codelineno-3-67" name="__codelineno-3-67" href="#__codelineno-3-67"></a><span class="w">    </span>rm<span class="w"> </span>-f<span class="w"> </span><span class="nv">$rmfiles</span>
+</span><span id="__span-3-68"><a id="__codelineno-3-68" name="__codelineno-3-68" href="#__codelineno-3-68"></a><span class="k">fi</span>
+</span><span id="__span-3-69"><a id="__codelineno-3-69" name="__codelineno-3-69" href="#__codelineno-3-69"></a><span class="w">    </span>mv<span class="w"> </span>-f<span class="w"> </span><span class="nv">$WRKDIR</span>/*<span class="w"> </span><span class="nv">$SLURM_SUBMIT_DIR</span>
+</span><span id="__span-3-70"><a id="__codelineno-3-70" name="__codelineno-3-70" href="#__codelineno-3-70"></a><span class="w">    </span>rm<span class="w"> </span><span class="nv">$WRKDIR</span><span class="w"> </span>-rf
+</span></code></pre></div>
 
 
 
@@ -1614,8 +1890,13 @@
 
 
 
+  
+  
 
 
+
+
+  
 
 
 
