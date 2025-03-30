@@ -64,13 +64,14 @@ echo "---------------------------------------------------------" >> $SDIR/job.$e
 Thanks to Jerimiah Zamora, we have VASP compiled with UT Austin's Transition State Tools for VASP (VTST Tools). Below is the SLURM Script that envokes VASP VTST Tools.
 
 ``` bash title="run_vasp_vtst.sh"
-
 #!/bin/bash
-#SBATCH --job-name=jobname            # Job name
+#SBATCH --job-name=JOB_NAME             # Job name
 #SBATCH --time=48:00:00               # Time limit hrs:min:sec
 #SBATCH -p nocona
 #SBATCH -N 1
-#SBATCH --ntasks-per-node=128
+#SBATCH --ntasks-per-node=64
+
+#this vasp slurm script is for one job on nocona
 
 # Modules
 module load gcc/10.1.0
@@ -82,6 +83,43 @@ module load netlib-lapack/3.10.1
 
 export VASP_DIR=/home/jerizamo/vasp/vasp.6.3.2/bin
 
+
+SDIR=`pwd`
+ex=$$
+echo "---------------------------------------------------------" > $SDIR/job.$ex
+echo "        JOB STARTED ON: " `date` >> $SDIR/job.$ex
+echo "        NODE NAME:      " `hostname` >> $SDIR/job.$ex
+echo "        DIR:            " `pwd` >> $SDIR/job.$ex
+
+if [ !  -f POSCAR ]
+then
+  echo "!!!Job stopped. File POSCAR is missing!!! " >> $SDIR/job.$ex
+  exit
+fi
+if [ !  -f INCAR ]
+then
+  echo "!!!Job stopped. File INCAR is missing!!! " >> $SDIR/job.$ex
+  exit
+fi
+if [ !  -f KPOINTS ]
+then
+  echo "!!!Job stopped. File KPOINTS is missing!!! " >> $SDIR/job.$ex
+  exit
+fi
+if [ !  -f POTCAR  ]
+then
+  echo "!!!Job stopped. File POTCAR is missing!!! " >> $SDIR/job.$ex
+  exit
+fi
+
+echo "        RUNNING VASP at  `date` "  >> $SDIR/job.$ex
+
 mpirun $VASP_DIR/vasp_std >& vasp.out
+
+rm -f  WAVECAR CHG* TMPCAR REP* EIG*
+rm -f DOSCAR IBZKPT ICONST PCDAT
+
+echo "        JOB FINISHED ON: " `date` >> $SDIR/job.$ex
+echo "---------------------------------------------------------" >> $SDIR/job.$ex
 
 ```
