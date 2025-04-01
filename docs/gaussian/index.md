@@ -69,7 +69,7 @@ There is one main output file for Gaussian. The filename will depend on how you 
 We have GaussView which is a visualization program specifically made for Gaussian calculation output. To use GaussView, add the below alias to the .bashrc file and lauch GaussView with the command ```gv```. Jerimiah Zamora currently has the most experience with using GaussView in our Research Group.
 
 ``` bash
-alias gv='export LD_LIBRARY_PATH=/home/aderezen/gaussview/tar/gv/lib:$LD_LIBRARY_PATH && export PATH=/home/aderezen/gaussview/tar/gv:/home/aderezen/gaussvi$
+alias gv='export LD_LIBRARY_PATH=/home/aderezen/gaussview/tar/gv/lib:$LD_LIBRARY_PATH && export PATH=/home/aderezen/gaussview/tar/gv:/home/aderezen/gaussview/tar/gv/exec:/home/aderezen/gaussview/tar/gv/bin:$PATH && export PATH=/home/aderezen/G16/AVX2/g16:$PATH && gv'
 
 ```
 
