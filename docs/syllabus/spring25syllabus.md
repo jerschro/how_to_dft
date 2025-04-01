@@ -70,17 +70,17 @@ The weekly grade will be on a scale of 0-100. For every meeting not attended wit
 |  7 | 2/24 - 2/28 | Adsorption Reactions | [Lesson 7](../lessons/lesson_7.md) | Show me your assigned complex and optimize it. |
 |  8 | 3/3 - 3/7 | Interpreting Results | [Lesson 8](../lessons/lesson_8.md) | Show me your reactant and products optimization calculation. Show proof you submitted your rough draft on time to Dr. Aquino. |
 |  9 | 3/10 - 3/14 | Optimization Results | Let's post process the optimization results. | Show me your excel file with optimization results. |
-|  9 | 3/13 | Semester Report Draft Due | [Send to Dr. Aquino](mailto:adeliaaquino@ttu.edu) | DO NOT TURN IT IN LATE! IT IS DUE BY 10:30 PM. LATE WORK IS NOT ACCEPTED. |
 | 10 | 3/17 - 3/21 | Spring Break | Relax! | None |
 | 11 | 3/24 - 3/28 | Complex Work | Continue work on your assigned complex. | Do frequency calculations on your complex. |
 | 12 | 3/31 - 4/4 | Complex Results | Let's post process the frequency results. | Show me your excel file with frequency results. |
 | 13 | 4/7 - 4/11 | Calculations & Final Report | Work on calculations and final report. | Show me your progress from the past week. |
+| 14 | 4/15 | Semester Report Draft Due | [Send to Dr. Aquino](mailto:adeliaaquino@ttu.edu) | DO NOT TURN IT IN LATE! IT IS DUE BY 10:30 PM. LATE WORK IS NOT ACCEPTED. |
 | 14 | 4/14 - 4/18 | Calculations & Final Report | Work on calculations and final report. | Show me your progress from the past week. |
 | 15 | 4/21 - 4/25 | Calculations & Final Report | Work on calculations and final report. | Turn in your current version of the Final Report to one of the grad students for them to make comments and suggestions. |
 | 16 | 4/28 - 5/2 | Final Week | Last minute Final Report edits and turn in the Final Report. | Show proof you turned in the Final Report. |
 | 16 | 5/1 | Semester Final Report Due | [Send to Dr. Aquino](mailto:adeliaaquino@ttu.edu) | DO NOT TURN IT IN LATE! IT IS DUE BY 10:30 PM. LATE WORK IS NOT ACCEPTED. |
 
-* Deadlines are tentative as of 1/27.
+* Final Report deadline is tentative as of 4/1.
 
 ## Calendar for Fall 24 (Returning Members)
 
@@ -90,12 +90,12 @@ This calendar below only includes the major deadlines.
 
 | Week # | Dates | Overview | Objective | Assignment |
 |---|---|---|---|---|
-|  9 | 3/13 | Semester Report Draft Due | [Send to Dr. Aquino](mailto:adeliaaquino@ttu.edu) | DO NOT TURN IT IN LATE! IT IS DUE BY 10:30 PM. LATE WORK IS NOT ACCEPTED. |
+| 14 | 4/15 | Semester Report Draft Due | [Send to Dr. Aquino](mailto:adeliaaquino@ttu.edu) | DO NOT TURN IT IN LATE! IT IS DUE BY 10:30 PM. LATE WORK IS NOT ACCEPTED. |
 | 16 | 5/1 | Semester Final Report Due | [Send to Dr. Aquino](mailto:adeliaaquino@ttu.edu) | DO NOT TURN IT IN LATE! IT IS DUE BY 10:30 PM. LATE WORK IS NOT ACCEPTED. |
 
-* Deadlines are tentative as of 1/27.
+* Final Report deadline is tentative as of 4/1.
 
-## Assignments for New Members
+## Assignments for New Members (Spring 2025)
 
 * Optimization and Frequency on DNA Molecule monomer, dimer and trimer. We can then calculate Interaction energy between the different systems. We can also do a solvent calculation and see the affect a solvent has on the systems. Run in SVP and if you have time TZVP. 
   * Solvent list: cytosol, nucleoplasm, water, urea.
@@ -104,4 +104,4 @@ This calendar below only includes the major deadlines.
   * Functional list: b3lyp, bp, cam-b3lyp, m062x, pbe, pbe0, wb97xd.
   * Solvent list: acetone, acetonitrile, hexane, water.
 
-* Optimization and frequency of manganase complex with APC using pbe/b3-lyp and SVP/TZVP (maybe def2). (Will start after spring break)
+* Optimization and frequency of a TiO2 complex with APC using pbe/b3-lyp and SVP/TZVP (maybe def2-SVP/def2-TZVP).

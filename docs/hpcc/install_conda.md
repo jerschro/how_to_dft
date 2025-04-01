@@ -17,6 +17,37 @@ conda activate
  
 ```
 
+Once you install conda on the HPC. You need to add the 1 of the 2 choices below to your .bashrc file in order activate conda automatically when you login to the HPC. Choice 1 is the simplier option compared to choice 2 which includes some error checking but causes issues when others try to source your conda environment. You will need to replace $USER with your eraider.
+
+Choice 1 - Simplier Conda Activation
+
+``` bash
+source /home/$USER/conda/etc/profile.d/conda.sh
+export PATH=/home/$USER/conda/bin:$PATH
+conda activate
+
+```
+
+Choice 2 - Error Checking Conda Activation
+
+``` bash
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/$USER/conda/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/$USER/conda/etc/profile.d/conda.sh" ]; then
+        . "/home/$USER/conda/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/$USER/conda/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
+```
+
 ## To Install Conda Locally
 
 Follow Conda instructions for your operating system.
