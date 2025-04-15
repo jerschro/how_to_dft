@@ -12,28 +12,28 @@
         <meta name="author" content="Jeremy Schroeder">
       
       
-        <link rel="canonical" href="https://jerschro.github.io/how_to_dft/lessons/assignment_2/">
+        <link rel="canonical" href="https://jerschro.github.io/how_to_dft/crest/">
       
       
-        <link rel="prev" href="../assignment_1/">
+        <link rel="prev" href="../vasp/phonopy/">
       
       
-        <link rel="next" href="../resource_intro_to_dft/">
+        <link rel="next" href="../lessons/">
       
       
-      <link rel="icon" href="../../assets/images/favicon.png">
+      <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.10">
     
     
       
-        <title>Assignment 2 - How To DFT</title>
+        <title>CREST - How To DFT</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.4af4bdda.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.4af4bdda.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -52,16 +52,16 @@
       
     
     
-      <link rel="stylesheet" href="../../styles.css">
+      <link rel="stylesheet" href="../styles.css">
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
     
     
     
-   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+   <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
     html.glightbox-open { overflow: initial; height: 100%; }
     .gslide-title { margin-top: 0px; user-select: text; }
     .gslide-desc { color: #666; user-select: text; }
@@ -70,7 +70,7 @@
     .gdesc-inner { font-size: 0.75rem; }
     body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
     body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
-    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -89,7 +89,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#assignment-2-create-a-potential-energy-surface-pes" class="md-skip">
+        <a href="#crest" class="md-skip">
           Skip to content
         </a>
       
@@ -103,7 +103,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="How To DFT" class="md-header__button md-logo" aria-label="How To DFT" data-md-component="logo">
+    <a href=".." title="How To DFT" class="md-header__button md-logo" aria-label="How To DFT" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -123,7 +123,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Assignment 2
+              CREST
             
           </span>
         </div>
@@ -241,7 +241,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../.." class="md-tabs__link">
+      <a href=".." class="md-tabs__link">
         
   
   
@@ -260,7 +260,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../syllabus/spring25syllabus/" class="md-tabs__link">
+      <a href="../syllabus/spring25syllabus/" class="md-tabs__link">
         
   
   
@@ -281,7 +281,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../hpcc/" class="md-tabs__link">
+        <a href="../hpcc/" class="md-tabs__link">
           
   
   
@@ -301,7 +301,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../gaussian/" class="md-tabs__link">
+      <a href="../gaussian/" class="md-tabs__link">
         
   
   
@@ -320,7 +320,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../orca/" class="md-tabs__link">
+      <a href="../orca/" class="md-tabs__link">
         
   
   
@@ -341,7 +341,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../turbomole/" class="md-tabs__link">
+        <a href="../turbomole/" class="md-tabs__link">
           
   
   
@@ -363,7 +363,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../vasp/" class="md-tabs__link">
+        <a href="../vasp/" class="md-tabs__link">
           
   
   
@@ -381,9 +381,11 @@
   
   
   
+    
   
-    <li class="md-tabs__item">
-      <a href="../../crest/" class="md-tabs__link">
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
         
   
   
@@ -400,13 +402,11 @@
   
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../lessons/" class="md-tabs__link">
           
   
   
@@ -431,7 +431,9 @@
           
             
               
-              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden>
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -442,7 +444,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="How To DFT" class="md-nav__button md-logo" aria-label="How To DFT" data-md-component="logo">
+    <a href=".." title="How To DFT" class="md-nav__button md-logo" aria-label="How To DFT" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -472,7 +474,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../.." class="md-nav__link">
+      <a href=".." class="md-nav__link">
         
   
   
@@ -494,7 +496,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../syllabus/spring25syllabus/" class="md-nav__link">
+      <a href="../syllabus/spring25syllabus/" class="md-nav__link">
         
   
   
@@ -553,7 +555,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../hpcc/" class="md-nav__link ">
+            <a href="../hpcc/" class="md-nav__link ">
               
   
   
@@ -588,7 +590,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../hpcc/create_account/" class="md-nav__link">
+      <a href="../hpcc/create_account/" class="md-nav__link">
         
   
   
@@ -611,7 +613,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../hpcc/connect_to_vpn/" class="md-nav__link">
+      <a href="../hpcc/connect_to_vpn/" class="md-nav__link">
         
   
   
@@ -634,7 +636,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../hpcc/log_on_linux/" class="md-nav__link">
+      <a href="../hpcc/log_on_linux/" class="md-nav__link">
         
   
   
@@ -657,7 +659,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../hpcc/log_on_mac/" class="md-nav__link">
+      <a href="../hpcc/log_on_mac/" class="md-nav__link">
         
   
   
@@ -680,7 +682,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../hpcc/log_on_windows/" class="md-nav__link">
+      <a href="../hpcc/log_on_windows/" class="md-nav__link">
         
   
   
@@ -703,7 +705,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../hpcc/install_conda/" class="md-nav__link">
+      <a href="../hpcc/install_conda/" class="md-nav__link">
         
   
   
@@ -726,7 +728,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../hpcc/intro_to_terminal/" class="md-nav__link">
+      <a href="../hpcc/intro_to_terminal/" class="md-nav__link">
         
   
   
@@ -749,7 +751,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../hpcc/bashrc_file/" class="md-nav__link">
+      <a href="../hpcc/bashrc_file/" class="md-nav__link">
         
   
   
@@ -779,7 +781,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../gaussian/" class="md-nav__link">
+      <a href="../gaussian/" class="md-nav__link">
         
   
   
@@ -801,7 +803,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../orca/" class="md-nav__link">
+      <a href="../orca/" class="md-nav__link">
         
   
   
@@ -860,7 +862,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../turbomole/" class="md-nav__link ">
+            <a href="../turbomole/" class="md-nav__link ">
               
   
   
@@ -895,7 +897,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../turbomole/guide_ppt/" class="md-nav__link">
+      <a href="../turbomole/guide_ppt/" class="md-nav__link">
         
   
   
@@ -918,7 +920,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../turbomole/define/" class="md-nav__link">
+      <a href="../turbomole/define/" class="md-nav__link">
         
   
   
@@ -941,7 +943,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../turbomole/cosmoprep/" class="md-nav__link">
+      <a href="../turbomole/cosmoprep/" class="md-nav__link">
         
   
   
@@ -964,7 +966,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../turbomole/cosmo_docx/" class="md-nav__link">
+      <a href="../turbomole/cosmo_docx/" class="md-nav__link">
         
   
   
@@ -987,7 +989,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../turbomole/frequency/" class="md-nav__link">
+      <a href="../turbomole/frequency/" class="md-nav__link">
         
   
   
@@ -1010,7 +1012,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../turbomole/collect_results/" class="md-nav__link">
+      <a href="../turbomole/collect_results/" class="md-nav__link">
         
   
   
@@ -1033,7 +1035,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../turbomole/frequency_docx/" class="md-nav__link">
+      <a href="../turbomole/frequency_docx/" class="md-nav__link">
         
   
   
@@ -1056,7 +1058,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../turbomole/restart_jobs/" class="md-nav__link">
+      <a href="../turbomole/restart_jobs/" class="md-nav__link">
         
   
   
@@ -1121,7 +1123,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../vasp/" class="md-nav__link ">
+            <a href="../vasp/" class="md-nav__link ">
               
   
   
@@ -1156,7 +1158,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../vasp/INCAR/" class="md-nav__link">
+      <a href="../vasp/INCAR/" class="md-nav__link">
         
   
   
@@ -1179,7 +1181,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../vasp/POSCAR/" class="md-nav__link">
+      <a href="../vasp/POSCAR/" class="md-nav__link">
         
   
   
@@ -1202,7 +1204,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../vasp/POTCAR/" class="md-nav__link">
+      <a href="../vasp/POTCAR/" class="md-nav__link">
         
   
   
@@ -1225,7 +1227,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../vasp/KPOINTS/" class="md-nav__link">
+      <a href="../vasp/KPOINTS/" class="md-nav__link">
         
   
   
@@ -1248,7 +1250,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../vasp/slurm_script/" class="md-nav__link">
+      <a href="../vasp/slurm_script/" class="md-nav__link">
         
   
   
@@ -1271,7 +1273,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../vasp/OUTCAR/" class="md-nav__link">
+      <a href="../vasp/OUTCAR/" class="md-nav__link">
         
   
   
@@ -1294,7 +1296,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../vasp/phonopy/" class="md-nav__link">
+      <a href="../vasp/phonopy/" class="md-nav__link">
         
   
   
@@ -1321,343 +1323,6 @@
       
   
   
-  
-  
-    <li class="md-nav__item">
-      <a href="../../crest/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    CREST
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-    
-  
-  
-  
-    
-    
-      
-        
-          
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-      
-        
-        
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" checked>
-        
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../" class="md-nav__link ">
-              
-  
-  
-  <span class="md-ellipsis">
-    Lessons
-    
-  </span>
-  
-
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_9" id="__nav_9_label" tabindex="">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_9">
-            <span class="md-nav__icon md-icon"></span>
-            Lessons
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../lesson_1/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Lesson 1
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../lesson_2/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Lesson 2
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../lesson_3/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Lesson 3
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../lesson_4/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Lesson 4
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../lesson_5/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Lesson 5
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../lesson_6/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Lesson 6
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../lesson_7/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Lesson 7
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../lesson_8/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Lesson 8
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../lesson_9/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Lesson 9
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../assignment_1/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Assignment 1
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
     
   
   
@@ -1675,7 +1340,7 @@
   
   
   <span class="md-ellipsis">
-    Assignment 2
+    CREST
     
   </span>
   
@@ -1688,7 +1353,7 @@
   
   
   <span class="md-ellipsis">
-    Assignment 2
+    CREST
     
   </span>
   
@@ -1711,36 +1376,27 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#description" class="md-nav__link">
+  <a href="#crest-documentation" class="md-nav__link">
     <span class="md-ellipsis">
-      Description
+      CREST Documentation
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#tasks" class="md-nav__link">
+  <a href="#how-to-install-crest-using-conda" class="md-nav__link">
     <span class="md-ellipsis">
-      Tasks
+      How to Install CREST using conda
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#example" class="md-nav__link">
+  <a href="#how-to-use-crest-for-conformational-sampling" class="md-nav__link">
     <span class="md-ellipsis">
-      Example
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#hints" class="md-nav__link">
-    <span class="md-ellipsis">
-      Hints
+      How to use CREST for Conformational Sampling
     </span>
   </a>
   
@@ -1753,6 +1409,85 @@
     </li>
   
 
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../lessons/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Lessons
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_9" id="__nav_9_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            Lessons
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
               
             
               
@@ -1762,7 +1497,260 @@
   
   
     <li class="md-nav__item">
-      <a href="../resource_intro_to_dft/" class="md-nav__link">
+      <a href="../lessons/lesson_1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Lesson 1
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lessons/lesson_2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Lesson 2
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lessons/lesson_3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Lesson 3
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lessons/lesson_4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Lesson 4
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lessons/lesson_5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Lesson 5
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lessons/lesson_6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Lesson 6
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lessons/lesson_7/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Lesson 7
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lessons/lesson_8/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Lesson 8
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lessons/lesson_9/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Lesson 9
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lessons/assignment_1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Assignment 1
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lessons/assignment_2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Assignment 2
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lessons/resource_intro_to_dft/" class="md-nav__link">
         
   
   
@@ -1793,6 +1781,8 @@
             
             
               
+                
+              
               <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
@@ -1812,36 +1802,27 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#description" class="md-nav__link">
+  <a href="#crest-documentation" class="md-nav__link">
     <span class="md-ellipsis">
-      Description
+      CREST Documentation
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#tasks" class="md-nav__link">
+  <a href="#how-to-install-crest-using-conda" class="md-nav__link">
     <span class="md-ellipsis">
-      Tasks
+      How to Install CREST using conda
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#example" class="md-nav__link">
+  <a href="#how-to-use-crest-for-conformational-sampling" class="md-nav__link">
     <span class="md-ellipsis">
-      Example
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#hints" class="md-nav__link">
-    <span class="md-ellipsis">
-      Hints
+      How to use CREST for Conformational Sampling
     </span>
   </a>
   
@@ -1860,43 +1841,80 @@
               <article class="md-content__inner md-typeset">
                 
                   
+  
+
 
 
   
   
 
 
-<p><a href="../../"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M575.8 255.5c0 18-15 32.1-32 32.1h-32l.7 160.2c0 2.7-.2 5.4-.5 8.1v16.2c0 22.1-17.9 40-40 40h-16c-1.1 0-2.2 0-3.3-.1-1.4.1-2.8.1-4.2.1L416 512h-24c-22.1 0-40-17.9-40-40v-88c0-17.7-14.3-32-32-32h-64c-17.7 0-32 14.3-32 32v88c0 22.1-17.9 40-40 40h-55.9c-1.5 0-3-.1-4.5-.2-1.2.1-2.4.2-3.6.2h-16c-22.1 0-40-17.9-40-40V360c0-.9 0-1.9.1-2.8v-69.7h-32c-18 0-32-14-32-32.1 0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7l255.4 224.5c8 7 12 15 11 24"/></svg></span></a> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span> <a href="../">Lessons</a> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span> <strong>Assignment 2</strong></p>
-<h1 id="assignment-2-create-a-potential-energy-surface-pes">Assignment 2 - Create a Potential Energy Surface (PES)</h1>
-<p>This is an optional assignment but a good learning tool and programming project if you want to learn. Written by Jeremy Schroeder.</p>
-<h2 id="description">Description</h2>
-<p>I want you to create a potential energy surface for a H2O molecule. Below is a picture of what the lowest energy structure is for H2O. I want you to explore all possible structures of H2O to determine if this is truly the case.</p>
-<p><a class="glightbox" href="../../images/lessons/assignment_2/water_molecule_distances.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Water Molecule Picture" src="../../images/lessons/assignment_2/water_molecule_distances.png" /></a></p>
-<p>Looking at the water molecule, there are 3 independent geometry variables that can change in the structure: </p>
-<ol>
-<li>The bond angle of H-O-H bond.</li>
-<li>The bond distance of H1-O.</li>
-<li>The bond distance of H2-O.</li>
-</ol>
-<p>So to create an energy surface, we can keep one variable constant and change the other two. For example, we can change the bond distances H1-O and H2-O bond for a specific bond angle. For simplification of this assignment and ability to visualize a PES in 3d space, lets fix the bond distances to be equal to eachother. Therefore the two indepenendent variables for the PES are Bond Angle H-O-H and Bond Distance of both O-H bonds.</p>
-<p>The ranges of each variable should be:</p>
+<p><a href="../"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M575.8 255.5c0 18-15 32.1-32 32.1h-32l.7 160.2c0 2.7-.2 5.4-.5 8.1v16.2c0 22.1-17.9 40-40 40h-16c-1.1 0-2.2 0-3.3-.1-1.4.1-2.8.1-4.2.1L416 512h-24c-22.1 0-40-17.9-40-40v-88c0-17.7-14.3-32-32-32h-64c-17.7 0-32 14.3-32 32v88c0 22.1-17.9 40-40 40h-55.9c-1.5 0-3-.1-4.5-.2-1.2.1-2.4.2-3.6.2h-16c-22.1 0-40-17.9-40-40V360c0-.9 0-1.9.1-2.8v-69.7h-32c-18 0-32-14-32-32.1 0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7l255.4 224.5c8 7 12 15 11 24"/></svg></span></a> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span> <strong>CREST</strong></p>
+<h1 id="crest">CREST</h1>
+<p>This is the webpage for containing everything to do with CREST.</p>
+<p>Introduction paragraph to crest.</p>
+<h2 id="crest-documentation">CREST Documentation</h2>
+<p>The CREST Documentation is really informative and descriptive. I would recommend you take a look at it. Also you should check out the xTB documentation which is the main QM/MM calculator CREST uses.</p>
 <ul>
-<li>Bond angle - between 0-180°</li>
-<li>Bond distances - betwen 0.25-2 Å</li>
+<li>CREST: <a href="https://crest-lab.github.io/crest-docs/">https://crest-lab.github.io/crest-docs/</a></li>
+<li>xTB: <a href="xtb-docs.readthedocs.io/">xtb-docs.readthedocs.io/</a></li>
 </ul>
-<p>You can use a DFT program such as Turbomole, Gaussian 16 and Orca or you can use a lesser computationally expensive level of theory like <a href="https://xtb-python.readthedocs.io/en/latest/">XTB</a> or <a href="https://github.com/tmpchem/computational_chemistry">MM</a> as a calculator to calculate the single point energies.</p>
-<h2 id="tasks">Tasks</h2>
-<ol>
-<li>Create a workflow using python or bash to strategically create structures, send the structures to the energy calculator and record the total energy value found from the calculator.</li>
-<li>Determine a simplified method to store the large amount of data retreived from the script.</li>
-<li>Use a graphical software like pyplot to graphically show the results and the PES.</li>
-<li>Identify the global minimum and local minima found.</li>
-</ol>
-<h2 id="example">Example</h2>
-<p>Below is a picture of an example PES that was generated for this project.</p>
-<p><a class="glightbox" href="../../images/lessons/assignment_2/example_pes.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Example PES" src="../../images/lessons/assignment_2/example_pes.png" /></a></p>
-<h2 id="hints">Hints</h2>
-<p>If you need help, feel free to contact Jeremy. You should try to use XTB to save on computational resources and run it locally.</p>
+<h2 id="how-to-install-crest-using-conda">How to Install CREST using conda</h2>
+<ul>
+<li>
+<p>If you are on Windows and have Anaconda/miniconda installed, go to search bar, look for "Anaconda Prompt" and open it. We can run CREST locally in this terminal.</p>
+</li>
+<li>
+<p>If you are on Mac or Linux and you have conda/miniconda installed, open the terminal. We can run CREST locally in this terminal.</p>
+</li>
+<li>
+<p>If you are on the HPCC, make sure you have conda installed. When you run crest, you need to run it either in an SLURM script (that you sbatch to run) or on an interactive node which you can do so by running the command below <code>salloc -p quanah -N 1 -n 1 -t 60</code>. This salloc command will request and give you an interactive node on quanah for 1 hour. <strong>DO NOT RUN CREST ON THE LOGIN NODES ON THE HPCC!!! IF YOU DO THIS, 1) IT IS ILLEGAL and 2) IT MAKES IT SLOW FOR EVERYONE ELSE USING THE HPCC.</strong></p>
+</li>
+</ul>
+<p>For all operating systems, run the commands below. This command creates a new conda environment named crest with CREST and xTB downloaded in it. To activate the conda environment and load CREST you type <code>conda activate crest</code>.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>conda create -n crest conda-forge::crest
+</span></code></pre></div>
+<p>To know if you crest is loaded. You should see (crest) on the left of the terminal prompt line, such as the example below.</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="o">(</span>crest<span class="o">)</span><span class="w"> </span>jeremy@CPU-NAME:~$
+</span></code></pre></div>
+<h2 id="how-to-use-crest-for-conformational-sampling">How to use CREST for Conformational Sampling</h2>
+<p>The example we are going to use is Squalene (<span class="arithmatex">\(\mathrm{C_{30}H_{50}}\)</span>). Squalene is an organic molecule with two possible ways to draw it on a 2D surface. It has many rotatable C-C bonds with each bond rotation being multiple possible different conformations.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">SMILE String</label><label for="__tabbed_1_2">Image 1</label><label for="__tabbed_1_3">Image 2</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>SMILE String for Squalene:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>CC(=CCC/C(=C/CC/C(=C/CC/C=C(/CC/C=C(/CCC=C(C)C)\C)\C)/C)/C)C
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<p><a class="glightbox" href="../images/crest/squalene_2d1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Squalene 2D1" src="../images/crest/squalene_2d1.png" /></a></p>
+<p>From <a href="https://www.sigmaaldrich.com/US/en/product/mm/821068">https://www.sigmaaldrich.com/US/en/product/mm/821068</a></p>
+</div>
+<div class="tabbed-block">
+<p><a class="glightbox" href="../images/crest/squalene_2d2.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Squalene 2D2" src="../images/crest/squalene_2d2.png" /></a></p>
+<p>From <a href="https://www.researchgate.net/figure/Squalene-chemical-structure-Squalene-is-a-natural-dehydrotriterpenic-hydrocarbon-C-30-H_fig2_335133970">https://www.researchgate.net/figure/Squalene-chemical-structure-Squalene-is-a-natural-dehydrotriterpenic-hydrocarbon-C-30-H_fig2_335133970</a></p>
+</div>
+</div>
+</div>
+<p>For CREST to run, we need an initial .xyz structure. Lets generate it using the <a href="https://www.rdkit.org/docs/api-docs.html">RDKit</a> library and the SMILE string of Squalene. Run the below code either in a python file or the python kernel.</p>
+<p><div class="language-python highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">rdkit</span><span class="w"> </span><span class="kn">import</span> <span class="n">Chem</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="kn">from</span><span class="w"> </span><span class="nn">rdkit.Chem</span><span class="w"> </span><span class="kn">import</span> <span class="n">AllChem</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="n">smile_string</span> <span class="o">=</span> <span class="sa">r</span><span class="s2">&quot;CC(=CCC/C(=C/CC/C(=C/CC/C=C(/CC/C=C(/CCC=C(C)C)\C)\C)/C)/C)C&quot;</span> <span class="c1">#we placed r before the string to make it a raw string because of the backslashes present in the smile string. without the r and python could interpret them as special characters.</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="n">xyz_filename</span> <span class="o">=</span> <span class="s2">&quot;squalene_initial.xyz&quot;</span> <span class="c1">#file you want the molecule to be saved to.</span>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="n">rdkit_mol</span> <span class="o">=</span> <span class="n">Chem</span><span class="o">.</span><span class="n">AddHs</span><span class="p">(</span><span class="n">Chem</span><span class="o">.</span><span class="n">MolFromSmiles</span><span class="p">(</span><span class="n">smile_string</span><span class="p">))</span> <span class="c1">#generates a 2d rdkit_mol object and adds Hydrogens where it is not specified in the SMILE string</span>
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="n">AllChem</span><span class="o">.</span><span class="n">EmbedMolecule</span><span class="p">(</span><span class="n">rdkit_mol</span><span class="p">)</span> <span class="c1">#makes the 2d rdkit_mol object into a 3d rdkit_mol object</span>
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="n">Chem</span><span class="o">.</span><span class="n">MolToXYZFile</span><span class="p">(</span><span class="n">rdkit_mol</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">(),</span> <span class="n">xyz_filename</span><span class="p">))</span> <span class="c1">#saves rdkit_mol object to a file in an .xyz format</span>
+</span></code></pre></div>
+CREST documentation reccomends to pre optimize the initial structure using the same level of theory we will use in CREST so, lets first run xTB to optimize squalene_initial.xyz. Let's run this command in a new directory. Also xTB, is downloaded when we install CREST so we can use the same conda environment.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>xtb squalene_initial.xyz --gfn2 &gt; xtb.out
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>cp xtbopt.xyz squalene_opt.xyz
+</span></code></pre></div>
+<p>Now lets run CREST! Run the command below in a new directory. We can add <code>&gt; crest.out</code> to the command to direct the stdout to a file so we can save the CREST terminal output. The default algorithim CREST uses is the iMTD-GC algorithim which is explained <a href="https://crest-lab.github.io/crest-docs/page/overview/workflows.html#imtd-gc-algorithm">HERE</a>.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>crest squalene_opt.xyz --gfn2 &gt; crest.out
+</span></code></pre></div>
 
 
 
@@ -1904,8 +1922,13 @@
 
 
 
+  
+  
 
 
+
+
+  
 
 
 
@@ -1991,14 +2014,14 @@
     
     
       
-      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.instant.progress", "navigation.tabs", "navigation.indexes", "navigation.top", "content.code.copy"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.instant.progress", "navigation.tabs", "navigation.indexes", "navigation.top", "content.code.copy"], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.c8b220af.min.js"></script>
+      <script src="../assets/javascripts/bundle.c8b220af.min.js"></script>
       
-        <script src="../../javascripts/shortcuts.js"></script>
+        <script src="../javascripts/shortcuts.js"></script>
       
-        <script src="../../javascripts/mathjax.js"></script>
+        <script src="../javascripts/mathjax.js"></script>
       
         <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
       
