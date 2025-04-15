@@ -1400,6 +1400,30 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="How to use CREST for Conformational Sampling">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#calculation-setup-and-running-crest" class="md-nav__link">
+    <span class="md-ellipsis">
+      Calculation Setup and Running CREST
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#looking-at-the-output-files-crest-generates" class="md-nav__link">
+    <span class="md-ellipsis">
+      Looking at the Output Files CREST Generates
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -1826,6 +1850,30 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="How to use CREST for Conformational Sampling">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#calculation-setup-and-running-crest" class="md-nav__link">
+    <span class="md-ellipsis">
+      Calculation Setup and Running CREST
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#looking-at-the-output-files-crest-generates" class="md-nav__link">
+    <span class="md-ellipsis">
+      Looking at the Output Files CREST Generates
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -1857,7 +1905,7 @@
 <p>The CREST Documentation is really informative and descriptive. I would recommend you take a look at it. Also you should check out the xTB documentation which is the main QM/MM calculator CREST uses.</p>
 <ul>
 <li>CREST: <a href="https://crest-lab.github.io/crest-docs/">https://crest-lab.github.io/crest-docs/</a></li>
-<li>xTB: <a href="xtb-docs.readthedocs.io/">xtb-docs.readthedocs.io/</a></li>
+<li>xTB: <a href="https://xtb-docs.readthedocs.io/">https://xtb-docs.readthedocs.io/</a></li>
 </ul>
 <h2 id="how-to-install-crest-using-conda">How to Install CREST using conda</h2>
 <ul>
@@ -1868,9 +1916,10 @@
 <p>If you are on Mac or Linux and you have conda/miniconda installed, open the terminal. We can run CREST locally in this terminal.</p>
 </li>
 <li>
-<p>If you are on the HPCC, make sure you have conda installed. When you run crest, you need to run it either in an SLURM script (that you sbatch to run) or on an interactive node which you can do so by running the command below <code>salloc -p quanah -N 1 -n 1 -t 60</code>. This salloc command will request and give you an interactive node on quanah for 1 hour. <strong>DO NOT RUN CREST ON THE LOGIN NODES ON THE HPCC!!! IF YOU DO THIS, 1) IT IS ILLEGAL and 2) IT MAKES IT SLOW FOR EVERYONE ELSE USING THE HPCC.</strong></p>
+<p>If you are on the HPCC, make sure you have conda installed. When you run crest, you need to run it either in an SLURM script (that you sbatch to run) or on an interactive node which you can do so by running the command below <code>salloc -p quanah -N 1 -n 36 -t 60</code>. This salloc command will request and give you a full interactive node on quanah (36 ntasks) for 1 hour (60 minutes). <strong>DO NOT RUN CREST ON THE LOGIN NODES ON THE HPCC!!! IF YOU DO THIS, 1) IT IS ILLEGAL and 2) IT MAKES IT SLOW FOR EVERYONE ELSE USING THE HPCC.</strong></p>
 </li>
 </ul>
+<p>If you need to install conda, read my install conda tutorial <a href="../hpcc/install_conda/">Here</a>.</p>
 <p>For all operating systems, run the commands below. This command creates a new conda environment named crest with CREST and xTB downloaded in it. To activate the conda environment and load CREST you type <code>conda activate crest</code>.</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>conda create -n crest conda-forge::crest
 </span></code></pre></div>
@@ -1878,12 +1927,16 @@
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="o">(</span>crest<span class="o">)</span><span class="w"> </span>jeremy@CPU-NAME:~$
 </span></code></pre></div>
 <h2 id="how-to-use-crest-for-conformational-sampling">How to use CREST for Conformational Sampling</h2>
-<p>The example we are going to use is Squalene (<span class="arithmatex">\(\mathrm{C_{30}H_{50}}\)</span>). Squalene is an organic molecule with two possible ways to draw it on a 2D surface. It has many rotatable C-C bonds with each bond rotation being multiple possible different conformations.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">SMILE String</label><label for="__tabbed_1_2">Image 1</label><label for="__tabbed_1_3">Image 2</label></div>
+<h3 id="calculation-setup-and-running-crest">Calculation Setup and Running CREST</h3>
+<p>There are two example molecules we can try, Hexane (<span class="arithmatex">\(\mathrm{C_{6}H_{12}}\)</span>) or Squalene (<span class="arithmatex">\(\mathrm{C_{30}H_{50}}\)</span>). Hexane is a hydrocarbon and Squalene is an organic molecule with two possible ways to draw it on a 2D surface. Both molecules have many rotatable C-C bonds with each bond rotation being multiple possible different conformations. The Hexane CREST calculation will finish alot faster than the Squalene CREST calculation.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">SMILE Strings</label><label for="__tabbed_1_2">Squalene Image 1</label><label for="__tabbed_1_3">Squalene Image 2</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
+<p>SMILE String for Hexane:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>CCCCCC
+</span></code></pre></div>
 <p>SMILE String for Squalene:</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>CC(=CCC/C(=C/CC/C(=C/CC/C=C(/CC/C=C(/CCC=C(C)C)\C)\C)/C)/C)C
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>CC(=CCC/C(=C/CC/C(=C/CC/C=C(/CC/C=C(/CCC=C(C)C)\C)\C)/C)/C)C
 </span></code></pre></div>
 </div>
 <div class="tabbed-block">
@@ -1897,24 +1950,86 @@
 </div>
 </div>
 <p>For CREST to run, we need an initial .xyz structure. Lets generate it using the <a href="https://www.rdkit.org/docs/api-docs.html">RDKit</a> library and the SMILE string of Squalene. Run the below code either in a python file or the python kernel.</p>
-<p><div class="language-python highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">rdkit</span><span class="w"> </span><span class="kn">import</span> <span class="n">Chem</span>
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="kn">from</span><span class="w"> </span><span class="nn">rdkit.Chem</span><span class="w"> </span><span class="kn">import</span> <span class="n">AllChem</span>
-</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
-</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>
-</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="n">smile_string</span> <span class="o">=</span> <span class="sa">r</span><span class="s2">&quot;CC(=CCC/C(=C/CC/C(=C/CC/C=C(/CC/C=C(/CCC=C(C)C)\C)\C)/C)/C)C&quot;</span> <span class="c1">#we placed r before the string to make it a raw string because of the backslashes present in the smile string. without the r and python could interpret them as special characters.</span>
-</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="n">xyz_filename</span> <span class="o">=</span> <span class="s2">&quot;squalene_initial.xyz&quot;</span> <span class="c1">#file you want the molecule to be saved to.</span>
-</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>
-</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="n">rdkit_mol</span> <span class="o">=</span> <span class="n">Chem</span><span class="o">.</span><span class="n">AddHs</span><span class="p">(</span><span class="n">Chem</span><span class="o">.</span><span class="n">MolFromSmiles</span><span class="p">(</span><span class="n">smile_string</span><span class="p">))</span> <span class="c1">#generates a 2d rdkit_mol object and adds Hydrogens where it is not specified in the SMILE string</span>
-</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="n">AllChem</span><span class="o">.</span><span class="n">EmbedMolecule</span><span class="p">(</span><span class="n">rdkit_mol</span><span class="p">)</span> <span class="c1">#makes the 2d rdkit_mol object into a 3d rdkit_mol object</span>
-</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="n">Chem</span><span class="o">.</span><span class="n">MolToXYZFile</span><span class="p">(</span><span class="n">rdkit_mol</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">(),</span> <span class="n">xyz_filename</span><span class="p">))</span> <span class="c1">#saves rdkit_mol object to a file in an .xyz format</span>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">rdkit</span><span class="w"> </span><span class="kn">import</span> <span class="n">Chem</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="kn">from</span><span class="w"> </span><span class="nn">rdkit.Chem</span><span class="w"> </span><span class="kn">import</span> <span class="n">AllChem</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="c1"># For Squalene</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="n">smile_string</span> <span class="o">=</span> <span class="sa">r</span><span class="s2">&quot;CC(=CCC/C(=C/CC/C(=C/CC/C=C(/CC/C=C(/CCC=C(C)C)\C)\C)/C)/C)C&quot;</span> <span class="c1">#we placed r before the string to make it a raw string because of the backslashes present in the smile string. without the r and python could interpret them as special characters.</span>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="n">xyz_filename</span> <span class="o">=</span> <span class="s2">&quot;squalene_initial.xyz&quot;</span> <span class="c1">#file you want the molecule to be saved to.</span>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="c1"># For Hexane</span>
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="n">smile_string</span> <span class="o">=</span> <span class="s2">&quot;CCCCCC&quot;</span>
+</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="n">xyz_filename</span> <span class="o">=</span> <span class="s2">&quot;hexane_initial.xyz&quot;</span> <span class="c1">#file you want the molecule to be saved to.</span>
+</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>
+</span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a><span class="c1">#Main RDkit code for SMILE generation to a .xyz file</span>
+</span><span id="__span-4-13"><a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a><span class="n">rdkit_mol</span> <span class="o">=</span> <span class="n">Chem</span><span class="o">.</span><span class="n">AddHs</span><span class="p">(</span><span class="n">Chem</span><span class="o">.</span><span class="n">MolFromSmiles</span><span class="p">(</span><span class="n">smile_string</span><span class="p">))</span> <span class="c1">#generates a 2d rdkit_mol object and adds Hydrogens where it is not specified in the SMILE string</span>
+</span><span id="__span-4-14"><a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a><span class="n">AllChem</span><span class="o">.</span><span class="n">EmbedMolecule</span><span class="p">(</span><span class="n">rdkit_mol</span><span class="p">)</span> <span class="c1">#makes the 2d rdkit_mol object into a 3d rdkit_mol object</span>
+</span><span id="__span-4-15"><a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a><span class="n">Chem</span><span class="o">.</span><span class="n">MolToXYZFile</span><span class="p">(</span><span class="n">rdkit_mol</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">(),</span> <span class="n">xyz_filename</span><span class="p">))</span> <span class="c1">#saves rdkit_mol object to a file in an .xyz format</span>
 </span></code></pre></div>
-CREST documentation reccomends to pre optimize the initial structure using the same level of theory we will use in CREST so, lets first run xTB to optimize squalene_initial.xyz. Let's run this command in a new directory. Also xTB, is downloaded when we install CREST so we can use the same conda environment.</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>xtb squalene_initial.xyz --gfn2 &gt; xtb.out
-</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>cp xtbopt.xyz squalene_opt.xyz
+<p>CREST documentation reccomends to pre optimize the initial structure using the same level of theory we will use in CREST so, lets first run xTB to optimize squalene_initial.xyz. Let's run this command in a new directory. Also xTB, is downloaded when we install CREST so we can use the same conda environment.</p>
+<p><div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>xtb squalene_initial.xyz --charge 0 --gfn 2 --molden --opt &gt; xtb.out
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>cp xtbopt.xyz initial_opt.xyz
 </span></code></pre></div>
-<p>Now lets run CREST! Run the command below in a new directory. We can add <code>&gt; crest.out</code> to the command to direct the stdout to a file so we can save the CREST terminal output. The default algorithim CREST uses is the iMTD-GC algorithim which is explained <a href="https://crest-lab.github.io/crest-docs/page/overview/workflows.html#imtd-gc-algorithm">HERE</a>.</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>crest squalene_opt.xyz --gfn2 &gt; crest.out
+nocona
+Now lets run CREST! Run the command below in a new directory or sbatch the SLURM script below. We can add <code>&gt; crest.out</code> to the command to direct the stdout to a file so we can save the CREST terminal output. The default algorithim CREST uses is the iMTD-GC algorithim which is explained <a href="https://crest-lab.github.io/crest-docs/page/overview/workflows.html#imtd-gc-algorithm">HERE</a>. We can add a solvent model with this flag <code>--gbsa hexane</code>. You can specify the amount of CPU Threads (on HPCC we call it ntasks) by using flag <code>-T 36</code> for 36 ntasks on quanah for example. </p>
+<ul>
+<li>NOTE: If you see an OpenBLAS Warning, it is OKAY, xTB has this warning and I believe it comes from how we installed xTB through conda. The xTB and CREST calculation will still work fine to my knowledge.</li>
+</ul>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>crest initial_opt.xyz --gfn2 -T 36 &gt; crest.out
 </span></code></pre></div>
+<p>If you use the SLURM script, replace <code>ERAIDER</code> in the source and export lines with your eraider on the HPCC.</p>
+<div class="language-bash highlight"><span class="filename">run_crest.sh</span><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="ch">#!/bin/bash</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="c1">#SBATCH --job-name=crest</span>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="c1">#SBATCH --partition quanah</span>
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="c1">#SBATCH --nodes=1</span>
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="c1">#SBATCH --ntasks=36</span>
+</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="c1">#SBATCH --time=04:00:00</span>
+</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="c1">#SBATCH --mem-per-cpu=1G</span>
+</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>
+</span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a><span class="c1"># &gt;&gt;&gt; conda initialize &gt;&gt;&gt;</span>
+</span><span id="__span-7-10"><a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a><span class="c1"># !! Contents within this block are managed by &#39;conda init&#39; !!</span>
+</span><span id="__span-7-11"><a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a><span class="nv">__conda_setup</span><span class="o">=</span><span class="s2">&quot;</span><span class="k">$(</span><span class="s1">&#39;/home/ERAIDER/conda/bin/conda&#39;</span><span class="w"> </span><span class="s1">&#39;shell.bash&#39;</span><span class="w"> </span><span class="s1">&#39;hook&#39;</span><span class="w"> </span><span class="m">2</span>&gt;<span class="w"> </span>/dev/null<span class="k">)</span><span class="s2">&quot;</span>
+</span><span id="__span-7-12"><a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a><span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span><span class="nv">$?</span><span class="w"> </span>-eq<span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+</span><span id="__span-7-13"><a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a><span class="w">    </span><span class="nb">eval</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$__conda_setup</span><span class="s2">&quot;</span>
+</span><span id="__span-7-14"><a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a><span class="k">else</span>
+</span><span id="__span-7-15"><a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span>-f<span class="w"> </span><span class="s2">&quot;/home/ERAIDER/conda/etc/profile.d/conda.sh&quot;</span><span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+</span><span id="__span-7-16"><a id="__codelineno-7-16" name="__codelineno-7-16" href="#__codelineno-7-16"></a><span class="w">        </span>.<span class="w"> </span><span class="s2">&quot;/home/ERAIDER/conda/etc/profile.d/conda.sh&quot;</span>
+</span><span id="__span-7-17"><a id="__codelineno-7-17" name="__codelineno-7-17" href="#__codelineno-7-17"></a><span class="w">    </span><span class="k">else</span>
+</span><span id="__span-7-18"><a id="__codelineno-7-18" name="__codelineno-7-18" href="#__codelineno-7-18"></a><span class="w">        </span><span class="nb">export</span><span class="w"> </span><span class="nv">PATH</span><span class="o">=</span><span class="s2">&quot;/home/ERAIDER/conda/bin:</span><span class="nv">$PATH</span><span class="s2">&quot;</span>
+</span><span id="__span-7-19"><a id="__codelineno-7-19" name="__codelineno-7-19" href="#__codelineno-7-19"></a><span class="w">    </span><span class="k">fi</span>
+</span><span id="__span-7-20"><a id="__codelineno-7-20" name="__codelineno-7-20" href="#__codelineno-7-20"></a><span class="k">fi</span>
+</span><span id="__span-7-21"><a id="__codelineno-7-21" name="__codelineno-7-21" href="#__codelineno-7-21"></a><span class="nb">unset</span><span class="w"> </span>__conda_setup
+</span><span id="__span-7-22"><a id="__codelineno-7-22" name="__codelineno-7-22" href="#__codelineno-7-22"></a><span class="c1"># &lt;&lt;&lt; conda initialize &lt;&lt;&lt;</span>
+</span><span id="__span-7-23"><a id="__codelineno-7-23" name="__codelineno-7-23" href="#__codelineno-7-23"></a>
+</span><span id="__span-7-24"><a id="__codelineno-7-24" name="__codelineno-7-24" href="#__codelineno-7-24"></a>conda<span class="w"> </span>activate<span class="w"> </span>crest
+</span><span id="__span-7-25"><a id="__codelineno-7-25" name="__codelineno-7-25" href="#__codelineno-7-25"></a>
+</span><span id="__span-7-26"><a id="__codelineno-7-26" name="__codelineno-7-26" href="#__codelineno-7-26"></a>crest<span class="w"> </span>initial_opt.xyz<span class="w"> </span>--gfn2<span class="w"> </span>-T<span class="w"> </span><span class="m">36</span><span class="w"> </span>&gt;<span class="w"> </span>crest.out
+</span></code></pre></div>
+<h3 id="looking-at-the-output-files-crest-generates">Looking at the Output Files CREST Generates</h3>
+<p>The list below is what files CREST generates for a conformational sampling. </p>
+<ul>
+<li>confcross.xyz</li>
+<li>coord</li>
+<li>cre_members</li>
+<li>crest_0.mdrestart</li>
+<li>crest_best.xyz</li>
+<li>crest_conformers.xyz</li>
+<li>crest_dynamics.trj</li>
+<li>crest.energies</li>
+<li>crest_input_copy.xyz</li>
+<li>crestopt.log</li>
+<li>crest.out</li>
+<li>crest.restart</li>
+<li>crest_rotamers.xyz</li>
+<li>ensemble_energies.log</li>
+<li>gfnff_adjacency</li>
+<li>gfnff_topo</li>
+<li>initial_opt.xyz</li>
+<li>wbo</li>
+</ul>
+<p>The crest.out file is the terminal output of CREST.
+The crest_best.xyz file is the lowest energy conformer that CREST found. 
+The crest_conformers.xyz has all of the conformers listed that CREST found.</p>
 
 
 
