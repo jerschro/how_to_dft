@@ -39,6 +39,7 @@ nav:
     - SLURM Script : vasp/slurm_script.md
     - OUTCAR : vasp/OUTCAR.md
     - Phonopy : vasp/phonopy.md
+  - CREST : crest/index.md
   - Lessons :
     - Lessons : lessons/index.md
     - Lesson 1 : lessons/lesson_1.md
