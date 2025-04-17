@@ -7,15 +7,15 @@ hide:
 
 This is the webpage for containing everything to do with CREST.
 
-
-Introduction paragraph to crest.
+CREST is an acronym for Conformer Rotamer Ensemble Sampling Tool and it uses semi-emperical methods from xTB in addition to genetic algorithms to find the lowest energy conformer for an input structure.
 
 ## CREST Documentation
 
-The CREST Documentation is really informative and descriptive. I would recommend you take a look at it. Also you should check out the xTB documentation which is the main QM/MM calculator CREST uses.
+The CREST Documentation is really informative and descriptive. I would recommend you take a look at it. Also you should check out the xTB documentation which is the main QM/MM calculator CREST uses. Good examples on how CREST and xTB operate are on the Grimme-Lab Workshops webpage linked below.
 
 * CREST: [https://crest-lab.github.io/crest-docs/](https://crest-lab.github.io/crest-docs/)
 * xTB: [https://xtb-docs.readthedocs.io/](https://xtb-docs.readthedocs.io/)
+* Grimme-Lab Workshops: [https://grimme-lab.github.io/workshops/](https://grimme-lab.github.io/workshops/)
 
 ## How to Install CREST using conda
 
@@ -44,7 +44,7 @@ To know if you crest is loaded. You should see (crest) on the left of the termin
 ## How to use CREST for Conformational Sampling
 
 
-### Calculation Setup and Running CREST
+## Calculation Setup and Running CREST
 
 There are two example molecules we can try, Hexane ($\mathrm{C_{6}H_{12}}$) or Squalene ($\mathrm{C_{30}H_{50}}$). Hexane is a hydrocarbon and Squalene is an organic molecule with two possible ways to draw it on a 2D surface. Both molecules have many rotatable C-C bonds with each bond rotation being multiple possible different conformations. The Hexane CREST calculation will finish alot faster than the Squalene CREST calculation.
 
@@ -64,6 +64,10 @@ There are two example molecules we can try, Hexane ($\mathrm{C_{6}H_{12}}$) or S
 
     ```
 
+=== "Hexane Image"
+    ![Hexane 2D](../images/crest/hexane_2d.png)
+
+    From [https://encyclopedia.airliquide.com/hexane](https://encyclopedia.airliquide.com/hexane)
 
 === "Squalene Image 1"
     ![Squalene 2D1](../images/crest/squalene_2d1.png)
@@ -75,14 +79,13 @@ There are two example molecules we can try, Hexane ($\mathrm{C_{6}H_{12}}$) or S
 
     From [https://www.researchgate.net/figure/Squalene-chemical-structure-Squalene-is-a-natural-dehydrotriterpenic-hydrocarbon-C-30-H_fig2_335133970](https://www.researchgate.net/figure/Squalene-chemical-structure-Squalene-is-a-natural-dehydrotriterpenic-hydrocarbon-C-30-H_fig2_335133970)
 
-
-
 For CREST to run, we need an initial .xyz structure. Lets generate it using the [RDKit](https://www.rdkit.org/docs/api-docs.html) library and the SMILE string of Squalene. Run the below code either in a python file or the python kernel.
 
 ``` python 
 from rdkit import Chem
 from rdkit.Chem import AllChem
 import os
+
 # For Squalene
 smile_string = r"CC(=CCC/C(=C/CC/C(=C/CC/C=C(/CC/C=C(/CCC=C(C)C)\C)\C)/C)/C)C" #we placed r before the string to make it a raw string because of the backslashes present in the smile string. without the r and python could interpret them as special characters.
 xyz_filename = "squalene_initial.xyz" #file you want the molecule to be saved to.
@@ -105,7 +108,7 @@ xtb squalene_initial.xyz --charge 0 --gfn 2 --molden --opt > xtb.out
 cp xtbopt.xyz initial_opt.xyz
 
 ```
-nocona
+
 Now lets run CREST! Run the command below in a new directory or sbatch the SLURM script below. We can add `> crest.out` to the command to direct the stdout to a file so we can save the CREST terminal output. The default algorithim CREST uses is the iMTD-GC algorithim which is explained [HERE](https://crest-lab.github.io/crest-docs/page/overview/workflows.html#imtd-gc-algorithm). We can add a solvent model with this flag `--gbsa hexane`. You can specify the amount of CPU Threads (on HPCC we call it ntasks) by using flag `-T 36` for 36 ntasks on quanah for example. 
 
 * NOTE: If you see an OpenBLAS Warning, it is OKAY, xTB has this warning and I believe it comes from how we installed xTB through conda. The xTB and CREST calculation will still work fine to my knowledge.
@@ -127,51 +130,242 @@ If you use the SLURM script, replace `ERAIDER` in the source and export lines wi
 #SBATCH --time=04:00:00
 #SBATCH --mem-per-cpu=1G
 
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/ERAIDER/conda/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/home/ERAIDER/conda/etc/profile.d/conda.sh" ]; then
-        . "/home/ERAIDER/conda/etc/profile.d/conda.sh"
-    else
-        export PATH="/home/ERAIDER/conda/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
-
+#set up environment for crest calculation
+source /home/ERAIDER/conda/etc/profile.d/conda.sh
+export PATH=/home/ERAIDER/conda/bin:$PATH
 conda activate crest
 
+#check to see if initial geometry file exists
+if [ ! -f initial_opt.xyz ]
+then
+  echo "NO initial_opt.xyz file exists. exiting!!!"
+  exit
+fi
+
+#run crest
 crest initial_opt.xyz --gfn2 -T 36 > crest.out
 
 ```
 
 
-### Looking at the Output Files CREST Generates
+## Looking at the Output Files CREST Generates
 
-The list below is what files CREST generates for a conformational sampling. 
+The list below is what files CREST generates for a conformational sampling. Important files are listed below and the rest are in the table:
 
-* confcross.xyz
-* coord
-* cre_members
-* crest_0.mdrestart
-* crest_best.xyz
-* crest_conformers.xyz
-* crest_dynamics.trj
-* crest.energies
-* crest_input_copy.xyz
-* crestopt.log
-* crest.out
-* crest.restart
-* crest_rotamers.xyz
-* ensemble_energies.log
-* gfnff_adjacency
-* gfnff_topo
-* initial_opt.xyz
-* wbo
+* **crest_best.xyz** - the lowest energy conformer that CREST found.
+* **crest_conformers.xyz** - has all of the conformers listed that CREST found.
+* **crest_rotamers.xyz** - has all of the rotamers listed that CREST found. It contains all of the conformers in crest_conformers.xyz and all of the rotamers CREST found for each conformer.
+* **crest.out** - the terminal output of CREST.
 
-The crest.out file is the terminal output of CREST.
-The crest_best.xyz file is the lowest energy conformer that CREST found. 
-The crest_conformers.xyz has all of the conformers listed that CREST found.
+<table>
+    <tr><td>confcross.xyz</td><td>coord</td><td>cre_members</td></tr>
+    <tr><td>crest_0.mdrestart</td><td>crest_dynamics.trj</td><td>crest.energies</td></tr>
+    <tr><td>crest_input_copy.xyz</td><td>crestopt.log</td><td>crest.restart</td></tr>
+    <tr><td>crest_rotamers.xyz</td><td>ensemble_energies.log</td><td>gfnff_adjacency</td></tr>
+    <tr><td>gfnff_topo</td><td>initial_opt.xyz</td><td>wbo</td></tr>
+</table>
+
+## What CREST Does
+
+Looking at our example of Hexane. CREST takes the initial structure we give it and determines the bonds and connectivity seen in the .xyz file. The algorithms CREST uses are described in more detail in this paper linked [TTU Library Link](https://ttu-primo.hosted.exlibrisgroup.com/permalink/f/1j33bpi/TN_cdi_crossref_primary_10_1039_C9CP06869D). The below slideshow shows the initial structure and the best structure CREST found.
+
+
+=== "Initial Structure"
+    ![Hexane Initial](../images/crest/hexane_init.jpg)
+
+    This is the initial structure we generated from the SMILE string using RDKit. This is the structure we used as input to CREST.
+
+=== "CREST Best"
+    ![Hexane Best](../images/crest/hexane_best.jpg)
+
+    This structure is the lowest energy structure CREST found. It is equivalent to Conformer 1 of CREST.
+
+
+The Below Slideshow shows all of the different Conformations CREST produced for Hexane. All of these structures are from the crest_conformers.xyz file in the original order it produced.
+
+=== "Conformer 1"
+    ![Hexane 1](../images/crest/hexane_1.jpg)
+
+    **Conformer 1**
+
+    $\mathrm{E_Total}$ = -19.993838 $\mathrm{E_h}$
+
+    $\Delta\mathrm{E_{gs}}$ = $\mathrm{E_{1}-E_1}$= 0.000000 $\mathrm{E_h}$ = 0.000000 $\mathrm{eV}$ = 0.000000 $\mathrm{\frac{kcal}{mol}}$ = 0.000000 $\mathrm{\frac{kJ}{mol}}$
+
+=== "Conformer 2"
+    ![Hexane 2](../images/crest/hexane_2.jpg)
+
+    **Conformer 2**
+
+    $\mathrm{E_Total}$ = -19.992963 $\mathrm{E_h}$
+
+    $\Delta\mathrm{E_{gs}}$ = $\mathrm{E_{2}-E_1}$= 0.000875 $\mathrm{E_h}$ = 0.023629 $\mathrm{eV}$ = 0.551332 $\mathrm{\frac{kcal}{mol}}$ = 2.275338 $\mathrm{\frac{kJ}{mol}}$
+
+=== "Conformer 3"
+    ![Hexane 3](../images/crest/hexane_3.jpg)
+
+    **Conformer 3**
+
+    $\mathrm{E_Total}$ = -19.992925 $\mathrm{E_h}$
+
+    $\Delta\mathrm{E_{gs}}$ = $\mathrm{E_{3}-E_1}$= 0.000913 $\mathrm{E_h}$ = 0.024638 $\mathrm{eV}$ = 0.574881 $\mathrm{\frac{kcal}{mol}}$ = 2.372526 $\mathrm{\frac{kJ}{mol}}$
+
+=== "Conformer 4"
+    ![Hexane 4](../images/crest/hexane_4.jpg)
+
+    **Conformer 4**
+
+    $\mathrm{E_Total}$ = -19.992111 $\mathrm{E_h}$
+
+    $\Delta\mathrm{E_{gs}}$ = $\mathrm{E_{4}-E_1}$= 0.001726 $\mathrm{E_h}$ = 0.046615 $\mathrm{eV}$ = 1.087682 $\mathrm{\frac{kcal}{mol}}$ = 4.488848 $\mathrm{\frac{kJ}{mol}}$
+
+=== "Conformer 5"
+    ![Hexane 5](../images/crest/hexane_5.jpg)
+
+    **Conformer 5**
+
+    $\mathrm{E_Total}$ = -19.992034 $\mathrm{E_h}$
+
+    $\Delta\mathrm{E_{gs}}$ = $\mathrm{E_{5}-E_1}$= 0.001804 $\mathrm{E_h}$ = 0.048703 $\mathrm{eV}$ = 1.136407 $\mathrm{\frac{kcal}{mol}}$ = 4.689932 $\mathrm{\frac{kJ}{mol}}$
+
+=== "Conformer 6"
+    ![Hexane 6](../images/crest/hexane_6.jpg)
+
+    **Conformer 6**
+
+    $\mathrm{E_Total}$ = -19.991982 $\mathrm{E_h}$
+
+    $\Delta\mathrm{E_{gs}}$ = $\mathrm{E_{6}-E_1}$= 0.001856 $\mathrm{E_h}$ = 0.050113 $\mathrm{eV}$ = 1.169299 $\mathrm{\frac{kcal}{mol}}$ = 4.825678 $\mathrm{\frac{kJ}{mol}}$
+
+=== "Conformer 7"
+    ![Hexane 7](../images/crest/hexane_7.jpg)
+
+    **Conformer 7**
+
+    $\mathrm{E_Total}$ = -19.991885 $\mathrm{E_h}$
+
+    $\Delta\mathrm{E_{gs}}$ = $\mathrm{E_{7}-E_1}$= 0.001953 $\mathrm{E_h}$ = 0.052718 $\mathrm{eV}$ = 1.230088 $\mathrm{\frac{kcal}{mol}}$ = 5.076552 $\mathrm{\frac{kJ}{mol}}$
+
+=== "Conformer 8"
+    ![Hexane 8](../images/crest/hexane_8.jpg)
+
+    **Conformer 8**
+
+    $\mathrm{E_Total}$ = -19.991154 $\mathrm{E_h}$
+
+    $\Delta\mathrm{E_{gs}}$ = $\mathrm{E_{8}-E_1}$= 0.002684 $\mathrm{E_h}$ = 0.072464 $\mathrm{eV}$ = 1.690838 $\mathrm{\frac{kcal}{mol}}$ = 6.978062 $\mathrm{\frac{kJ}{mol}}$
+
+=== "Conformer 9"
+    ![Hexane 9](../images/crest/hexane_9.jpg)
+
+    **Conformer 9**
+
+    $\mathrm{E_Total}$ = -19.990123 $\mathrm{E_h}$
+
+    $\Delta\mathrm{E_{gs}}$ = $\mathrm{E_{9}-E_1}$= 0.003715 $\mathrm{E_h}$ = 0.100303 $\mathrm{eV}$ = 2.340406 $\mathrm{\frac{kcal}{mol}}$ = 9.658818 $\mathrm{\frac{kJ}{mol}}$
+
+=== "Conformer 10"
+    ![Hexane 10](../images/crest/hexane_10.jpg)
+
+    **Conformer 10**
+
+    $\mathrm{E_Total}$ = -19.990069 $\mathrm{E_h}$
+
+    $\Delta\mathrm{E_{gs}}$ = $\mathrm{E_{10}-E_1}$= 0.003769 $\mathrm{E_h}$ = 0.101760 $\mathrm{eV}$ = 2.374401 $\mathrm{\frac{kcal}{mol}}$ = 9.799114 $\mathrm{\frac{kJ}{mol}}$
+
+=== "Conformer 11"
+    ![Hexane 11](../images/crest/hexane_11.jpg)
+
+    **Conformer 11**
+
+    $\mathrm{E_Total}$ = -19.989594 $\mathrm{E_h}$
+
+    $\Delta\mathrm{E_{gs}}$ = $\mathrm{E_{11}-E_1}$= 0.004244 $\mathrm{E_h}$ = 0.114593 $\mathrm{eV}$ = 2.673846 $\mathrm{\frac{kcal}{mol}}$ = 11.034920 $\mathrm{\frac{kJ}{mol}}$
+
+=== "Conformer 12"
+    ![Hexane 12](../images/crest/hexane_12.jpg)
+
+    **Conformer 12**
+
+    $\mathrm{E_Total}$ = -19.989445 $\mathrm{E_h}$
+
+    $\Delta\mathrm{E_{gs}}$ = $\mathrm{E_{12}-E_1}$= 0.004393 $\mathrm{E_h}$ = 0.118606 $\mathrm{eV}$ = 2.767464 $\mathrm{\frac{kcal}{mol}}$ = 11.421280 $\mathrm{\frac{kJ}{mol}}$
+
+=== "Conformer 13"
+    ![Hexane 13](../images/crest/hexane_13.jpg)
+
+    **Conformer 13**
+
+    $\mathrm{E_Total}$ = -19.989391 $\mathrm{E_h}$
+
+    $\Delta\mathrm{E_{gs}}$ = $\mathrm{E_{13}-E_1}$= 0.004447 $\mathrm{E_h}$ = 0.120066 $\mathrm{eV}$ = 2.801541 $\mathrm{\frac{kcal}{mol}}$ = 11.561914 $\mathrm{\frac{kJ}{mol}}$
+
+=== "Conformer 14"
+    ![Hexane 14](../images/crest/hexane_14.jpg)
+
+    **Conformer 14**
+
+    $\mathrm{E_Total}$ = -19.989332 $\mathrm{E_h}$
+
+    $\Delta\mathrm{E_{gs}}$ = $\mathrm{E_{14}-E_1}$= 0.004506 $\mathrm{E_h}$ = 0.121660 $\mathrm{eV}$ = 2.838742 $\mathrm{\frac{kcal}{mol}}$ = 11.715444 $\mathrm{\frac{kJ}{mol}}$
+
+=== "Conformer 15"
+    ![Hexane 15](../images/crest/hexane_15.jpg)
+
+    **Conformer 15**
+
+    $\mathrm{E_Total}$ = -19.989165 $\mathrm{E_h}$
+
+    $\Delta\mathrm{E_{gs}}$ = $\mathrm{E_{15}-E_1}$= 0.004673 $\mathrm{E_h}$ = 0.126168 $\mathrm{eV}$ = 2.943921 $\mathrm{\frac{kcal}{mol}}$ = 12.149514 $\mathrm{\frac{kJ}{mol}}$
+
+=== "Conformer 16"
+    ![Hexane 16](../images/crest/hexane_16.jpg)
+
+    **Conformer 16**
+
+    $\mathrm{E_Total}$ = -19.989108 $\mathrm{E_h}$
+
+    $\Delta\mathrm{E_{gs}}$ = $\mathrm{E_{16}-E_1}$= 0.004730 $\mathrm{E_h}$ = 0.127702 $\mathrm{eV}$ = 2.979705 $\mathrm{\frac{kcal}{mol}}$ = 12.297194 $\mathrm{\frac{kJ}{mol}}$
+
+=== "Conformer 17"
+    ![Hexane 17](../images/crest/hexane_17.jpg)
+
+    **Conformer 17**
+
+    $\mathrm{E_Total}$ = -19.988352 $\mathrm{E_h}$
+
+    $\Delta\mathrm{E_{gs}}$ = $\mathrm{E_{17}-E_1}$= 0.005486 $\mathrm{E_h}$ = 0.148125 $\mathrm{eV}$ = 3.456243 $\mathrm{\frac{kcal}{mol}}$ = 14.263860 $\mathrm{\frac{kJ}{mol}}$
+
+=== "Conformer 18"
+    ![Hexane 18](../images/crest/hexane_18.jpg)
+
+    **Conformer 18**
+
+    $\mathrm{E_Total}$ = -19.988347 $\mathrm{E_h}$
+
+    $\Delta\mathrm{E_{gs}}$ = $\mathrm{E_{18}-E_1}$= 0.005490 $\mathrm{E_h}$ = 0.148242 $\mathrm{eV}$ = 3.458990 $\mathrm{\frac{kcal}{mol}}$ = 14.275196 $\mathrm{\frac{kJ}{mol}}$
+
+=== "Conformer 19"
+    ![Hexane 19](../images/crest/hexane_19.jpg)
+
+    **Conformer 19**
+
+    $\mathrm{E_Total}$ = -19.986849 $\mathrm{E_h}$
+
+    $\Delta\mathrm{E_{gs}}$ = $\mathrm{E_{19}-E_1}$= 0.006989 $\mathrm{E_h}$ = 0.188705 $\mathrm{eV}$ = 4.403114 $\mathrm{\frac{kcal}{mol}}$ = 18.171582 $\mathrm{\frac{kJ}{mol}}$
+
+=== "Conformer 20"
+    ![Hexane 20](../images/crest/hexane_20.jpg)
+
+    **Conformer 20**
+
+    $\mathrm{E_Total}$ = -19.986350 $\mathrm{E_h}$
+
+    $\Delta\mathrm{E_{gs}}$ = $\mathrm{E_{20}-E_1}$= 0.007488 $\mathrm{E_h}$ = 0.202172 $\mathrm{eV}$ = 4.717346 $\mathrm{\frac{kcal}{mol}}$ = 19.468410 $\mathrm{\frac{kJ}{mol}}$
+
+
+All of the Structures shown above are viable Hexane conformations and you can notice that the $\Delta\mathrm{E_{gs}}$ increases across the conformers.
+
+So now we can be confident in continuing with the crest_best.xyz structure to use in further studies and calculations.
+
+
