@@ -7,7 +7,6 @@ repo_url: https://github.com/jerschro/how_to_dft
 
 nav:
   - Home : index.md
-  - Syllabus : syllabus/spring25syllabus.md
   - HPCC : 
     - HPCC : hpcc/index.md
     - Create an HPCC Account : hpcc/create_account.md
@@ -40,24 +39,30 @@ nav:
     - OUTCAR : vasp/OUTCAR.md
     - Phonopy : vasp/phonopy.md
   - CREST : crest/index.md
-  - Lessons :
-    - Lessons : lessons/index.md
-    - Lesson 1 : lessons/lesson_1.md
-    - Lesson 2 : lessons/lesson_2.md
-    - Lesson 3 : lessons/lesson_3.md
-    - Lesson 4 : lessons/lesson_4.md
-    - Lesson 5 : lessons/lesson_5.md
-    - Lesson 6 : lessons/lesson_6.md
-    - Lesson 7 : lessons/lesson_7.md
-    - Lesson 8 : lessons/lesson_8.md
-    - Lesson 9 : lessons/lesson_9.md
-    - Assignment 1 : lessons/assignment_1.md
-    - Assignment 2 : lessons/assignment_2.md
-    - Resource 1 : lessons/resource_intro_to_dft.md
-    
-
-
-
+  - ME 4331 :
+    - ME 4331 : me_4331/index.md
+    - Syllabus : me_4331/syllabus/fall25syllabus.md
+    - Lessons : me_4331/index.md
+    - Lesson 1 : me_4331/lesson_1.md
+    - Lesson 2 : me_4331/lesson_2.md
+    - Lesson 3 : me_4331/lesson_3.md
+    - Lesson 4 : me_4331/lesson_4.md
+    - Lesson 5 : me_4331/lesson_5.md
+    - Lesson 6 : me_4331/lesson_6.md
+    - Lesson 7 : me_4331/lesson_7.md
+    - Lesson 8 : me_4331/lesson_8.md
+    - Lesson 9 : me_4331/lesson_9.md
+    - Assignment 1 : me_4331/assignment_1.md
+    - Assignment 2 : me_4331/assignment_2.md
+    - Resource 1 : me_4331/resource_intro_to_dft.md
+  - ME 5329:
+    - ME 5329: me_5329/index.md
+    - Assignment 0: me_5329/assignment_00.md
+    - Assignment 1: me_5329/assignment_01.md
+    - Assignment 2: me_5329/assignment_02.md
+    - Assignment 3: me_5329/assignment_03.md
+    - Assignment 4: me_5329/assignment_04.md
+    - Assignment 5: me_5329/assignment_05.md
 
 theme:
   name: material
@@ -115,6 +120,7 @@ plugins:
       caption_position: bottom
       background: white
       shadow: true
+  - mkdocs-pdf # for pdf
       
 markdown_extensions:
   - attr_list

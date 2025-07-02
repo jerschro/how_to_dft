@@ -11,11 +11,11 @@ Created by Jeremy Schroeder with help from Tristan Fisher, Jerimiah Zamora and D
 
 ## Website Sections
 
-* [Syllabus](syllabus/spring25syllabus.md)
 * [HPCC](hpcc/index.md)
 * [Gaussian](gaussian/index.md)
 * [ORCA](orca/index.md)
 * [Turbomole](turbomole/index.md)
 * [VASP](vasp/index.md)
 * [CREST](crest/index.md)
-* [Lessons](lessons/index.md)
+* [ME 4331](me_4331/index.md)
+* [ME 5329](me_5329/index.md)

@@ -1,4 +1,4 @@
-[:fontawesome-solid-house:](../index.md) :fontawesome-solid-angle-right: [VASP](index.md) :fontawesome-solid-angle-right: **Slurm Script**
+[:fontawesome-solid-house:](../index.md) :fontawesome-solid-angle-right: [VASP](index.md) :fontawesome-solid-angle-right: **SLURM Script**
 # SLURM Script
 
 Below is an example SLURM script you can use. 
