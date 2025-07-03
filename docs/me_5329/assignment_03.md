@@ -5,6 +5,31 @@
 ![Assignment_3_Instructions.pdf](../assets/pdfs/me_5329/Assignment_3_Instructions.pdf#toolbar=0&navpanes=0&scrollbar=0){ type=application/pdf style="min-height:100vh;width:100%" }
 
 
+## butane.xyz
+
+Click the link to download the butane.xyz file: [butane.xyz](../assets/downloads/me_5329/butane.xyz){:butane.xyz}
+
+You may also copy the .xyz file below.
+
+```xyz title="butane.xyz"
+14
+Butane at 0 deg dihedral for ME 5329 Project 3 
+C     0.000000    0.000000    0.000000
+C    -1.528951    0.000073   -0.000042
+C     0.605451   -0.000019    1.395212
+C    -2.134394   -0.000051    1.395172
+H     0.373159   -0.866008   -0.559027
+H     0.347936    0.894003   -0.531125
+H    -1.902109    0.866140   -0.558978
+H    -1.876891   -0.893872   -0.531260
+H     1.694633    0.090529    1.331830
+H     0.229682    0.840789    1.986742
+H     0.380954   -0.927652    1.929780
+H    -1.758627   -0.840922    1.986612
+H    -1.909891    0.927524    1.929837
+H    -3.223578   -0.090588    1.331786
+
+```
 
 ## create_water_pes_heatmap.ipynb
 

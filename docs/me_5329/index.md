@@ -3,6 +3,9 @@
 
 This is the homepage for containing everything to do with ME 5329. 
 
+## Course Schedule
+
+* [Course Schedule](course_schedule.md)
 
 ## Assignments
 
