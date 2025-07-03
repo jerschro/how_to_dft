@@ -189,19 +189,19 @@ Geometry Optimizations are the backbone of DFT calculations. It is the first cal
 
     The picture below shows a potential energy surface for a water molecule with x axis being the H-O-H bond angle, y axis being 1 O-H bond length and z axis being the total energy of that particular structure. [^1]
 
-    ![Gradient 2](../images/lessons/lesson_3/gradient_2.png)
+    ![Gradient 2](../assets/images/lessons/lesson_3/gradient_2.png)
 
 === "Finding the lowest energy"
 
     There are different techniques to do a search method on a 3d matrix such as conjugate gradient and steepest descent/direction. We want to choose the perturbed structure that produces the lowest energy is a global minima not just a local minima. [^2]
 
-    ![Gradient 1](../images/lessons/lesson_3/gradient_1.png)
+    ![Gradient 1](../assets/images/lessons/lesson_3/gradient_1.png)
 
 === "Convergence"
 
     After multiple optimization steps, if you compare the change in total energy and the displacement of each atom among other values. If the change is less than $10^-6$ (standard value) then the calculation is converged and it will stop.[^3]
 
-    ![Convergence 1](../images/lessons/lesson_3/convergence_1.png)
+    ![Convergence 1](../assets/images/lessons/lesson_3/convergence_1.png)
     
 ## Example Optimization
 
@@ -214,10 +214,10 @@ Geometry Optimizations are the backbone of DFT calculations. It is the first cal
     <div class="grid">
     
     Geometry 1
-    ![Linear Geo](../images/lessons/lesson_3/linear.png)
+    ![Linear Geo](../assets/images/lessons/lesson_3/linear.png)
 
     Geometry 2
-    ![Bent Geo](../images/lessons/lesson_3/bent.png)
+    ![Bent Geo](../assets/images/lessons/lesson_3/bent.png)
     
     </div>
 
@@ -228,10 +228,10 @@ Geometry Optimizations are the backbone of DFT calculations. It is the first cal
     <div class="grid">
     
     Geometry 1
-    ![Linear GGraph](../images/lessons/lesson_3/Bent_Water_Structure_Parameters_Optimization_Graph.png)
+    ![Linear GGraph](../assets/images/lessons/lesson_3/Bent_Water_Structure_Parameters_Optimization_Graph.png)
 
     Geometry 2
-    ![Bent GGraph](../images/lessons/lesson_3/Linear_Water_Structure_Parameters_Optimization_Graph.png)
+    ![Bent GGraph](../assets/images/lessons/lesson_3/Linear_Water_Structure_Parameters_Optimization_Graph.png)
     
     </div>
 
@@ -240,10 +240,10 @@ Geometry Optimizations are the backbone of DFT calculations. It is the first cal
     <div class="grid">
     
     Geometry 1
-    ![Linear EGraph](../images/lessons/lesson_3/Bent_Energy_Graph.png)
+    ![Linear EGraph](../assets/images/lessons/lesson_3/Bent_Energy_Graph.png)
 
     Geometry 2
-    ![Bent EGraph](../images/lessons/lesson_3/Linear_Energy_Graph.png)
+    ![Bent EGraph](../assets/images/lessons/lesson_3/Linear_Energy_Graph.png)
     
     </div>
 
@@ -252,10 +252,10 @@ Geometry Optimizations are the backbone of DFT calculations. It is the first cal
     <div class="grid">
     
     Geometry 1:  $-76.27246207551\:E_h$
-    ![Linear Geo](../images/lessons/lesson_3/linear_opt.png)
+    ![Linear Geo](../assets/images/lessons/lesson_3/linear_opt.png)
 
     Geometry 2:  $-76.32141258581\:E_h$
-    ![Bent Geo](../images/lessons/lesson_3/bent_opt.png)
+    ![Bent Geo](../assets/images/lessons/lesson_3/bent_opt.png)
     
     </div>
 

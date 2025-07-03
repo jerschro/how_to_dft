@@ -39,7 +39,7 @@ Below is a list of basic linux commands. There are many more and this is just th
 * `grep ["text string"] [filepath]` prints out lines from the file that contains the "text string".
 
 This picture contains probably every command you will ever need: [Source](https://files.fosswire.com/2007/08/fwunixref.pdf)
-![linux](../images/hpcc/intro_to_terminal/linux_commands_cheat_sheet.png)
+![linux](../assets/images/hpcc/intro_to_terminal/linux_commands_cheat_sheet.png)
 
 
 ## Explanation of Path

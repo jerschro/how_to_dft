@@ -2,11 +2,11 @@
 
 # Assignment 1
 
-![Assignment_1_Instructions.pdf](../pdfs/me_5329/Assignment_1_Instructions.pdf#toolbar=0&navpanes=0&scrollbar=0){ type=application/pdf style="min-height:100vh;width:100%" }
+![Assignment_1_Instructions.pdf](../assets/pdfs/me_5329/Assignment_1_Instructions.pdf#toolbar=0&navpanes=0&scrollbar=0){ type=application/pdf style="min-height:100vh;width:100%" }
 
 ## create_ir_spectrum_plot.ipynb
 
-Click the link to download the Jupyter notebook: [create_ir_spectrum_plot.ipynb](../files/me_5329/create_ir_spectrum_plot.ipynb){:create_ir_spectrum_plot.ipynb}
+Click the link to download the Jupyter notebook: [create_ir_spectrum_plot.ipynb](../assets/downloads/me_5329/create_ir_spectrum_plot.ipynb){:create_ir_spectrum_plot.ipynb}
 
 You may also copy the Python code below. The code is the same in both files.
 

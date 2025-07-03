@@ -18,7 +18,7 @@ To model an adsorption reaction we need three initial geometries:
 
 The results we want from the adsorption reaction are ΔE, ΔH and ΔG. We get these results from Turbomole using the formulas below:
 
-![formulas](../images/lessons/lesson_7/formulas.png)
+![formulas](../assets/images/lessons/lesson_7/formulas.png)
 
 ## How to make the Complex
 

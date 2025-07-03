@@ -34,7 +34,7 @@ Each branch has extensive research applications and very detailed definitions. T
 
 This picture shows a graph of Computational Chemistry Methods with Calculation Complexity vs Accuracy[^2].
 
-![Branches of Computational Chemistry](../images/lessons/lesson_2/Quantum-chemistry-methods-upper-right-are-considered-highly-accurate-but-also-highly.png)
+![Branches of Computational Chemistry](../assets/images/lessons/lesson_2/Quantum-chemistry-methods-upper-right-are-considered-highly-accurate-but-also-highly.png)
 
 
 ## Conclusions

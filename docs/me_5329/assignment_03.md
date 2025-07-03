@@ -2,13 +2,13 @@
 
 # Assignment 3
 
-![Assignment_3_Instructions.pdf](../pdfs/me_5329/Assignment_3_Instructions.pdf#toolbar=0&navpanes=0&scrollbar=0){ type=application/pdf style="min-height:100vh;width:100%" }
+![Assignment_3_Instructions.pdf](../assets/pdfs/me_5329/Assignment_3_Instructions.pdf#toolbar=0&navpanes=0&scrollbar=0){ type=application/pdf style="min-height:100vh;width:100%" }
 
 
 
 ## create_water_pes_heatmap.ipynb
 
-Click the link to download the Jupyter notebook: [create_water_pes_heatmap.ipynb](../files/me_5329/create_water_pes_heatmap.ipynb){:create_water_pes_heatmap.ipynb}
+Click the link to download the Jupyter notebook: [create_water_pes_heatmap.ipynb](../assets/downloads/me_5329/create_water_pes_heatmap.ipynb){:create_water_pes_heatmap.ipynb}
 
 You may also copy the Python code below. The code is the same in both files.
 

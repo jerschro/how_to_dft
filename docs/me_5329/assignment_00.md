@@ -2,7 +2,7 @@
 
 # Assignment 0
 
-![Assignment_0_Instructions.pdf](../pdfs/me_5329/Assignment_0_Instructions.pdf){ type=application/pdf style="min-height:100vh;width:100%" }
+![Assignment_0_Instructions.pdf](../assets/pdfs/me_5329/Assignment_0_Instructions.pdf){ type=application/pdf style="min-height:100vh;width:100%" }
 
 ## Code Block in Instructions
 

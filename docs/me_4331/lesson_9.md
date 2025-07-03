@@ -39,13 +39,13 @@ In Region II,
 
 
 
-![Figure 2.1](../images/lessons/lesson_9/fig_2_1.png)
+![Figure 2.1](../assets/images/lessons/lesson_9/fig_2_1.png)
 
 
 If you notice there is n in the wavefunction equation. n is the principle quantum number and is any non zero positive integer. This process of assigning n is quantization. This is where quantum comes from in quantum mechanics. The below image is showing the wave function for n = 1,2,3. 
 
 
-![Figure 2.3 and 2.4](../images/lessons/lesson_9/fig_2_3_and_2_4.png)
+![Figure 2.3 and 2.4](../assets/images/lessons/lesson_9/fig_2_3_and_2_4.png)
 
 $\psi$ is the location of where a particle and $|{\psi}^2|$ is the probability density of where that particle will be found. For the 1-D Box, $\int_{0}^{l} |{\psi(x)}^2| dx = 1$.
 
@@ -62,7 +62,7 @@ If the Potential function is not infinite, then we have:
 
 If $\psi \rightarrow 0$ as $x \rightarrow -\infty$ and $x \rightarrow \infty$, this is a bound state. For a bound state, you are guranteed to find the particle in a finite region. For an unbound state which is where $\psi$ does not go to zero as $x \rightarrow -\infty$ and $x \rightarrow \infty$. For this case, if $E > V_0$ it is unbound and if $E < V_0$ is a bound state.
 
-![Figure 2.5](../images/lessons/lesson_9/fig_2_5.png)
+![Figure 2.5](../assets/images/lessons/lesson_9/fig_2_5.png)
 
 If you notice in the picture above, in image (b), the probability density of the wave function exists in Region I and Region II which is different than in the infinite well case. This is the theory behind quantum tunnelling of particles. This picture is a bound state so $E < V_0$, in classical theory, a particle would not be able to exist being the potential well but here in quantum mechanics, there is a chance the particle will escape the potential well.
 
@@ -73,7 +73,7 @@ If you notice in the picture above, in image (b), the probability density of the
 ## Angular Momentum of a Particle
 
 
-![Figure 5.5](../images/lessons/lesson_9/fig_5_5.png)
+![Figure 5.5](../assets/images/lessons/lesson_9/fig_5_5.png)
 
 Below are Angular Momentum Equations for a particle in 3D coordinates. Notice they are operators and that $\hat{L_z}$ is a much simplier equation than $\hat{L_x}$ and $\hat{L_y}$.
 
@@ -105,7 +105,7 @@ $S_{l,m}(\theta)$ is given by the equations below. This is called a Legrende Equ
 
 This table shows the above series expansion for different l and m quantum numbers.
 
-![Table 5.1](../images/lessons/lesson_9/table_5_1.png)
+![Table 5.1](../assets/images/lessons/lesson_9/table_5_1.png)
 
 
 
@@ -121,7 +121,7 @@ Where $\psi = R(r)Y_{l}^{m}(\theta, \phi)$
 
 There is a lot more math and derivation to get to orbital functions. Below is what orbital the quantum number l denotes.
 
-![Table 6.110](../images/lessons/lesson_9/table_6_110.png)
+![Table 6.110](../assets/images/lessons/lesson_9/table_6_110.png)
 
 The solution of $R(r)$ for the bond state of the Hydrogenlike atom is below:
 
@@ -138,29 +138,29 @@ So the complete wavefunction for a Hydrogenlike atom is:
 * $\psi_{nlm}(r, \theta, \phi) = R_{nl}(r)S_{l,m}(\theta)\frac{1}{\sqrt{2\pi}}e^{im\phi}$
 * $\psi_{nlm}(r, \theta, \phi) = r^le^{-\frac{Zr}{na}}\sum_{j=0}^{n-l-1}[b_jr^j] * \sin^{|m|}\theta\sum_{\substack{j=1,3,...\\or\:j=0,2...}}^{l-|m|}[a_j\cos^j\theta] * \frac{1}{\sqrt{2\pi}}e^{im\phi}$
 
-![Table 6.2](../images/lessons/lesson_9/table_6_2.png)
+![Table 6.2](../assets/images/lessons/lesson_9/table_6_2.png)
 
 The constant a stated earlier is actually the Bohr radius, which is the radius of the circle in which the electron moved in the grpund state of the hydrogen atom in Bohr Theory.
 
 * $a = \frac{4\pi\epsilon_0\hbar^2}{\mu e^2}$
 * $\mu = \frac{m_em_p}{m_e + m_p}$
 
-![Figure 6.7](../images/lessons/lesson_9/fig_6_7.png)
+![Figure 6.7](../assets/images/lessons/lesson_9/fig_6_7.png)
 
 
 
-![Figure 6.8](../images/lessons/lesson_9/fig_6_8.png)
+![Figure 6.8](../assets/images/lessons/lesson_9/fig_6_8.png)
 
 
 
-![Figure 6.9](../images/lessons/lesson_9/fig_6_9.png)
+![Figure 6.9](../assets/images/lessons/lesson_9/fig_6_9.png)
 
 
 
-![Figure 6.13](../images/lessons/lesson_9/fig_6_13.png)
+![Figure 6.13](../assets/images/lessons/lesson_9/fig_6_13.png)
 
 
-![Figure 6.14](../images/lessons/lesson_9/fig_6_14.png)
+![Figure 6.14](../assets/images/lessons/lesson_9/fig_6_14.png)
 
 
 
@@ -170,7 +170,7 @@ The constant a stated earlier is actually the Bohr radius, which is the radius o
 * Table 15.1
 * Chapter 15.17 Solvent Effects
 
-![Table 15.1](../images/lessons/lesson_9/table_15_1.png)
+![Table 15.1](../assets/images/lessons/lesson_9/table_15_1.png)
 
 
 ## Citations

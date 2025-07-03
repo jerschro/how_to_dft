@@ -17,6 +17,7 @@ nav:
     - How to Install Conda : hpcc/install_conda.md
     - Intro to the Terminal : hpcc/intro_to_terminal.md
     - The .bashrc File : hpcc/bashrc_file.md
+    - File Access : hpcc/file_access.md
   - Gaussian : gaussian/index.md
   - ORCA : orca/index.md
   - Turbomole : 
@@ -41,7 +42,7 @@ nav:
   - CREST : crest/index.md
   - ME 4331 :
     - ME 4331 : me_4331/index.md
-    - Syllabus : me_4331/syllabus/fall25syllabus.md
+    - Syllabus : me_4331/syllabus_fall25.md
     - Lessons : me_4331/index.md
     - Lesson 1 : me_4331/lesson_1.md
     - Lesson 2 : me_4331/lesson_2.md

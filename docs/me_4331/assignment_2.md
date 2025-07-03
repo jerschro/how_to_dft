@@ -8,7 +8,7 @@ This is an optional assignment but a good learning tool and programming project 
 
 I want you to create a potential energy surface for a H2O molecule. Below is a picture of what the lowest energy structure is for H2O. I want you to explore all possible structures of H2O to determine if this is truly the case.
 
-![Water Molecule Picture](../images/lessons/assignment_2/water_molecule_distances.png)
+![Water Molecule Picture](../assets/images/lessons/assignment_2/water_molecule_distances.png)
 
 Looking at the water molecule, there are 3 independent geometry variables that can change in the structure: 
 
@@ -37,7 +37,7 @@ You can use a DFT program such as Turbomole, Gaussian 16 and Orca or you can use
 
 Below is a picture of an example PES that was generated for this project.
 
-![Example PES](../images/lessons/assignment_2/example_pes.png)
+![Example PES](../assets/images/lessons/assignment_2/example_pes.png)
 
 ## Hints
 

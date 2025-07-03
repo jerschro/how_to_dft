@@ -20,7 +20,7 @@ Written by Jeremy Schroeder
     
     This method of drawing is called Line-bond (Skeletal) Formula.
     
-    ![Thymine No Hs](../images/lessons/lesson_1/b1.png)
+    ![Thymine No Hs](../assets/images/lessons/lesson_1/b1.png)
     
     This [article](https://chem.libretexts.org/Bookshelves/Organic_Chemistry/Supplemental_Modules_(Organic_Chemistry)/Fundamentals/Structure_of_Organic_Molecules) has more detail on drawing organic molecules.
     
@@ -33,7 +33,7 @@ Written by Jeremy Schroeder
 
     This method of drawing is called Kekulé Formula.
 
-    ![Thymine With Hs](../images/lessons/lesson_1/b2.png)
+    ![Thymine With Hs](../assets/images/lessons/lesson_1/b2.png)
 
     This [article](https://chem.libretexts.org/Bookshelves/Organic_Chemistry/Supplemental_Modules_(Organic_Chemistry)/Fundamentals/Structure_of_Organic_Molecules) has more detail on drawing organic molecules.
     
@@ -42,8 +42,8 @@ Written by Jeremy Schroeder
 === "3d Molecule"
     These are two screenshots of a single molecule of Thymine in 3d space.
     <div class="grid">
-    ![XYZ file flat](../images/lessons/lesson_1/xyz_file1.png)
-    ![XYZ axial](../images/lessons/lesson_1/xyz_file2.png)
+    ![XYZ file flat](../assets/images/lessons/lesson_1/xyz_file1.png)
+    ![XYZ axial](../assets/images/lessons/lesson_1/xyz_file2.png)
     </div>
     Pictures are from the program VESTA.
 
@@ -56,10 +56,10 @@ Written by Jeremy Schroeder
 
     
     <div class="grid">
-    ![Unit Cell Plane A](../images/lessons/lesson_1/cif_file1.png)
-    ![Unit Cell Plane B](../images/lessons/lesson_1/cif_file2.png)
+    ![Unit Cell Plane A](../assets/images/lessons/lesson_1/cif_file1.png)
+    ![Unit Cell Plane B](../assets/images/lessons/lesson_1/cif_file2.png)
     </div>
-    ![Unit Cell Plane C](../images/lessons/lesson_1/cif_file3.png)
+    ![Unit Cell Plane C](../assets/images/lessons/lesson_1/cif_file3.png)
     
     Pictures are from the program VESTA.
 

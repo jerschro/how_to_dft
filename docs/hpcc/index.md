@@ -21,3 +21,4 @@ It will be good to reference these pages in the first few weeks of learning how 
 * [How to Install Conda](install_conda.md) - Instructions on how to install conda and have a local python environment.
 * [Introduction to the Terminal](intro_to_terminal.md) - Introduction page on how to use the LINUX/UNIX Terminal.
 * [The .bashrc File](bashrc_file.md) - Contains information on the .bashrc file.
+* [File Access](file_access.md) - How to make your files public to other users and change file permissions.

@@ -2,7 +2,7 @@
 
 # Assignment 4
 
-![Assignment_4_Instructions.pdf](../pdfs/me_5329/Assignment_4_Instructions.pdf#toolbar=0&navpanes=0&scrollbar=0){ type=application/pdf style="min-height:100vh;width:100%" }
+![Assignment_4_Instructions.pdf](../assets/pdfs/me_5329/Assignment_4_Instructions.pdf#toolbar=0&navpanes=0&scrollbar=0){ type=application/pdf style="min-height:100vh;width:100%" }
 
 ## Example ORCA input block from instructions
 

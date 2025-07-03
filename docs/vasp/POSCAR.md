@@ -3,7 +3,7 @@
 
 The POSCAR file contains the periodic boundary geometry of the VASP calculation. The POSCAR/.vasp is a proprietary file format used only by VASP and many visualization programs can open it.
 
-## Explanation of POSCAR File from [Lesson 2](../lessons/lesson_2.md)
+## Explanation of POSCAR File from [Lesson 2](../me_4331/lesson_2.md)
 
 This is a .vasp or POSCAR file.
 It is a proprietary format for VASP but is also a good standard in the industry for unitcell cell containing structures.
