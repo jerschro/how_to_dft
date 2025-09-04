@@ -17,5 +17,6 @@ Created by Jeremy Schroeder with help from Tristan Fisher, Jerimiah Zamora and D
 * [Turbomole](turbomole/index.md)
 * [VASP](vasp/index.md)
 * [CREST](crest/index.md)
+* [xTB](xtb/index.md)
 * [ME 4331](me_4331/index.md)
 * [ME 5329](me_5329/index.md)

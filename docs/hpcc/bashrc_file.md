@@ -15,6 +15,116 @@ The .bashrc file is located in your home directory.
     * This command will rerun your .bashrc file and apply the changes you made to the linux environment.
     * It is also suitable to log out and log back into the terminal to "refresh" your .bashrc file.
 
+
+
+## Example .bashrc File
+
+This example starter bashrc file shown below is also located here ```/home/tristfis/AQUINO_COURSE/250825/instructions/EXAMPLE.bashrc```.
+
+You can copy this file to be your bashrc file by using this command:
+
+```cd; cp /home/tristfis/AQUINO_COURSE/250825/instructions/EXAMPLE.bashrc .bashrc; ln -is .bashrc .profile; source ~/.bashrc```
+
+``` bash
+[ -z "$PS1" ] && return
+#leave these for parallel computing
+ulimit -s unlimited 1>/dev/null 2>/dev/null
+ulimit -l unlimited 1>/dev/null 2>/dev/null
+#set prompt, optional
+PS1='`/bin/hostname -s`:`echo $PWD | sed "s=$HOME=="`$ '
+#after creating .bashrc, link this to .profile
+#cd;ln -is .bashrc .profile
+
+#R/W Permissions for specific user:
+#	chmod a+rx $user
+#	setfacl -R -m u:$user:rX */
+
+##### PathLists ######
+LUS=/lustre/scratch/$USER
+WRK=/lustre/work/$USER
+JERI=/home/jerizamo
+TRIS=/home/tristfis
+JERE=/home/jerschro
+AQUI=/home/aaquino
+######################
+
+
+########## ENVIRONMENTS ##############################################################################
+#__________General
+export PATH=$PATH:.
+export PATH=$HOME/bin:$PATH
+#__________Turbomole
+export TURBODIR=/home/hlischka/programs/TURBOMOLE-7.5/TURBOMOLE
+export PATH=$TURBODIR/scripts:$PATH
+export PATH=$TURBODIR/bin/`sysname`:$PATH
+#__________Conda
+source $HOME/conda/etc/profile.d/conda.sh
+export PATH=$HOME/conda/bin:$PATH
+#__________gnuPlot
+alias gnuplt='module load gcc/10.1.0; module load gnuplot; echo "starting gnuplot."; sleep 2; gnuplot'
+#__________Orca
+export ORCADIR=/lustre/work/rnieman/orca_5_0_1_linux_x86-64_shared_openmpi411
+export PATH=$ORCADIR:$PATH
+export LD_LIBRARY_PATH=$ORCADIR:$LD_LIBRARY_PATH
+
+######################################################################################################
+
+
+############ MODULES ############
+#module load intel gnuplot gnu
+#module load gcc/9.2.0 molden/6.5
+#module load gcc/10.2.0 
+#module load gnuplot
+#################################
+
+
+#### Scripts & Functions ####
+shopt -s cdspell                          #spelling corrections
+shopt -s checkhash
+shopt -s checkwinsize
+shopt -s no_empty_cmd_completion
+shopt -s cmdhist
+shopt -s histappend histreedit histverify
+shopt -s extglob                          # Allows boolean completion.
+
+source $HOME/bin/*.sh
+
+#############################
+
+
+########## Aliases ##########
+###_General
+alias rm='rm -i'
+alias mv='mv -i'
+alias grep='grep --color=auto'
+alias ll='ls -lahF --color=auto'
+alias ls='ls --color=auto'
+alias diff='diff -ys --suppress-common-lines --width=$(tput cols)' # USAGE: diff <(echo $string) <(...)
+alias src='export PATH="/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/opt/dell/srvadmin/bin"; source ~/.bashrc'
+
+###_Directory Switch
+alias lus=' cd /lustre/scratch/$USER '
+alias wrk=' cd /lustre/work/$USER '
+
+###_HPCC Jobs
+alias myq='qstat'
+alias sgeqst='qstat -u "*"'
+alias qlist=" qstat -g c"
+alias sq='squeue -u $USER'
+
+###_Py-Stuff
+alias coa='conda activate'; alias cod='conda deactivate'
+
+###_Misc.
+alias vi='vim'
+alias ftp_vsc='sftp 172.16.21.58'
+
+#############################
+
+
+```
+
+
 ## Commands Needed for Turbomole
 
 If you are using Turbomole, you will need to have these lines in your .bashrc file in order for Turbomole to run correctly.
@@ -41,6 +151,12 @@ alias size='du --summarize --human-readable * '
 
 ```
 
+
+
+
+
+
+<!-- 
 ## To automatically activate conda
 
 ``` bash
@@ -96,4 +212,4 @@ alias ttmole='/home/jerschro/conda/bin/python3 /home/jerschro/Programs/TTMolE/ma
 ``` bash
 alias launch="bash /home/jerschro/Scripts/documentation/launch_documentation.sh"
 
-```
+``` -->

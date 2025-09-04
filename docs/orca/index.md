@@ -79,8 +79,7 @@ alias orca_energy='/home/jerschro/conda/bin/python3 /home/jerschro/Scripts/orca/
 
 ## SLURM Script for ORCA
 
-Below is an example SLURM script for ORCA. After loading the correct modules and environment variables, you can invoke ORCA with the command ```$ORCADIR/orca orca.inp >> orca.out```.
-
+Below is an example SLURM script for ORCA. After loading the correct modules and environment variables, you can invoke ORCA with the command ```$ORCADIR/orca orca.inp >> orca.out```. There are two SLURM script versions below. The first one runs one job and the second one runs multiple .inp files in the same node.
 
 ``` bash title="run_orca.sh"
 #!/bin/bash
@@ -154,7 +153,70 @@ fi
     mv -f $WRKDIR/* $SLURM_SUBMIT_DIR
     rm $WRKDIR -rf
 
+```
 
+
+``` bash title="run_orca.sh"
+#!/bin/bash
+#SBATCH --job-name=ORCA_job
+#SBATCH --time=06:00:00
+#SBATCH -p nocona
+#SBATCH -N 1
+#SBATCH -n 1
+#SBATCH -o slurm.o-%j
+#SBATCH -e slurm.e-%j
+
+shopt -s extglob; ulimit -s unlimited; 
+
+home=$SLURM_SUBMIT_DIR; START_TIME=$(date); cd $SLURM_SUBMIT_DIR; 
+keepFileList=" OUTCAR mos alpha beta *.in *.inp XDATCAR "
+
+JOBTYPE="ORCA"
+WRKDIR=/lustre/scratch/$USER/$JOBTYPE/$SLURM_JOB_ID
+#WRKDIR=/lustre/work/$USER/$JOBTYPE/$SLURM_JOB_ID
+
+[ -z $WRKDIR ] && [ -z $JOBTYPE ] && exit;
+[[ $JOBTYPE == "XTB" ]] && [[ ! "$SLURM_NTASKS" == "1" ]] && exit;
+mkdir -p $WRKDIR
+
+echo "JOB-TYPE: " $JOBTYPE; 		echo "Job ID: " $SLURM_JOB_ID
+echo "Start Time: " $START_TIME; 	echo "Submit Directory:  " $SLURM_SUBMIT_DIR
+echo "Work Directory: " $WRKDIR
+
+#JOB--------------------------------------------------------------------
+cp $SLURM_SUBMIT_DIR/!(slurm*) $WRKDIR -pf
+ln -s $WRKDIR 0.$JOBTYPE-$SLURM_JOB_ID; cd $WRKDIR; 
+
+#______Orca
+	export ORCADIR=/lustre/work/rnieman/orca_6_0_0_shared_openmpi416
+	export PATH=$ORCADIR:$PATH;	export LD_LIBRARY_PATH=$ORCADIR:$LD_LIBRARY_PATH
+	module load gcc/10.2.0 openmpi/4.0.4
+		for inp in *.inp; do out=${inp%inp}out; $ORCADIR/orca $inp >> $out; done;
+
+#EXIT--------------------------------------------------------------------
+
+cd $WRKDIR; smallSlurm="`find slurm* -maxdepth 1 -size -50w`" 2> /dev/null; 
+rm -f $smallSlurm; keepFileList="$keepFileList *.out *.log"; 
+if [[ -f $WRKDIR ]] && [[ -f $SLURM_SUBMIT_DIR ]]; then
+	cd $WRKDIR;
+	for i in $keepFileList; do 
+		[ -f $i ] && mv -f $i $SLURM_SUBMIT_DIR; 
+	done
+	largeFiles="`find . -maxdepth 1 -size +80M`"
+	for j in $largeFiles; do 
+		rm -f $j 
+	done
+fi
+cp -pf $WRKDIR/* $SLURM_SUBMIT_DIR 2> /dev/null; cd $SLURM_SUBMIT_DIR
+[ -z $largeFiles ] && echo -e "\nRemoved Files:\n"$largeFiles
+echo -e "\nKept Files:\n"$keepFileList
+
+#-----------------------------------------------------------------------
+END_TIME=$(date) 
+time_diff=$(($(date -d "$END_TIME" +%s) - $(date -d "$START_TIME" +%s)))
+time_diff=$(date -u -d @"$time_diff" +'%H:%M:%S')
+echo "End Time: " $END_TIME; echo "Total Calculation Time: " $time_diff
+#-----------------------------------------------------------------------
 
 ```
 

@@ -5,7 +5,7 @@
 ## Instructions to Log On for the First Time
 
 1. Make sure you are on the wifi network TTUNet. If you are off campus, look at the [VPN Instructions](connect_to_vpn.md) to be able to log in.
-1. Open terminal for mac. (++cmd+t++ is a shortcut to open the Terminal)
+1. Open the terminal for mac. (++cmd+space++ then type "Terminal" and press ++return++ is a shortcut to open the Terminal)
 1. Type command "ssh eraider@login.hpcc.ttu.edu" where eraider is your eraider account name.
 1. You are now on the super computer!
 1. Go to [Intro to the Terminal](intro_to_terminal.md) to learn how to interact with it!
@@ -33,6 +33,8 @@ It is also a good idea to have a coding environment downloaded locally to be abl
 
 ## How to Open Molden (aka Turn on X-11 Forwarding) on Mac
 
+**BELOW INSTRUCTIONS ARE OLD. Please talk to Jeremy for updated instructions. 8/25/25**
+
 1. Download [XQuartz](https://www.xquartz.org/)
 2. Add "export PATH=/home/rnieman/PROGRAMS/molden6.2/:$PATH" to .bashrc file
 3. When you type ssh command to open terminal add the -X -Y flag so "ssh -X -Y eraider@login.hpcc.ttu.edu"
@@ -41,4 +43,5 @@ It is also a good idea to have a coding environment downloaded locally to be abl
 ## How To Transfer Files Locally
 
 1. Use scp function in local terminal.
-1. Use Global Transfer web server.
+    * Example command is: ```scp eraider@login.hpcc.ttu.edu:/home/eraider/file_to_transfer.txt .```
+1. Use Global Transfer web server. More instructions are on HPCC Documentation.

@@ -40,9 +40,10 @@ nav:
     - OUTCAR : vasp/OUTCAR.md
     - Phonopy : vasp/phonopy.md
   - CREST : crest/index.md
+  - xTB : xtb/index.md
   - ME 4331 :
     - ME 4331 : me_4331/index.md
-    - Syllabus : me_4331/syllabus_fall25.md
+    # - Syllabus : me_4331/syllabus_fall25.md
     - Lessons : me_4331/index.md
     - Lesson 1 : me_4331/lesson_1.md
     - Lesson 2 : me_4331/lesson_2.md
@@ -58,13 +59,10 @@ nav:
     - Resource 1 : me_4331/resource_intro_to_dft.md
   - ME 5329:
     - ME 5329: me_5329/index.md
-    - Course Schedule : me_5329/course_schedule.md
-    - Assignment 0: me_5329/assignment_00.md
-    - Assignment 1: me_5329/assignment_01.md
-    - Assignment 2: me_5329/assignment_02.md
-    - Assignment 3: me_5329/assignment_03.md
-    - Assignment 4: me_5329/assignment_04.md
-    - Assignment 5: me_5329/assignment_05.md
+    - Course Syllabus : me_5329/course_syllabus.md
+    - Homework 0: me_5329/homework_00.md
+    - Homework 1: me_5329/homework_01.md
+    - Project 1: me_5329/project_01.md
 
 theme:
   name: material

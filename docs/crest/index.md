@@ -17,29 +17,6 @@ The CREST Documentation is really informative and descriptive. I would recommend
 * xTB: [https://xtb-docs.readthedocs.io/](https://xtb-docs.readthedocs.io/)
 * Grimme-Lab Workshops: [https://grimme-lab.github.io/workshops/](https://grimme-lab.github.io/workshops/)
 
-## How to Install CREST using conda
-
-* If you are on Windows and have Anaconda/miniconda installed, go to search bar, look for "Anaconda Prompt" and open it. We can run CREST locally in this terminal.
-
-* If you are on Mac or Linux and you have conda/miniconda installed, open the terminal. We can run CREST locally in this terminal.
-
-* If you are on the HPCC, make sure you have conda installed. When you run crest, you need to run it either in an SLURM script (that you sbatch to run) or on an interactive node which you can do so by running the command below ```salloc -p quanah -N 1 -n 36 -t 60```. This salloc command will request and give you a full interactive node on quanah (36 ntasks) for 1 hour (60 minutes). **DO NOT RUN CREST ON THE LOGIN NODES ON THE HPCC!!! IF YOU DO THIS, 1) IT IS ILLEGAL and 2) IT MAKES IT SLOW FOR EVERYONE ELSE USING THE HPCC.**
-
-If you need to install conda, read my install conda tutorial [Here](../hpcc/install_conda.md).
-
-For all operating systems, run the commands below. This command creates a new conda environment named crest with CREST and xTB downloaded in it. To activate the conda environment and load CREST you type ```conda activate crest```.
-
-``` conda
-conda create -n crest conda-forge::crest
-
-```
-
-To know if you crest is loaded. You should see (crest) on the left of the terminal prompt line, such as the example below.
-
-``` bash
-(crest) jeremy@CPU-NAME:~$
-
-```
 
 ## How to use CREST for Conformational Sampling
 
@@ -101,7 +78,7 @@ Chem.MolToXYZFile(rdkit_mol, os.path.join(os.getcwd(), xyz_filename)) #saves rdk
 
 ```
 
-CREST documentation reccomends to pre optimize the initial structure using the same level of theory we will use in CREST so, lets first run xTB to optimize squalene_initial.xyz. Let's run this command in a new directory. Also xTB, is downloaded when we install CREST so we can use the same conda environment.
+CREST documentation reccomends to pre optimize the initial structure using the same level of theory we will use in CREST so, lets first run xTB to optimize squalene_initial.xyz. Let's run this command in a new directory. Also xTB, is downloaded when we install CREST so we can use the same conda environment or use our xTB conda environment.
 
 ```
 xtb squalene_initial.xyz --charge 0 --gfn 2 --molden --opt > xtb.out
@@ -109,43 +86,101 @@ cp xtbopt.xyz initial_opt.xyz
 
 ```
 
-Now lets run CREST! Run the command below in a new directory or sbatch the SLURM script below. We can add `> crest.out` to the command to direct the stdout to a file so we can save the CREST terminal output. The default algorithim CREST uses is the iMTD-GC algorithim which is explained [HERE](https://crest-lab.github.io/crest-docs/page/overview/workflows.html#imtd-gc-algorithm). We can add a solvent model with this flag `--gbsa hexane`. You can specify the amount of CPU Threads (on HPCC we call it ntasks) by using flag `-T 36` for 36 ntasks on quanah for example. 
+Now lets run CREST! After you create a new directory with the initial_opt.xyz file located inside, run the SLURM script named "run_crest.sh" which is located [HERE](https://jerschro.github.io/how_to_dft/crest/#slurm-script-for-crest). The command where CREST is envoked is ```crest initial_opt.xyz --gfn2 -T 36 > crest.out```. Then submit the SLURM script to SLURM using the command ```sbatch run_crest.sh```.
 
-* NOTE: If you see an OpenBLAS Warning, it is OKAY, xTB has this warning and I believe it comes from how we installed xTB through conda. The xTB and CREST calculation will still work fine to my knowledge.
 
-```
-crest initial_opt.xyz --gfn2 -T 36 > crest.out
+## SLURM Script for CREST
 
-```
-
-If you use the SLURM script, replace `ERAIDER` in the source and export lines with your eraider on the HPCC.
-
+This SLURM script sources CREST for you so you do not need to install it using conda.
 
 ``` bash title="run_crest.sh"
 #!/bin/bash
-#SBATCH --job-name=crest
-#SBATCH --partition quanah
-#SBATCH --nodes=1
-#SBATCH --ntasks=36
-#SBATCH --time=04:00:00
+#SBATCH --job-name=CREST_job
+#SBATCH --time=12:00:00
+#SBATCH -p quanah
+#SBATCH -N 1
+#SBATCH -n 36
 #SBATCH --mem-per-cpu=1G
+#SBATCH -o slurm.o-%j
+#SBATCH -e slurm.e-%j
 
-#set up environment for crest calculation
-source /home/ERAIDER/conda/etc/profile.d/conda.sh
-export PATH=/home/ERAIDER/conda/bin:$PATH
-conda activate crest
+shopt -s extglob; ulimit -s unlimited; 
 
-#check to see if initial geometry file exists
+home=$SLURM_SUBMIT_DIR; START_TIME=$(date); cd $SLURM_SUBMIT_DIR; 
+keepFileList=" OUTCAR mos alpha beta *.in *.inp XDATCAR "
+
+JOBTYPE="CREST"
+WRKDIR=/lustre/scratch/$USER/$JOBTYPE/$SLURM_JOB_ID
+#WRKDIR=/lustre/work/$USER/$JOBTYPE/$SLURM_JOB_ID
+
+[ -z $WRKDIR ] && [ -z $JOBTYPE ] && exit;
+[[ $JOBTYPE == "XTB" ]] && [[ ! "$SLURM_NTASKS" == "1" ]] && exit;
+mkdir -p $WRKDIR
+
+echo "JOB-TYPE: " $JOBTYPE; 		echo "Job ID: " $SLURM_JOB_ID
+echo "Start Time: " $START_TIME; 	echo "Submit Directory:  " $SLURM_SUBMIT_DIR
+echo "Work Directory: " $WRKDIR
+
+#JOB--------------------------------------------------------------------
+
 if [ ! -f initial_opt.xyz ]
 then
   echo "NO initial_opt.xyz file exists. exiting!!!"
   exit
 fi
 
-#run crest
-crest initial_opt.xyz --gfn2 -T 36 > crest.out
+cp $SLURM_SUBMIT_DIR/!(slurm*) $WRKDIR -pf
+ln -s $WRKDIR 0.$JOBTYPE-$SLURM_JOB_ID; cd $WRKDIR; 
+
+#CREST
+source /home/jerschro/conda/etc/profile.d/conda.sh
+export PATH=/home/jerschro/conda/bin:$PATH
+
+/home/jerschro/conda/envs/crest/bin/crest initial_opt.xyz --gfn2 -T 36 > crest.out
+
+
+#EXIT--------------------------------------------------------------------
+
+cd $WRKDIR; smallSlurm="`find slurm* -maxdepth 1 -size -50w`" 2> /dev/null; 
+rm -f $smallSlurm; keepFileList="$keepFileList *.out *.log"; 
+if [[ -f $WRKDIR ]] && [[ -f $SLURM_SUBMIT_DIR ]]; then
+	cd $WRKDIR;
+	for i in $keepFileList; do 
+		[ -f $i ] && mv -f $i $SLURM_SUBMIT_DIR; 
+	done
+	largeFiles="`find . -maxdepth 1 -size +80M`"
+	for j in $largeFiles; do 
+		rm -f $j 
+	done
+fi
+cp -pf $WRKDIR/* $SLURM_SUBMIT_DIR 2> /dev/null; cd $SLURM_SUBMIT_DIR
+[ -z $largeFiles ] && echo -e "\nRemoved Files:\n"$largeFiles
+echo -e "\nKept Files:\n"$keepFileList
+
+#-----------------------------------------------------------------------
+END_TIME=$(date) 
+time_diff=$(($(date -d "$END_TIME" +%s) - $(date -d "$START_TIME" +%s)))
+time_diff=$(date -u -d @"$time_diff" +'%H:%M:%S')
+echo "End Time: " $END_TIME; echo "Total Calculation Time: " $time_diff
+#-----------------------------------------------------------------------
 
 ```
+
+
+
+
+<!-- 
+
+**PLEASE USE THE SLURM SCRIPT [HERE](https://jerschro.github.io/how_to_dft/crest/#slurm-script-for-crest). RUNNING CREST IN THE COMMAND LINE IS VERY SLOW** Run the command below in a new directory or sbatch the SLURM script below. We can add `> crest.out` to the command to direct the stdout to a file so we can save the CREST terminal output. The default algorithim CREST uses is the iMTD-GC algorithim which is explained [HERE](https://crest-lab.github.io/crest-docs/page/overview/workflows.html#imtd-gc-algorithm). We can add a solvent model with this flag `--gbsa hexane`. You can specify the amount of CPU Threads (on HPCC we call it ntasks) by using flag `-T 36` for 36 ntasks on quanah for example. 
+
+* NOTE: If you see an OpenBLAS Warning, it is OKAY, xTB has this warning and I believe it comes from how we installed xTB through conda. The xTB and CREST calculation will still work fine to my knowledge.
+
+```
+crest initial_opt.xyz --gfn2 -T 36 > crest.out
+
+``` 
+
+-->
 
 
 ## Looking at the Output Files CREST Generates
@@ -368,4 +403,28 @@ All of the Structures shown above are viable Hexane conformations and you can no
 
 So now we can be confident in continuing with the crest_best.xyz structure to use in further studies and calculations.
 
+
+## How to Install CREST using conda
+
+* If you are on Windows and have Anaconda/miniconda installed, go to search bar, look for "Anaconda Prompt" and open it. We can run CREST locally in this terminal.
+
+* If you are on Mac or Linux and you have conda/miniconda installed, open the terminal. We can run CREST locally in this terminal.
+
+* If you are on the HPCC, make sure you have conda installed. When you run crest, you need to run it either in an SLURM script (that you sbatch to run) or on an interactive node which you can do so by running the command below ```salloc -p quanah -N 1 -n 36 -t 60```. This salloc command will request and give you a full interactive node on quanah (36 ntasks) for 1 hour (60 minutes). **DO NOT RUN CREST ON THE LOGIN NODES ON THE HPCC!!! IF YOU DO THIS, 1) IT IS ILLEGAL and 2) IT MAKES IT SLOW FOR EVERYONE ELSE USING THE HPCC. PLEASE USE THE SLURM SCRIPT [HERE](https://jerschro.github.io/how_to_dft/crest/#slurm-script-for-crest). RUNNING CREST IN THE COMMAND LINE IS VERY SLOW**
+
+If you need to install conda, read my install conda tutorial [Here](../hpcc/install_conda.md).
+
+For all operating systems, run the commands below. This command creates a new conda environment named crest with CREST and xTB downloaded in it. To activate the conda environment and load CREST you type ```conda activate crest```.
+
+``` conda
+conda create -n crest conda-forge::crest
+
+```
+
+To know if you crest is loaded. You should see (crest) on the left of the terminal prompt line, such as the example below.
+
+``` bash
+(crest) jeremy@CPU-NAME:~$
+
+```
 

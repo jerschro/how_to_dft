@@ -2,10 +2,10 @@
 # ME 4331
 
 This is the homepage for containing everything to do with ME 4331. 
-
+<!-- 
 ## Syllabus
 
-* [Syllabus Fall 2025](syllabus_fall25.md)
+* [Syllabus Fall 2025](syllabus_fall25.md) -->
 
 ## Lessons
 

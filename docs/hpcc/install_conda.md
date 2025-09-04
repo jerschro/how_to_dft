@@ -3,10 +3,21 @@
 
 # How To Install Conda
 
+## To Install Conda Locally
+
+If you want MiniForge locally, find your operating system [Here](https://conda-forge.org/download/).
+
+Follow Conda instructions for your operating system.
+
+* [Linux](https://conda.io/projects/conda/en/latest/user-guide/install/linux.html)
+* [Mac](https://conda.io/projects/conda/en/latest/user-guide/install/macos.html)
+* [Windows](https://conda.io/projects/conda/en/latest/user-guide/install/windows.html)
+
 ## To Install Conda on HPCC
 
-Following the below code will automatically install conda on the HPCC. For more information, check out the link [here](https://www.depts.ttu.edu/hpcc/userguides/application_guides/python.local_installation.php).
+Follow the HPCC tutorial on how to install Miniforge/Conda, check out the link [here](https://www.depts.ttu.edu/hpcc/userguides/application_guides/Miniforge.php). The installation instructions are in the **Installing MiniForge** section.
 
+<!-- Following the below code will automatically install conda on the HPCC. Old Link [here](https://www.depts.ttu.edu/hpcc/userguides/application_guides/python.local_installation.php). 
 ``` bash
 #  Running the following script will automate the process of installing a local copy of Miniconda v3
 /lustre/work/examples/InstallPython.sh
@@ -16,6 +27,9 @@ Following the below code will automatically install conda on the HPCC. For more 
 conda activate
  
 ```
+-->
+
+**If the Miniforge installation does not automatically add something to your .bashrc, please follow the instructions below. 8/25/25**
 
 Once you install conda on the HPC. You need to add the 1 of the 2 choices below to your .bashrc file in order activate conda automatically when you login to the HPC. Choice 1 is the simplier option compared to choice 2 which includes some error checking but causes issues when others try to source your conda environment. You will need to replace $USER with your eraider.
 
@@ -48,11 +62,50 @@ unset __conda_setup
 
 ```
 
-## To Install Conda Locally
+## Notes on Conda Commands
 
-Follow Conda instructions for your operating system.
+1. Version:
+    * ```conda --version```
 
-* [Linux](https://conda.io/projects/conda/en/latest/user-guide/install/linux.html)
-* [Mac](https://conda.io/projects/conda/en/latest/user-guide/install/macos.html)
-* [Windows](https://conda.io/projects/conda/en/latest/user-guide/install/windows.html)
+1. Update:
+    * ```conda update conda```
 
+1. Create environment:
+    * ```conda create --name [name] [pkg(s)]```
+    * ex: conda create --name test_environment pandas
+
+1. List all environments (The asterisk * in it's output will indicate the active environment)
+    * ```conda info --envs```
+
+1. Python Version:
+    * ```python --version```
+
+1. List current packages in the active environment:
+    * ```conda list```
+
+1. List all environments you have:
+    * ```conda list -env```
+
+1. Search anaconda repository for a desired package:
+    * ```conda search [pkg]```
+
+1. Install a specific package to the active environment:
+    * ```conda install [pkg]```
+
+* Good Packages To Install for Python:
+    * numpy
+    * matplotlib
+    * scipy
+    * pandas
+    * tabulate
+    * 
+* Other python modules that are standard and already installed in Python:
+    * os
+    * sys
+    * shutil
+    * textwrap
+    * argparse
+
+## Other Documentation for Conda
+
+[TTU HPCC](https://www.depts.ttu.edu/hpcc/userguides/application_guides/Miniforge.php) has good documentation on Conda. [Conda website](https://docs.conda.io/en/latest/) has good documentation also.
