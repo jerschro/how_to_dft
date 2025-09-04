@@ -25,7 +25,7 @@ The xTB Documentation is really informative and descriptive. I would recommend y
 
 If you need to install conda, read my install conda tutorial [Here](../hpcc/install_conda.md).
 
-For all operating systems, run the commands below. This command creates a new conda environment named crest with CREST and xTB downloaded in it. To activate the conda environment and load CREST you type ```conda activate crest```.
+For all operating systems, run the commands below. This command creates a new conda environment named xtb with xTB downloaded in it. To activate the conda environment and load xTB you type ```conda activate xtb```.
 
 ``` conda
 conda create -n xtb conda-forge::xtb
