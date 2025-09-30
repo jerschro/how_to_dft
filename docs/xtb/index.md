@@ -19,15 +19,15 @@ The xTB Documentation is really informative and descriptive. I would recommend y
 
 ## How to Install xTB using conda
 
-* If you are on Windows and have Anaconda/miniconda installed, go to search bar, look for "Anaconda Prompt" and open it. We can run CREST locally in this terminal.
+* If you are on Windows and have Anaconda/miniconda installed, go to search bar, look for "Anaconda Prompt" and open it. We can run xTB locally in this terminal.
 
-* If you are on Mac or Linux and you have conda/miniconda installed, open the terminal. We can run CREST locally in this terminal.
+* If you are on Mac or Linux and you have conda/miniconda installed, open the terminal. We can run xTB locally in this terminal.
 
 If you need to install conda, read my install conda tutorial [Here](../hpcc/install_conda.md).
 
 For all operating systems, run the commands below. This command creates a new conda environment named xtb with xTB downloaded in it. To activate the conda environment and load xTB you type ```conda activate xtb```.
 
-``` conda
+``` bash
 conda create -n xtb conda-forge::xtb
 
 ```
@@ -41,12 +41,20 @@ To know if you xtb is loaded. You should see (xtb) on the left of the terminal p
 
 ## How to Run xTB
 
-All you need is xTB environment loaded and an .xyz file. It is perfectly ok to run xTB in the local terminal. 
+All you need is the xTB environment loaded and an .xyz file. It is perfectly ok to run xTB in the local terminal. 
 
-```
+``` bash
 xtb initial_geom.xyz --opt tight > xtb.out
 
 ```
+
+You may also call the executable in Jeremy's directory which bypasses having to install xtb yourself by using this command on the HPC.
+
+``` bash
+/home/jerschro/conda/envs/xtb/bin/xtb initial_geom.xyz --opt tight > xtb.out
+
+```
+
 
 ## Looking at the Output Files xTB Generates
 

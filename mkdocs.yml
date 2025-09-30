@@ -41,6 +41,7 @@ nav:
     - Phonopy : vasp/phonopy.md
   - CREST : crest/index.md
   - xTB : xtb/index.md
+  - QE : quantum_espresso/index.md
   - ME 4331 :
     - ME 4331 : me_4331/index.md
     # - Syllabus : me_4331/syllabus_fall25.md
@@ -62,7 +63,11 @@ nav:
     - Course Syllabus : me_5329/course_syllabus.md
     - Homework 0: me_5329/homework_00.md
     - Homework 1: me_5329/homework_01.md
+    - Homework 2: me_5329/homework_02.md
+    - Homework 3: me_5329/homework_03.md
     - Project 1: me_5329/project_01.md
+    - Project 2: me_5329/project_02.md
+    - Project 3: me_5329/project_03.md
 
 theme:
   name: material
