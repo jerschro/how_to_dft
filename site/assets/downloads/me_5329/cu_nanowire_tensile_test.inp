@@ -1,0 +1,107 @@
+# ME 5329 Homework 4 Fall 2025 - LAMMPS Input for Cu Nano Wire Tensile Test
+
+# ---- SECTION 1: LAMMPS Initialization ----
+
+# ---- Initialization ----
+units       metal       # defines calculation units 
+dimension   3           # defines a 3d LAMMPS simulation 
+atom_style  atomic      # defines what attributes each atoms have saved
+boundary s s p          # non-periodic and shrink-wrapped in x and y axis; periodic in z axis
+
+# ---- Read data file ----
+variable initial_data_file string "Cu_cylinder.dat"
+read_data ${initial_data_file}   # reads our initial .dat structure
+
+# ---- Masses ----
+mass        1 63.546          # Cu, defining atom type 1's atomic mass
+
+# ---- Interatomic potential ----
+pair_style  eam             # embedded atom method to calculate pairwise interactions
+pair_coeff  * * Cu_u3.eam   # interatomic potential file for atom type
+
+# ---- Neighbor list settings ----
+neighbor    2.0 bin                        # defines neighbor list with a skin of 2 A; ensures all interacting atoms for EAM are included
+neigh_modify delay 10 every 1 check yes    # rebuilds neighbor list every 1 timestep; full rebuild every 10 steps; 'check yes' ensures atoms leaving the skin are detected
+
+# ---- Define grip regions ----
+variable grip_dist equal 10          # grip distance in Angstrom
+
+variable zlo equal zlo               # defines lowest z cartesian position
+variable zhi equal zhi               # defines highest z cartesian position
+variable bottom_top equal ${zlo}+${grip_dist}  # defines grip region distance
+variable top_bottom equal ${zhi}-${grip_dist}  # defines grip region distance
+region bottom_grip block INF INF INF INF ${zlo} ${bottom_top} units box # makes a grip region
+region top_grip    block INF INF INF INF ${top_bottom} ${zhi} units box # makes a grip region
+
+# ---- Create groups from regions ----
+group bottom region bottom_grip        # groups atoms in the defined grip region
+group top region top_grip              # groups atoms in the defined grip region
+group wire subtract all top bottom     # groups atoms in the defined grip region
+
+
+
+
+
+
+
+# ---- SECTION 2: Equilibriation Run ----
+
+# ---- Equilibration Run Time integration and thermostat ----
+variable sim_temp equal 300 # in K
+
+velocity wire create 10.0 12345 mom yes rot yes  # 10 K initial velocities
+fix 1 wire nvt temp 10.0 ${sim_temp} 0.1 # ramp from 10 to 300 K
+
+# ---- Equilibration Run Fix Grips ----
+fix 2 bottom setforce 0.0 0.0 0.0 # keep bottom grip fixed
+fix 3 top setforce 0.0 0.0 0.0       # keep top grip fixed
+
+# ---- Equilibration Run Output ----
+variable equi_dump_freq equal 100      # how many timesteps per dump
+variable equi_timestep_amt equal 0.001 # simulation timestep in ps
+variable equi_run_amt equal 10000      # how many dumps you want
+variable equi_dump_filename string "equilibriate.lammpstrj" # dump filename
+
+compute Twire wire temp     # compute temperature of wire group
+thermo      ${equi_dump_freq}    #write and calculate thermo data every defined timestep
+thermo_style custom step temp c_Twire pe etotal press pxx pyy pzz lx ly lz  #format of thermo data to write
+dump 1 all custom ${equi_dump_freq} ${equi_dump_filename} id type x y z vx vy vz
+
+# ---- Equilibration Run ----
+timestep    ${equi_timestep_amt}  
+run         ${equi_run_amt}
+
+
+
+
+
+
+# ---- SECTION 3: Tensile Test Run ----
+
+# ---- Changing Settings for Tensile Test Run ----
+unfix 1      # want to stop temperature ramp
+unfix 3   # want to pull top region for tensile
+undump 1  # want to dump to a new file
+
+# ---- Tensile Test Fix Grips ----
+variable strain_rate equal 0.02   # in 1/ps
+
+fix 4 bottom setforce 0.0 0.0 0.0 # keep bottom grip fixed
+fix 5 top deform 1 z erate ${strain_rate} units box remap x   # Pull wire along z at specified strain rate; remap x keeps atomic positions consistent with box deformation
+
+# ---- Tensile Test Time integration and thermostat ----
+fix 6 wire nvt temp ${sim_temp} ${sim_temp} 0.1 # Only wire atoms are thermostatted; grips are fixed/moved manually
+
+# ---- Tensile Test Output ----
+variable tens_dump_freq equal 100      # how many timesteps per dump
+variable tens_timestep_amt equal 0.001 # simulation timestep in ps
+variable tens_run_amt equal 100000      # how many dumps you want
+variable tens_dump_filename string "tensile.lammpstrj" # dump filename
+
+thermo      ${tens_dump_freq}    #write and calculate thermo data every defined timestep
+thermo_style custom step temp c_Twire pe etotal press pxx pyy pzz lx ly lz  #format of thermo data to write
+dump 2 all custom ${tens_dump_freq} ${tens_dump_filename} id type x y z vx vy vz
+
+# ---- Tensile Test Run ----
+timestep    ${tens_timestep_amt}  
+run         ${tens_run_amt}
