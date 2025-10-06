@@ -6,7 +6,7 @@
 units       metal       # defines calculation units 
 dimension   3           # defines a 3d LAMMPS simulation 
 atom_style  atomic      # defines what attributes each atoms have saved
-boundary s s p          # non-periodic and shrink-wrapped in x and y axis; periodic in z axis
+boundary s s s          # non-periodic and shrink-wrapped in x and y axis; periodic in z axis
 
 # ---- Read data file ----
 variable initial_data_file string "Cu_cylinder.dat"
@@ -58,7 +58,7 @@ fix 3 top setforce 0.0 0.0 0.0       # keep top grip fixed
 
 # ---- Equilibration Run Output ----
 variable equi_dump_freq equal 100      # how many timesteps per dump
-variable equi_timestep_amt equal 0.001 # simulation timestep in ps
+variable timestep_amt equal 0.001 # simulation timestep in ps
 variable equi_run_amt equal 10000      # how many dumps you want
 variable equi_dump_filename string "equilibriate.lammpstrj" # dump filename
 
@@ -68,7 +68,7 @@ thermo_style custom step temp c_Twire pe etotal press pxx pyy pzz lx ly lz  #for
 dump 1 all custom ${equi_dump_freq} ${equi_dump_filename} id type x y z vx vy vz
 
 # ---- Equilibration Run ----
-timestep    ${equi_timestep_amt}  
+timestep    ${timestep_amt}  
 run         ${equi_run_amt}
 
 
@@ -80,21 +80,23 @@ run         ${equi_run_amt}
 
 # ---- Changing Settings for Tensile Test Run ----
 unfix 1      # want to stop temperature ramp
+unfix 2   # want to pull bottom region for tensile
 unfix 3   # want to pull top region for tensile
 undump 1  # want to dump to a new file
 
 # ---- Tensile Test Fix Grips ----
-variable strain_rate equal 0.02   # in 1/ps
+variable strain_rate equal 0.01   # in 1/ps
 
-fix 4 bottom setforce 0.0 0.0 0.0 # keep bottom grip fixed
-fix 5 top deform 1 z erate ${strain_rate} units box remap x   # Pull wire along z at specified strain rate; remap x keeps atomic positions consistent with box deformation
+variable box_length equal ${zhi} - ${zlo}  #calculate box length
+variable v equal (${box_length} * ${strain_rate} ) / 2   #calculate velocity to move grips to match strain rate
+fix 4 bottom move linear 0.0 0.0 -${v} #move bottom grip at set velocity
+fix 5 top move linear 0.0 0.0 ${v}      #move top grip at set velocity
 
 # ---- Tensile Test Time integration and thermostat ----
 fix 6 wire nvt temp ${sim_temp} ${sim_temp} 0.1 # Only wire atoms are thermostatted; grips are fixed/moved manually
 
 # ---- Tensile Test Output ----
 variable tens_dump_freq equal 100      # how many timesteps per dump
-variable tens_timestep_amt equal 0.001 # simulation timestep in ps
 variable tens_run_amt equal 100000      # how many dumps you want
 variable tens_dump_filename string "tensile.lammpstrj" # dump filename
 
@@ -103,5 +105,6 @@ thermo_style custom step temp c_Twire pe etotal press pxx pyy pzz lx ly lz  #for
 dump 2 all custom ${tens_dump_freq} ${tens_dump_filename} id type x y z vx vy vz
 
 # ---- Tensile Test Run ----
-timestep    ${tens_timestep_amt}  
 run         ${tens_run_amt}
+
+
