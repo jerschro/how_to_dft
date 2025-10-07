@@ -63,8 +63,11 @@ variable equi_run_amt equal 10000      # how many dumps you want
 variable equi_dump_filename string "equilibriate.lammpstrj" # dump filename
 
 compute Twire wire temp     # compute temperature of wire group
-thermo      ${equi_dump_freq}    #write and calculate thermo data every defined timestep
-thermo_style custom step temp c_Twire pe etotal press pxx pyy pzz lx ly lz  #format of thermo data to write
+compute topz top reduce max z   # compute top atom in z
+compute botz bottom reduce min z # compute bottom atom in z
+variable box_height equal c_topz - c_botz   # compute box height, necessary because Lz does not update every dump step
+thermo      ${equi_dump_freq}    # write and calculate thermo data every defined timestep
+thermo_style custom step temp c_Twire pe etotal press pxx pyy pzz v_box_height lx ly lz  # format of thermo data to write
 dump 1 all custom ${equi_dump_freq} ${equi_dump_filename} id type x y z vx vy vz
 
 # ---- Equilibration Run ----
@@ -87,10 +90,10 @@ undump 1  # want to dump to a new file
 # ---- Tensile Test Fix Grips ----
 variable strain_rate equal 0.01   # in 1/ps
 
-variable box_length equal ${zhi} - ${zlo}  #calculate box length
-variable v equal (${box_length} * ${strain_rate} ) / 2   #calculate velocity to move grips to match strain rate
-fix 4 bottom move linear 0.0 0.0 -${v} #move bottom grip at set velocity
-fix 5 top move linear 0.0 0.0 ${v}      #move top grip at set velocity
+variable box_length equal ${zhi} - ${zlo}  # calculate box length
+variable v equal (${box_length} * ${strain_rate} ) / 2   # calculate velocity to move grips to match strain rate
+fix 4 bottom move linear 0.0 0.0 -${v} # move bottom grip at set velocity
+fix 5 top move linear 0.0 0.0 ${v}      # move top grip at set velocity
 
 # ---- Tensile Test Time integration and thermostat ----
 fix 6 wire nvt temp ${sim_temp} ${sim_temp} 0.1 # Only wire atoms are thermostatted; grips are fixed/moved manually
@@ -100,11 +103,9 @@ variable tens_dump_freq equal 100      # how many timesteps per dump
 variable tens_run_amt equal 100000      # how many dumps you want
 variable tens_dump_filename string "tensile.lammpstrj" # dump filename
 
-thermo      ${tens_dump_freq}    #write and calculate thermo data every defined timestep
-thermo_style custom step temp c_Twire pe etotal press pxx pyy pzz lx ly lz  #format of thermo data to write
+thermo      ${tens_dump_freq}    # write and calculate thermo data every defined timestep
+thermo_style custom step temp c_Twire pe etotal press pxx pyy pzz v_box_height lx ly lz  # format of thermo data to write
 dump 2 all custom ${tens_dump_freq} ${tens_dump_filename} id type x y z vx vy vz
 
 # ---- Tensile Test Run ----
 run         ${tens_run_amt}
-
-
